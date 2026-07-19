@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(function(){
+  try {
+    var stored = localStorage.getItem('plateai-theme');
+    var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PlateAI — Point, Shoot, Know</title>
@@ -200,9 +209,15 @@
   .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 24px -6px rgba(155,93,229,0.65); }
 
   @media (max-width: 720px) {
+    .topnav-row { gap: 10px; }
     .tabbar button { padding: 8px 12px; font-size: 13.5px; }
     .brand span.brand-word { display: none; }
     .nav-cta span.long { display: none; }
+    .theme-toggle { width: 34px; height: 34px; }
+    .theme-toggle svg { width: 15px; height: 15px; }
+  }
+  @media (max-width: 400px) {
+    .tabbar button { padding: 7px 9px; font-size: 12.5px; }
   }
 
   /* ---------- corner-bracket motif ---------- */
@@ -394,7 +409,17 @@
   .chip-c .dot { background: conic-gradient(var(--mint-bg) 81%, color-mix(in srgb, var(--mint-bg) 25%, transparent) 0); }
   @keyframes bob { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-10px);} }
   @media (prefers-reduced-motion: reduce) { .float-chip { animation: none; } }
-  @media (max-width: 520px) { .float-chip { display: none; } }
+  @media (max-width: 520px) {
+    .float-chip { font-size: 11.5px; padding: 7px 12px 7px 7px; gap: 6px; }
+    .float-chip .dot { width: 20px; height: 20px; }
+    .chip-a { top: 3%; left: 2%; }
+    .chip-b { bottom: 22%; right: 2%; }
+    .chip-c { bottom: 2%; left: 4%; }
+  }
+  @media (max-width: 380px) {
+    .float-chip { font-size: 10.5px; padding: 6px 10px 6px 6px; }
+    .float-chip .dot { width: 17px; height: 17px; }
+  }
 
   /* ---------- feature grid ---------- */
   .section-head { max-width: 62ch; margin-bottom: 52px; }
@@ -924,6 +949,27 @@
     transition: color .2s ease;
   }
   .foot-legal a:hover { color: var(--flame); }
+
+  .theme-toggle {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    flex-shrink: 0;
+    transition: transform .25s cubic-bezier(.22,1,.36,1), border-color .25s ease, color .25s ease;
+  }
+  .theme-toggle:hover { transform: translateY(-2px); border-color: var(--flame); color: var(--flame); }
+  .theme-toggle:active { transform: translateY(0) scale(0.92); }
+  .theme-toggle svg { width: 17px; height: 17px; }
+  .theme-toggle .icon-sun, .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: dark) { .theme-toggle .icon-sun { display: block; } }
+  @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) { .theme-toggle .icon-moon { display: block; } }
+  :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 </style>
 
 <nav class="topnav">
@@ -939,6 +985,10 @@
       <button role="tab" aria-selected="false" data-tab="blog">Blog</button>
       <button role="tab" aria-selected="false" data-tab="support">Support</button>
     </div>
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
     <a class="nav-cta" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
       <span class="long">Download</span>
@@ -1519,6 +1569,18 @@
       }, true);
     }
   })();
+</script>
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('plateai-theme', next); } catch (e) {}
+  });
+})();
 </script>
 </body>
 </html>
