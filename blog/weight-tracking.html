@@ -1,0 +1,219 @@
+<title>Weight Tracking That Doesn't Spiral Into Daily Obsession — PlateAI Blog</title>
+<style>
+  :root {
+    --ink: #17120E; --ink-soft: #4A4038; --muted: #8A8078;
+    --paper: #FFFFFF; --paper-soft: #F7F4F1;
+    --line: rgba(23,18,14,0.09); --line-strong: rgba(23,18,14,0.16);
+    --flame: #FF7A29; --gold: #FFB238; --mint: #5BAE34; --mint-bg: #BCEF8F;
+    --cta-1: #4D7CFF; --cta-2: #9B5DE5; --cta-3: #F15BB5;
+    --font-display: ui-rounded, "SF Pro Rounded", "SFRounded", "Hiragino Maru Gothic ProN", -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --mint:#7FCB55; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --mint:#7FCB55; color-scheme: dark; }
+  :root[data-theme="light"] { --ink:#17120E; --ink-soft:#4A4038; --muted:#8A8078; --paper:#FFFFFF; --paper-soft:#F7F4F1; --line:rgba(23,18,14,0.09); --line-strong:rgba(23,18,14,0.16); --flame:#FF7A29; --gold:#FFB238; --mint:#5BAE34; color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .eyebrow, .brand-word { font-family: var(--font-display); }
+  h1, h2, h3 { text-wrap: balance; }
+  a { color: var(--flame); text-decoration: none; }
+  a.plain:hover { text-decoration: underline; }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--line); }
+  .topnav-row { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--ink) !important; text-decoration: none !important; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, var(--flame), var(--gold)); flex-shrink: 0; }
+  .back { font-size: 13.5px; font-weight: 700; color: var(--muted) !important; }
+
+  header.hero { padding: 52px 0 0; }
+  .post-tag {
+    display: inline-flex; padding: 6px 12px; border-radius: 999px;
+    background: color-mix(in srgb, var(--mint) 18%, transparent);
+    color: var(--mint); font-size: 11.5px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: .04em; margin-bottom: 18px;
+  }
+  h1.title { font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
+  .meta { display: flex; gap: 14px; align-items: center; margin-top: 20px; font-size: 13.5px; color: var(--muted); font-weight: 600; }
+  .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+
+  .hero-band {
+    margin-top: 32px;
+    height: 220px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, var(--mint-bg), var(--mint));
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-band::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(420px 220px at 85% 15%, rgba(255,255,255,0.35), transparent 60%);
+  }
+
+  article { padding: 44px 0 0; }
+  .lead { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 8px; }
+
+  .prose h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 44px 0 16px; }
+  .prose h3 { font-size: 18.5px; font-weight: 700; margin: 30px 0 10px; }
+  .prose p { font-size: 16.5px; line-height: 1.8; color: var(--ink-soft); margin: 0 0 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 16.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 8px; }
+  .prose strong { color: var(--ink); }
+
+  .pull {
+    margin: 34px 0;
+    padding: 26px 28px;
+    border-left: 3px solid var(--mint);
+    background: var(--paper-soft);
+    border-radius: 0 16px 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+  }
+
+  .example-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 8px 0 24px; }
+  @media (max-width: 560px) { .example-row { grid-template-columns: 1fr; } }
+  .example-card { padding: 18px 20px; border-radius: 14px; border: 1px solid var(--line); background: var(--paper-soft); }
+  .example-card b { display: block; font-size: 13px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .example-card .val { font-family: var(--font-display); font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .example-card p { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+
+  .inline-cta {
+    margin: 40px 0;
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--paper-soft);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .inline-cta .icon { width: 44px; height: 44px; border-radius: 13px; background: linear-gradient(135deg, var(--mint-bg), var(--mint)); flex-shrink: 0; }
+  .inline-cta h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .inline-cta p { font-size: 14px; color: var(--muted); margin: 0; }
+  .inline-cta .btn {
+    padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; color: #fff;
+    background: linear-gradient(100deg, var(--cta-1), var(--cta-2) 55%, var(--cta-3));
+    flex-shrink: 0;
+  }
+
+  .disclaimer { margin-top: 40px; font-size: 13px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 20px; }
+
+  .cta-banner { position: relative; margin-top: 64px; padding: 64px 0; background: linear-gradient(115deg, #221912 0%, #3C2415 48%, #1B140F 100%); overflow: hidden; }
+  .cta-glow { position: absolute; inset: 0; background: radial-gradient(480px 300px at 12% 20%, rgba(255,178,56,0.25), transparent 70%), radial-gradient(420px 280px at 88% 85%, rgba(255,122,41,0.22), transparent 70%); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; color: #FBF3EC; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .cta-inner h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+  .cta-inner p { margin-top: 8px; color: #D8C7BA; font-size: 15px; }
+  .store-badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 14px; background: #FBF3EC; color: #1B140F; font-weight: 700; }
+  .store-badge svg { width: 24px; height: 24px; }
+  .store-badge .lines { display: flex; flex-direction: column; line-height: 1.15; }
+  .store-badge .lines small { font-size: 10.5px; font-weight: 600; color: #6b6259; text-transform: uppercase; letter-spacing: .04em; }
+  .store-badge .lines span { font-size: 15.5px; }
+
+  footer { padding: 32px 0; border-top: 1px solid var(--line); }
+  .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: 700px; margin: 0 auto; padding: 0 28px; }
+</style>
+
+<nav class="topnav">
+  <div class="topnav-row">
+    <a class="brand" href="../index.html" target="_blank" rel="noopener">
+      <span class="mark"></span><span class="brand-word">PlateAI</span>
+    </a>
+    <a class="back" href="../index.html#blog" target="_blank" rel="noopener">← Back to Blog</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="post-tag">Guide</span>
+    <h1 class="title">Weight Tracking That Doesn't Spiral Into Daily Obsession</h1>
+    <div class="meta">
+      <span>PlateAI Team</span><span class="dot"></span><span>July 3, 2026</span><span class="dot"></span><span>5 min read</span>
+    </div>
+    <div class="hero-band" role="img" aria-label="Illustrative gradient banner"></div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+      <p class="lead">The scale can wreck a morning. Up 1.4 lb overnight and suddenly the whole day feels like a referendum on yesterday's choices — even though almost none of that swing was actually fat. Here's what's really moving, and a way to track weight that tells you the truth instead of triggering a spiral.</p>
+
+      <h2>Your weight is not one number — it's noise around a trend</h2>
+      <p>Body weight can swing 2–4 lb (1–2 kg) in a single day from things that have nothing to do with fat gain or loss: sodium intake, carb intake (each gram of stored carbohydrate holds roughly 3g of water), hydration status, hormonal cycles, how recently you ate, and even how well you slept. None of that is "progress" or "failure" — it's just water moving around.</p>
+      <div class="pull">A single weigh-in is a data point. A trend line built from 7–14 days of weigh-ins is information.</div>
+
+      <div class="example-row">
+        <div class="example-card"><b>Monday</b><div class="val">172.4 lb</div><p>High-sodium dinner the night before</p></div>
+        <div class="example-card"><b>Tuesday</b><div class="val">170.9 lb</div><p>Water weight releasing — not "1.5 lb of fat lost"</p></div>
+      </div>
+      <p>Both of those readings are real. Neither one, on its own, tells you anything about whether you're actually losing fat. The trend across two weeks does.</p>
+
+      <h2>Why we default the reminder to weekly, not daily</h2>
+      <p>PlateAI's Weight Control reminder defaults to a weekly check-in (Monday mornings) instead of a daily one, and that's a deliberate choice, not a missing feature. Daily weigh-ins work well for people who can genuinely look at noisy data without reacting to it — but for most people, a bad number on a random Wednesday quietly undoes a week of good habits, either through discouragement or an overcorrection that isn't warranted.</p>
+      <p>A weekly cadence, taken under consistent conditions (same time of day, ideally after waking and before eating), naturally averages out most of the daily noise without you having to do any math.</p>
+
+      <h3>If you prefer daily weigh-ins</h3>
+      <p>That's fine too — some people find the ritual grounding rather than stressful. The rule that matters isn't the frequency, it's what you do with the number:</p>
+      <ul>
+        <li><strong>Never react to a single day.</strong> Look at a 7-day rolling average, not yesterday's reading.</li>
+        <li><strong>Weigh under the same conditions</strong> — same time, same state of dress, ideally after using the bathroom and before eating or drinking.</li>
+        <li><strong>Judge progress in two-to-three week windows.</strong> One week of "no movement" is normal variance, not a stalled plan.</li>
+      </ul>
+
+      <h2>Reading the trend line instead of the number</h2>
+      <p>Once you have a few weeks of data, the shape of the line matters more than any single point on it. A trend that's gently sloping down — even with individual weigh-ins bouncing above and below it — is exactly what real fat loss looks like. A flat trend across three-plus consistent weeks is the actual signal that something needs to change, whether that's your intake, your activity, or your adherence.</p>
+
+      <div class="inline-cta">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <div class="icon"></div>
+          <div>
+            <h4>Weight Control turns your weigh-ins into a trend automatically</h4>
+            <p>Log a weight, get a chart — with a weekly or monthly reminder so you never have to remember on your own.</p>
+          </div>
+        </div>
+        <a class="btn" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">Try PlateAI free</a>
+      </div>
+
+      <h3>The short version</h3>
+      <ol>
+        <li>A single weigh-in reflects water and food volume as much as fat — don't judge it in isolation.</li>
+        <li>Weigh consistently (same time, same conditions), whatever frequency you choose.</li>
+        <li>Judge progress on a 7-day rolling average, checked every two to three weeks.</li>
+        <li>If the trend is flat for three-plus weeks despite consistent tracking, that's the real signal to adjust — not any single morning's number.</li>
+      </ol>
+
+      <div class="disclaimer">This article is general educational information, not medical advice. If frequent weighing negatively affects your mental health or relationship with food, consider tracking less often or speaking with a healthcare provider.</div>
+    </div>
+  </div>
+</article>
+
+<div class="cta-banner">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-inner">
+    <div>
+      <h2>Track the trend, not the noise.</h2>
+      <p>Weight Control charts your real progress automatically.</p>
+    </div>
+    <a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
+      <span class="lines"><small>Download on the</small><span>App Store</span></span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-row">
+    <span>PlateAI</span>
+    <span>&copy; 2026 Yevhen Basistyi. All rights reserved.</span>
+  </div>
+</footer>

@@ -1,0 +1,239 @@
+<title>How Much Protein Do You Actually Need Per Day? — PlateAI Blog</title>
+<style>
+  :root {
+    --ink: #17120E; --ink-soft: #4A4038; --muted: #8A8078;
+    --paper: #FFFFFF; --paper-soft: #F7F4F1;
+    --line: rgba(23,18,14,0.09); --line-strong: rgba(23,18,14,0.16);
+    --flame: #FF7A29; --gold: #FFB238; --periwinkle: #7AA3FF;
+    --cta-1: #4D7CFF; --cta-2: #9B5DE5; --cta-3: #F15BB5;
+    --font-display: ui-rounded, "SF Pro Rounded", "SFRounded", "Hiragino Maru Gothic ProN", -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  :root[data-theme="light"] { --ink:#17120E; --ink-soft:#4A4038; --muted:#8A8078; --paper:#FFFFFF; --paper-soft:#F7F4F1; --line:rgba(23,18,14,0.09); --line-strong:rgba(23,18,14,0.16); --flame:#FF7A29; --gold:#FFB238; --periwinkle:#7AA3FF; color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .eyebrow, .brand-word { font-family: var(--font-display); }
+  h1, h2, h3 { text-wrap: balance; }
+  a { color: var(--flame); text-decoration: none; }
+  a.plain:hover { text-decoration: underline; }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--line); }
+  .topnav-row { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--ink) !important; text-decoration: none !important; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, var(--flame), var(--gold)); flex-shrink: 0; }
+  .back { font-size: 13.5px; font-weight: 700; color: var(--muted) !important; }
+
+  header.hero { padding: 52px 0 0; }
+  .post-tag {
+    display: inline-flex; padding: 6px 12px; border-radius: 999px;
+    background: color-mix(in srgb, var(--periwinkle) 20%, transparent);
+    color: #2C4FBD; font-size: 11.5px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: .04em; margin-bottom: 18px;
+  }
+  :root[data-theme="dark"] .post-tag { color: var(--periwinkle); }
+  @media (prefers-color-scheme: dark) { .post-tag { color: var(--periwinkle); } }
+  h1.title { font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
+  .meta { display: flex; gap: 14px; align-items: center; margin-top: 20px; font-size: 13.5px; color: var(--muted); font-weight: 600; }
+  .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+
+  .hero-band {
+    margin-top: 32px;
+    height: 220px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, var(--periwinkle), var(--cta-1));
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-band::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(420px 220px at 85% 15%, rgba(255,255,255,0.35), transparent 60%);
+  }
+
+  article { padding: 44px 0 0; }
+  .lead { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 8px; }
+
+  .prose h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 44px 0 16px; }
+  .prose h3 { font-size: 18.5px; font-weight: 700; margin: 30px 0 10px; }
+  .prose p { font-size: 16.5px; line-height: 1.8; color: var(--ink-soft); margin: 0 0 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 16.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 8px; }
+  .prose strong { color: var(--ink); }
+
+  .pull {
+    margin: 34px 0;
+    padding: 26px 28px;
+    border-left: 3px solid var(--periwinkle);
+    background: var(--paper-soft);
+    border-radius: 0 16px 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+  }
+
+  .ref-table { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 15px; }
+  .ref-table th, .ref-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  .ref-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 700; }
+  .ref-table td { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .ref-table td:first-child { color: var(--ink); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+
+  .food-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 8px 0 24px; }
+  @media (max-width: 520px) { .food-grid { grid-template-columns: 1fr; } }
+  .food-card { padding: 14px 16px; background: var(--paper-soft); border: 1px solid var(--line); border-radius: 12px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .food-card b { font-size: 14.5px; font-weight: 700; }
+  .food-card span { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .inline-cta {
+    margin: 40px 0;
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--paper-soft);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .inline-cta .icon { width: 44px; height: 44px; border-radius: 13px; background: linear-gradient(135deg, var(--periwinkle), var(--cta-1)); flex-shrink: 0; }
+  .inline-cta h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .inline-cta p { font-size: 14px; color: var(--muted); margin: 0; }
+  .inline-cta .btn {
+    padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; color: #fff;
+    background: linear-gradient(100deg, var(--cta-1), var(--cta-2) 55%, var(--cta-3));
+    flex-shrink: 0;
+  }
+
+  .disclaimer { margin-top: 40px; font-size: 13px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 20px; }
+
+  .cta-banner { position: relative; margin-top: 64px; padding: 64px 0; background: linear-gradient(115deg, #221912 0%, #3C2415 48%, #1B140F 100%); overflow: hidden; }
+  .cta-glow { position: absolute; inset: 0; background: radial-gradient(480px 300px at 12% 20%, rgba(255,178,56,0.25), transparent 70%), radial-gradient(420px 280px at 88% 85%, rgba(255,122,41,0.22), transparent 70%); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; color: #FBF3EC; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .cta-inner h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+  .cta-inner p { margin-top: 8px; color: #D8C7BA; font-size: 15px; }
+  .store-badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 14px; background: #FBF3EC; color: #1B140F; font-weight: 700; }
+  .store-badge svg { width: 24px; height: 24px; }
+  .store-badge .lines { display: flex; flex-direction: column; line-height: 1.15; }
+  .store-badge .lines small { font-size: 10.5px; font-weight: 600; color: #6b6259; text-transform: uppercase; letter-spacing: .04em; }
+  .store-badge .lines span { font-size: 15.5px; }
+
+  footer { padding: 32px 0; border-top: 1px solid var(--line); }
+  .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: 700px; margin: 0 auto; padding: 0 28px; }
+</style>
+
+<nav class="topnav">
+  <div class="topnav-row">
+    <a class="brand" href="../index.html" target="_blank" rel="noopener">
+      <span class="mark"></span><span class="brand-word">PlateAI</span>
+    </a>
+    <a class="back" href="../index.html#blog" target="_blank" rel="noopener">← Back to Blog</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="post-tag">Nutrition</span>
+    <h1 class="title">How Much Protein Do You Actually Need Per Day?</h1>
+    <div class="meta">
+      <span>PlateAI Team</span><span class="dot"></span><span>July 10, 2026</span><span class="dot"></span><span>6 min read</span>
+    </div>
+    <div class="hero-band" role="img" aria-label="Illustrative gradient banner"></div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+      <p class="lead">Protein is the macro everyone agrees matters and almost nobody hits consistently. Not because it's complicated — because the target most people are using is either outdated or was never meant for them in the first place.</p>
+
+      <h2>The RDA is a floor, not a target</h2>
+      <p>The commonly cited 0.8 g of protein per kilogram of bodyweight (about 0.36 g per pound) is the U.S. RDA — the minimum intake to prevent deficiency in a sedentary adult. It was never designed to optimize body composition, preserve muscle during weight loss, or support anyone who trains. Treating it as a daily goal is like using the minimum wage as a salary target.</p>
+      <p>For most active adults — and especially anyone in a calorie deficit — the more useful range sits considerably higher:</p>
+
+      <div class="pull">1.6–2.2 g of protein per kg of bodyweight (roughly 0.7–1.0 g per pound) covers nearly everyone from "generally active" to "training seriously," with higher end reserved for a calorie deficit.</div>
+
+      <div class="table-wrap">
+        <table class="ref-table">
+          <thead><tr><th>Bodyweight</th><th>Moderate target (0.7 g/lb)</th><th>Higher target (1.0 g/lb)</th></tr></thead>
+          <tbody>
+            <tr><td>130 lb / 59 kg</td><td>91 g</td><td>130 g</td></tr>
+            <tr><td>160 lb / 73 kg</td><td>112 g</td><td>160 g</td></tr>
+            <tr><td>190 lb / 86 kg</td><td>133 g</td><td>190 g</td></tr>
+            <tr><td>220 lb / 100 kg</td><td>154 g</td><td>220 g</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Why protein needs go up when calories go down</h2>
+      <p>This is the part most calorie-counting advice misses entirely. In a deficit, your body is looking for energy anywhere it can find it — and without enough protein coming in, some of that energy comes from muscle tissue, not just fat. Higher protein intake during a cut is one of the most consistent findings in body-composition research: it helps preserve lean mass while the scale drops, so more of the weight lost is actually fat.</p>
+      <p>Protein also carries the highest satiety value of the three macros — gram for gram, it keeps you fuller longer than carbs or fat, which matters enormously when you're eating in a deficit and hunger is working against you.</p>
+
+      <h2>What that actually looks like on a plate</h2>
+      <p>Numbers on a chart are easy to nod along to and hard to hit. Here's roughly what different amounts of common protein sources contain:</p>
+      <div class="food-grid">
+        <div class="food-card"><b>Chicken breast, 100g</b><span>~31g protein</span></div>
+        <div class="food-card"><b>Greek yogurt, 200g</b><span>~20g protein</span></div>
+        <div class="food-card"><b>Eggs, 2 large</b><span>~12g protein</span></div>
+        <div class="food-card"><b>Salmon, 100g</b><span>~25g protein</span></div>
+        <div class="food-card"><b>Cottage cheese, 200g</b><span>~24g protein</span></div>
+        <div class="food-card"><b>Tofu, 150g</b><span>~18g protein</span></div>
+        <div class="food-card"><b>Lentils, cooked 200g</b><span>~18g protein</span></div>
+        <div class="food-card"><b>Whey scoop, 30g</b><span>~24g protein</span></div>
+      </div>
+      <p>Hitting 130–160g a day usually means protein at every meal, not just one big serving at dinner — spreading intake across 3–4 meals also appears to support muscle protein synthesis better than front- or back-loading it into a single sitting.</p>
+
+      <div class="inline-cta">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <div class="icon"></div>
+          <div>
+            <h4>The hard part isn't knowing the target — it's seeing the gap</h4>
+            <p>PlateAI's macro ring tracks protein against your daily goal automatically from a photo, so you know by lunch if dinner needs to make up ground.</p>
+          </div>
+        </div>
+        <a class="btn" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">Try PlateAI free</a>
+      </div>
+
+      <h3>Where people fall short without realizing it</h3>
+      <ul>
+        <li><strong>Breakfast is usually the weakest meal</strong> — cereal, toast, and coffee can carry a whole day's worth of carbs and almost no protein.</li>
+        <li><strong>"Healthy" doesn't mean high-protein.</strong> A salad with a light dressing can be under 10g of protein unless it's built around a real protein source.</li>
+        <li><strong>Snacking skews toward carbs and fat</strong> by default — chips and crackers are effortless; a protein-forward snack usually takes planning.</li>
+      </ul>
+
+      <p>None of this requires precision to the gram. Getting within 10–15g of your target most days will do more for how you look and feel than hitting an exact number occasionally. The goal is a number you can consistently land near — not a perfect one you abandon by Thursday.</p>
+
+      <div class="disclaimer">This article is general educational information, not medical or dietary advice. Individual protein needs vary with age, kidney function, and training history — consult a qualified healthcare provider or dietitian for personalized guidance.</div>
+    </div>
+  </div>
+</article>
+
+<div class="cta-banner">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-inner">
+    <div>
+      <h2>Know your protein number, every meal.</h2>
+      <p>Snap a photo — PlateAI tracks the macro ring for you.</p>
+    </div>
+    <a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
+      <span class="lines"><small>Download on the</small><span>App Store</span></span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-row">
+    <span>PlateAI</span>
+    <span>&copy; 2026 Yevhen Basistyi. All rights reserved.</span>
+  </div>
+</footer>

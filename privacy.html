@@ -1,0 +1,167 @@
+<title>Privacy Policy — PlateAI</title>
+<style>
+  :root {
+    --ink: #17120E; --ink-soft: #4A4038; --muted: #8A8078;
+    --paper: #FFFFFF; --paper-soft: #F7F4F1;
+    --line: rgba(23,18,14,0.09); --line-strong: rgba(23,18,14,0.16);
+    --flame: #FF7A29; --gold: #FFB238; --periwinkle: #7AA3FF;
+    --font-display: ui-rounded, "SF Pro Rounded", "SFRounded", "Hiragino Maru Gothic ProN", -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  :root[data-theme="light"] { --ink:#17120E; --ink-soft:#4A4038; --muted:#8A8078; --paper:#FFFFFF; --paper-soft:#F7F4F1; --line:rgba(23,18,14,0.09); --line-strong:rgba(23,18,14,0.16); --flame:#FF7A29; --gold:#FFB238; --periwinkle:#7AA3FF; color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, .eyebrow, .brand-word { font-family: var(--font-display); }
+  a { color: var(--flame); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--line); }
+  .topnav-row { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 760px; margin: 0 auto; padding: 0 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--ink) !important; text-decoration: none !important; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, var(--flame), var(--gold)); flex-shrink: 0; }
+  .back { font-size: 13.5px; font-weight: 700; color: var(--muted) !important; }
+
+  header.hero { padding: 56px 0 36px; border-bottom: 1px solid var(--line); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--flame); margin-bottom: 16px; }
+  .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: linear-gradient(135deg, var(--flame), var(--gold)); }
+  h1 { font-size: clamp(30px, 4.4vw, 42px); font-weight: 800; letter-spacing: -0.015em; line-height: 1.08; margin: 0; }
+  .updated { margin-top: 14px; font-size: 13.5px; color: var(--muted); }
+  .lead { margin-top: 22px; font-size: 16px; line-height: 1.7; color: var(--ink-soft); max-width: 62ch; }
+
+  article { padding: 48px 0 96px; }
+  .clause { padding: 30px 0; border-top: 1px solid var(--line); }
+  .clause:first-child { border-top: none; padding-top: 0; }
+  .clause-num { font-size: 12.5px; font-weight: 800; letter-spacing: 0.06em; color: var(--flame); text-transform: uppercase; margin-bottom: 8px; }
+  .clause h2 { font-size: 19px; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.01em; }
+  .clause p { font-size: 15.5px; line-height: 1.75; color: var(--ink-soft); margin: 0 0 12px; }
+  .clause p:last-child { margin-bottom: 0; }
+  .clause ul { margin: 0 0 12px; padding-left: 20px; }
+  .clause li { font-size: 15.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 6px; }
+
+  .partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 4px 0 4px; }
+  @media (max-width: 560px) { .partner-grid { grid-template-columns: 1fr; } }
+  .partner-card { padding: 16px 18px; background: var(--paper-soft); border: 1px solid var(--line); border-radius: 14px; }
+  .partner-card b { display: block; font-size: 14.5px; font-weight: 700; margin-bottom: 4px; }
+  .partner-card span { font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+
+  .region-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+  @media (max-width: 560px) { .region-row { grid-template-columns: 1fr; } }
+  .region-card { padding: 18px 20px; border-radius: 14px; border: 1px solid var(--line); background: var(--paper-soft); }
+  .region-card b { display: block; font-size: 14px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; color: var(--periwinkle); margin-bottom: 8px; }
+  .region-card p { margin: 0; font-size: 14.5px; }
+
+  .contact-box { margin-top: 8px; padding: 20px 22px; background: var(--paper-soft); border: 1px solid var(--line); border-radius: 16px; font-size: 15px; display: flex; flex-direction: column; gap: 12px; }
+  .contact-box .row b { font-weight: 700; display: block; margin-bottom: 2px; }
+
+  footer { padding: 32px 0; border-top: 1px solid var(--line); }
+  .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: 760px; margin: 0 auto; padding: 0 28px; }
+</style>
+
+<nav class="topnav">
+  <div class="topnav-row">
+    <a class="brand" href="index.html" target="_blank" rel="noopener">
+      <span class="mark"></span><span class="brand-word">PlateAI</span>
+    </a>
+    <a class="back" href="index.html" target="_blank" rel="noopener">← Back to PlateAI.app</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated July 19, 2026 · Applies to the PlateAI iOS app</p>
+    <p class="lead">Yevhen Basistyi ("we," "our," or "us") respects your privacy and is committed to protecting it. This Privacy Policy explains how PlateAI (the "App") handles information. By using the App, you agree to the practices described here.</p>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+
+    <div class="clause">
+      <div class="clause-num">01</div>
+      <h2>Information we collect</h2>
+      <p>PlateAI does not collect or store personal or sensitive data on our own servers. The App does, however, integrate with a small set of third-party services to provide food analysis, crash reporting, advertising, and subscription management:</p>
+      <div class="partner-grid">
+        <div class="partner-card"><b>OpenAI</b><span>Analyzes food photos or descriptions you submit to generate nutrition results.</span></div>
+        <div class="partner-card"><b>Google AdMob</b><span>Serves in-app advertising.</span></div>
+        <div class="partner-card"><b>Firebase Crashlytics</b><span>Identifies and helps us fix app crashes.</span></div>
+        <div class="partner-card"><b>RevenueCat</b><span>Manages in-app subscriptions and purchases.</span></div>
+      </div>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">02</div>
+      <h2>Device permissions</h2>
+      <p>The App requests access to your device's camera so you can photograph food items. These photos are sent to OpenAI's API for analysis; PlateAI itself does not retain a copy of your images after that request completes.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">03</div>
+      <h2>How data is used</h2>
+      <p>While PlateAI does not maintain its own user database, the third-party services above process data on our behalf:</p>
+      <ul>
+        <li><b>OpenAI</b> processes submitted photos or descriptions to return food analysis results.</li>
+        <li><b>AdMob</b> uses device and usage signals to serve personalized or generic ads.</li>
+        <li><b>Firebase Crashlytics</b> collects crash and diagnostic data to improve app stability.</li>
+        <li><b>RevenueCat</b> manages subscription state and purchase history tied to your App Store account.</li>
+      </ul>
+      <p>No personal information is stored by PlateAI beyond what's required for these integrations to function, and nothing is shared without anonymization where technically possible.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">04</div>
+      <h2>Data sharing</h2>
+      <p>We may share limited, anonymized data with:</p>
+      <ul>
+        <li><b>OpenAI</b> — to process food analysis requests. No user-identifiable data is included in these requests.</li>
+        <li><b>Google AdMob</b> — to display in-app advertisements.</li>
+        <li><b>Firebase Crashlytics</b> — to diagnose and resolve crashes.</li>
+        <li><b>RevenueCat</b> — to process and manage subscriptions.</li>
+      </ul>
+      <p>We do not sell your data, and we do not share it with any party outside of the integrations listed in this policy.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">05</div>
+      <h2>Data storage and security</h2>
+      <p>Data generated by your use of the App remains on your device, with the exception of the photos or descriptions sent to OpenAI for analysis at the moment you request it. Transmissions to our third-party partners are encrypted in transit.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">06</div>
+      <h2>Regional compliance</h2>
+      <p>We aim to comply with applicable data protection regulations, including:</p>
+      <div class="region-row">
+        <div class="region-card"><b>GDPR — European Union</b><p>Users in the EU may request access to, correction of, or deletion of data processed through our third-party services by contacting us below.</p></div>
+        <div class="region-card"><b>CCPA — California</b><p>California residents may opt out of third-party data processing by contacting us or adjusting the relevant settings within those third-party services.</p></div>
+      </div>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">07</div>
+      <h2>Contact</h2>
+      <p>For privacy-related questions or requests, or for general app support:</p>
+      <div class="contact-box">
+        <div class="row"><b>Privacy inquiries</b><a href="mailto:yevhen.basistyi@gmail.com">yevhen.basistyi@gmail.com</a></div>
+        <div class="row"><b>App support</b><a href="mailto:plateaibusiness0@gmail.com">plateaibusiness0@gmail.com</a></div>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<footer>
+  <div class="foot-row">
+    <span>PlateAI</span>
+    <span>&copy; 2026 Yevhen Basistyi. All rights reserved.</span>
+  </div>
+</footer>

@@ -1,0 +1,215 @@
+<title>What the Health Score Actually Measures — PlateAI Blog</title>
+<style>
+  :root {
+    --ink: #17120E; --ink-soft: #4A4038; --muted: #8A8078;
+    --paper: #FFFFFF; --paper-soft: #F7F4F1;
+    --line: rgba(23,18,14,0.09); --line-strong: rgba(23,18,14,0.16);
+    --flame: #FF7A29; --gold: #FFB238; --saffron: #FFB84D;
+    --cta-1: #4D7CFF; --cta-2: #9B5DE5; --cta-3: #F15BB5;
+    --font-display: ui-rounded, "SF Pro Rounded", "SFRounded", "Hiragino Maru Gothic ProN", -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; color-scheme: dark; }
+  :root[data-theme="light"] { --ink:#17120E; --ink-soft:#4A4038; --muted:#8A8078; --paper:#FFFFFF; --paper-soft:#F7F4F1; --line:rgba(23,18,14,0.09); --line-strong:rgba(23,18,14,0.16); --flame:#FF7A29; --gold:#FFB238; color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .eyebrow, .brand-word { font-family: var(--font-display); }
+  h1, h2, h3 { text-wrap: balance; }
+  a { color: var(--flame); text-decoration: none; }
+  a.plain:hover { text-decoration: underline; }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--line); }
+  .topnav-row { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--ink) !important; text-decoration: none !important; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, var(--flame), var(--gold)); flex-shrink: 0; }
+  .back { font-size: 13.5px; font-weight: 700; color: var(--muted) !important; }
+
+  header.hero { padding: 52px 0 0; }
+  .post-tag {
+    display: inline-flex; padding: 6px 12px; border-radius: 999px;
+    background: color-mix(in srgb, var(--saffron) 22%, transparent);
+    color: #9A5B00; font-size: 11.5px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: .04em; margin-bottom: 18px;
+  }
+  @media (prefers-color-scheme: dark) { .post-tag { color: var(--gold); } }
+  :root[data-theme="dark"] .post-tag { color: var(--gold); }
+  h1.title { font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
+  .meta { display: flex; gap: 14px; align-items: center; margin-top: 20px; font-size: 13.5px; color: var(--muted); font-weight: 600; }
+  .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+
+  .hero-band {
+    margin-top: 32px;
+    height: 220px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, var(--saffron), var(--flame));
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-band::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(420px 220px at 85% 15%, rgba(255,255,255,0.35), transparent 60%);
+  }
+
+  article { padding: 44px 0 0; }
+  .lead { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 8px; }
+
+  .prose h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 44px 0 16px; }
+  .prose h3 { font-size: 18.5px; font-weight: 700; margin: 30px 0 10px; }
+  .prose p { font-size: 16.5px; line-height: 1.8; color: var(--ink-soft); margin: 0 0 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 16.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 8px; }
+  .prose strong { color: var(--ink); }
+
+  .pull {
+    margin: 34px 0;
+    padding: 26px 28px;
+    border-left: 3px solid var(--saffron);
+    background: var(--paper-soft);
+    border-radius: 0 16px 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+  }
+
+  .factor-list { display: flex; flex-direction: column; gap: 12px; margin: 8px 0 24px; }
+  .factor-item { display: flex; gap: 16px; padding: 18px 20px; border-radius: 14px; border: 1px solid var(--line); background: var(--paper-soft); align-items: flex-start; }
+  .factor-item .pct { font-family: var(--font-display); font-weight: 800; font-size: 17px; color: var(--flame); flex-shrink: 0; width: 52px; }
+  .factor-item div b { display: block; font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+  .factor-item div span { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+  .inline-cta {
+    margin: 40px 0;
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--paper-soft);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .inline-cta .icon { width: 44px; height: 44px; border-radius: 13px; background: linear-gradient(135deg, var(--saffron), var(--flame)); flex-shrink: 0; }
+  .inline-cta h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .inline-cta p { font-size: 14px; color: var(--muted); margin: 0; }
+  .inline-cta .btn {
+    padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; color: #fff;
+    background: linear-gradient(100deg, var(--cta-1), var(--cta-2) 55%, var(--cta-3));
+    flex-shrink: 0;
+  }
+
+  .disclaimer { margin-top: 40px; font-size: 13px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 20px; }
+
+  .cta-banner { position: relative; margin-top: 64px; padding: 64px 0; background: linear-gradient(115deg, #221912 0%, #3C2415 48%, #1B140F 100%); overflow: hidden; }
+  .cta-glow { position: absolute; inset: 0; background: radial-gradient(480px 300px at 12% 20%, rgba(255,178,56,0.25), transparent 70%), radial-gradient(420px 280px at 88% 85%, rgba(255,122,41,0.22), transparent 70%); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; color: #FBF3EC; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .cta-inner h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+  .cta-inner p { margin-top: 8px; color: #D8C7BA; font-size: 15px; }
+  .store-badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 14px; background: #FBF3EC; color: #1B140F; font-weight: 700; }
+  .store-badge svg { width: 24px; height: 24px; }
+  .store-badge .lines { display: flex; flex-direction: column; line-height: 1.15; }
+  .store-badge .lines small { font-size: 10.5px; font-weight: 600; color: #6b6259; text-transform: uppercase; letter-spacing: .04em; }
+  .store-badge .lines span { font-size: 15.5px; }
+
+  footer { padding: 32px 0; border-top: 1px solid var(--line); }
+  .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: 700px; margin: 0 auto; padding: 0 28px; }
+</style>
+
+<nav class="topnav">
+  <div class="topnav-row">
+    <a class="brand" href="../index.html" target="_blank" rel="noopener">
+      <span class="mark"></span><span class="brand-word">PlateAI</span>
+    </a>
+    <a class="back" href="../index.html#blog" target="_blank" rel="noopener">← Back to Blog</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="post-tag">Behind the scenes</span>
+    <h1 class="title">What the Health Score Actually Measures</h1>
+    <div class="meta">
+      <span>PlateAI Team</span><span class="dot"></span><span>June 26, 2026</span><span class="dot"></span><span>3 min read</span>
+    </div>
+    <div class="hero-band" role="img" aria-label="Illustrative gradient banner"></div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+      <p class="lead">Two meals can have identical calories and completely different health scores — which confuses people the first time they see it. That gap is the entire point. Calories tell you about energy; they don't tell you much about what a meal is actually made of.</p>
+
+      <h2>It's not a calorie count wearing a different label</h2>
+      <p>A 500-calorie plate of grilled salmon, greens, and quinoa is not nutritionally interchangeable with a 500-calorie serving of fries and a soda, even though your calorie total for the day would look identical either way. The health score exists to surface that difference — a single number that reflects the quality of a meal, not just its energy content.</p>
+
+      <div class="pull">Calories answer "how much energy." The health score answers "how well does this meal serve the rest of your body."</div>
+
+      <h2>What actually goes into the number</h2>
+      <p>The score blends several signals from the same analysis that generates your macros, weighted toward what the evidence on diet quality consistently points to:</p>
+
+      <div class="factor-list">
+        <div class="factor-item">
+          <div class="pct">Macros</div>
+          <div><b>Balance across protein, carbs, and fat</b><span>A plate isn't scored on being "low-carb" or "low-fat" in isolation — it's scored on whether the macro mix is reasonably balanced for a single meal, rather than dominated by one macro at the expense of the others.</span></div>
+        </div>
+        <div class="factor-item">
+          <div class="pct">Nutrients</div>
+          <div><b>Density of fiber, vitamins, and minerals</b><span>Two meals with the same calories can differ enormously in fiber and micronutrient content. Whole, minimally processed ingredients tend to score higher here than refined or heavily processed ones.</span></div>
+        </div>
+        <div class="factor-item">
+          <div class="pct">Portion</div>
+          <div><b>Signals from the photo itself</b><span>Plate coverage and apparent portion size feed into the estimate — a reasonable serving reads differently than one that visibly overshoots a typical meal.</span></div>
+        </div>
+      </div>
+
+      <h2>Why it's a relative signal, not a grade</h2>
+      <p>The most useful way to read the health score is comparatively — across your own meals, over time — rather than as a pass/fail grade on any single plate. A 6 today and an 8 tomorrow tells you something real about the shift in what you ate. A 6 in isolation doesn't mean you did something wrong; the occasional lower-scoring meal is normal and expected. It's the pattern across a week that's worth paying attention to, the same way the weight trend line matters more than any single day.</p>
+
+      <div class="inline-cta">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <div class="icon"></div>
+          <div>
+            <h4>The score arrives after your macros, not instead of them</h4>
+            <p>It's stage three of PlateAI's analysis — core macros land first, the health score follows once the fuller nutrient picture is in.</p>
+          </div>
+        </div>
+        <a class="btn" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">Try PlateAI free</a>
+      </div>
+
+      <p>None of this replaces judgment — a score is a compressed signal, not a verdict. But when you're deciding between two lunch options and the calories look about the same, it's the fastest way to see which one is actually doing more for you.</p>
+
+      <div class="disclaimer">The health score is a general wellness indicator generated from photo analysis and is not a substitute for professional dietary or medical advice.</div>
+    </div>
+  </div>
+</article>
+
+<div class="cta-banner">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-inner">
+    <div>
+      <h2>See past the calorie count.</h2>
+      <p>Every logged plate gets a health score, automatically.</p>
+    </div>
+    <a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
+      <span class="lines"><small>Download on the</small><span>App Store</span></span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-row">
+    <span>PlateAI</span>
+    <span>&copy; 2026 Yevhen Basistyi. All rights reserved.</span>
+  </div>
+</footer>

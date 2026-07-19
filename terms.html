@@ -1,0 +1,157 @@
+<title>Terms of Use — PlateAI</title>
+<style>
+  :root {
+    --ink: #17120E; --ink-soft: #4A4038; --muted: #8A8078;
+    --paper: #FFFFFF; --paper-soft: #F7F4F1;
+    --line: rgba(23,18,14,0.09); --line-strong: rgba(23,18,14,0.16);
+    --flame: #FF7A29; --gold: #FFB238;
+    --font-display: ui-rounded, "SF Pro Rounded", "SFRounded", "Hiragino Maru Gothic ProN", -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; color-scheme: dark; }
+  :root[data-theme="light"] { --ink:#17120E; --ink-soft:#4A4038; --muted:#8A8078; --paper:#FFFFFF; --paper-soft:#F7F4F1; --line:rgba(23,18,14,0.09); --line-strong:rgba(23,18,14,0.16); --flame:#FF7A29; --gold:#FFB238; color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, .eyebrow, .brand-word { font-family: var(--font-display); }
+  a { color: var(--flame); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--line); }
+  .topnav-row { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 760px; margin: 0 auto; padding: 0 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--ink) !important; text-decoration: none !important; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, var(--flame), var(--gold)); flex-shrink: 0; }
+  .back { font-size: 13.5px; font-weight: 700; color: var(--muted) !important; }
+
+  header.hero { padding: 56px 0 36px; border-bottom: 1px solid var(--line); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--flame); margin-bottom: 16px; }
+  .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: linear-gradient(135deg, var(--flame), var(--gold)); }
+  h1 { font-size: clamp(30px, 4.4vw, 42px); font-weight: 800; letter-spacing: -0.015em; line-height: 1.08; margin: 0; }
+  .updated { margin-top: 14px; font-size: 13.5px; color: var(--muted); }
+
+  article { padding: 48px 0 96px; }
+  .clause { padding: 30px 0; border-top: 1px solid var(--line); }
+  .clause:first-child { border-top: none; padding-top: 0; }
+  .clause-num { font-size: 12.5px; font-weight: 800; letter-spacing: 0.06em; color: var(--flame); text-transform: uppercase; margin-bottom: 8px; }
+  .clause h2 { font-size: 19px; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.01em; }
+  .clause p { font-size: 15.5px; line-height: 1.75; color: var(--ink-soft); margin: 0 0 12px; }
+  .clause p:last-child { margin-bottom: 0; }
+  .clause ul { margin: 0 0 12px; padding-left: 20px; }
+  .clause li { font-size: 15.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 6px; }
+
+  .contact-box { margin-top: 8px; padding: 20px 22px; background: var(--paper-soft); border: 1px solid var(--line); border-radius: 16px; font-size: 15px; }
+  .contact-box b { font-weight: 700; }
+
+  footer { padding: 32px 0; border-top: 1px solid var(--line); }
+  .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: 760px; margin: 0 auto; padding: 0 28px; }
+</style>
+
+<nav class="topnav">
+  <div class="topnav-row">
+    <a class="brand" href="index.html" target="_blank" rel="noopener">
+      <span class="mark"></span><span class="brand-word">PlateAI</span>
+    </a>
+    <a class="back" href="index.html" target="_blank" rel="noopener">← Back to PlateAI.app</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Legal</div>
+    <h1>Terms of Use</h1>
+    <p class="updated">Last updated July 19, 2026 · Applies to the PlateAI iOS app</p>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+
+    <div class="clause">
+      <div class="clause-num">01</div>
+      <h2>Acceptance of terms</h2>
+      <p>By downloading, installing, or using PlateAI (the "App"), you agree to be bound by these Terms of Use. If you do not agree, please do not use the App and uninstall it from your device.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">02</div>
+      <h2>Use of the app</h2>
+      <p>PlateAI is intended for personal, non-commercial use. There is no minimum age requirement to use the App, though users should have the legal capacity in their jurisdiction to agree to these Terms.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">03</div>
+      <h2>Subscriptions and purchases</h2>
+      <p>PlateAI offers optional subscriptions — available as weekly, monthly, or annual plans — managed through RevenueCat. Current pricing is displayed within the App before purchase.</p>
+      <p>All payments are processed through Apple's payment system (App Store). Refunds are handled under Apple's own refund policies; PlateAI does not process refunds directly.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">04</div>
+      <h2>Use of OpenAI services</h2>
+      <p>The App uses OpenAI's API to analyze food photos or descriptions you submit. By using this feature, you acknowledge that:</p>
+      <ul>
+        <li>Images or text you submit are sent to OpenAI solely to generate your nutrition analysis, and are not retained by PlateAI beyond what's needed to complete that request.</li>
+        <li>This processing is additionally governed by OpenAI's own terms of service and privacy policy.</li>
+      </ul>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">05</div>
+      <h2>Advertising</h2>
+      <p>The App may display advertisements served by Google AdMob. Advertising partners may collect anonymized data to serve relevant ads, subject to their own privacy practices.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">06</div>
+      <h2>Limitation of liability</h2>
+      <p>To the fullest extent permitted by law, PlateAI is not liable for:</p>
+      <ul>
+        <li>Errors, downtime, or interruptions in the App's functionality.</li>
+        <li>Inaccurate or incomplete results generated by OpenAI's food analysis — estimates should be treated as guidance, not medical or dietary advice.</li>
+        <li>Failures or data-handling practices of third-party services the App relies on (OpenAI, Apple, Google AdMob, Firebase, RevenueCat).</li>
+      </ul>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">07</div>
+      <h2>Intellectual property</h2>
+      <p>All content within the App — including trademarks, logos, design, and software — is the property of Yevhen Basistyi and is protected by applicable copyright and trademark law. Unauthorized reproduction or use is prohibited.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">08</div>
+      <h2>Dispute resolution</h2>
+      <p>Disputes arising from your use of the App will first be addressed through good-faith negotiation and, where unresolved, through arbitration in accordance with applicable law. Nothing in this section limits your right to bring a claim in local courts where applicable law guarantees that right.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">09</div>
+      <h2>Changes to these terms</h2>
+      <p>We may update these Terms from time to time. If a change is significant, we'll notify you within the App. Continued use of the App after an update constitutes acceptance of the revised Terms.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-num">10</div>
+      <h2>Contact</h2>
+      <p>Questions about these Terms can be sent to:</p>
+      <div class="contact-box">
+        <b>Yevhen Basistyi</b><br>
+        <a href="mailto:yevhen.basistyi@gmail.com">yevhen.basistyi@gmail.com</a>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<footer>
+  <div class="foot-row">
+    <span>PlateAI</span>
+    <span>&copy; 2026 Yevhen Basistyi. All rights reserved.</span>
+  </div>
+</footer>
