@@ -191,6 +191,8 @@
   .tabbar button.active { color: var(--ink); background: var(--paper-raise); box-shadow: 0 1px 2px rgba(var(--shadow-color)/0.06), 0 4px 14px rgba(var(--shadow-color)/0.08); }
 
   .nav-cta {
+    position: relative;
+    z-index: 0;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -205,6 +207,23 @@
     transition: transform .25s ease, box-shadow .25s ease;
   }
   .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 24px -6px rgba(155,93,229,0.65); }
+  .nav-cta::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    z-index: -1;
+    animation: ctaPulse 2.4s cubic-bezier(.4,0,.6,1) infinite;
+  }
+
+  @keyframes ctaPulse {
+    0% { transform: scale(1); opacity: .5; }
+    70%, 100% { transform: scale(1.5); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nav-cta::after { animation: none; display: none; }
+  }
 
   @media (max-width: 720px) {
     .wrap { padding: 0 18px; }
@@ -329,6 +348,8 @@
     flex-wrap: wrap;
   }
   .btn-primary {
+    position: relative;
+    z-index: 0;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -343,6 +364,18 @@
   }
   .btn-primary:hover { transform: translateY(-2px) scale(1.015); box-shadow: 0 16px 34px -8px rgba(155,93,229,0.7); }
   .btn-primary svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .btn-primary::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    z-index: -1;
+    animation: ctaPulse 2.4s cubic-bezier(.4,0,.6,1) infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .btn-primary::after { animation: none; display: none; }
+  }
   .btn-ghost {
     display: inline-flex;
     align-items: center;
