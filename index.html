@@ -392,13 +392,74 @@
     transform: rotate(-2deg);
     animation: floaty 7s ease-in-out infinite;
   }
-  .phone-shell img { width: 100%; }
+  .phone-shell img { width: 100%; display: block; }
   @keyframes floaty {
     0%, 100% { transform: rotate(-2deg) translateY(0); }
     50% { transform: rotate(-2deg) translateY(-14px); }
   }
   @media (prefers-reduced-motion: reduce) {
     .phone-shell { animation: none; }
+  }
+
+  .scan-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .scan-overlay::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    height: 46%;
+    top: -50%;
+    background: linear-gradient(180deg, transparent, rgba(255,178,56,0.16) 70%, rgba(255,122,41,0.22));
+    animation: scanBand 3.4s cubic-bezier(.45,0,.55,1) infinite;
+  }
+  .scan-line {
+    position: absolute;
+    left: 6%; right: 6%;
+    height: 2px;
+    top: -4%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold) 20%, #fff 50%, var(--flame) 80%, transparent);
+    box-shadow: 0 0 10px 2px rgba(255,178,56,0.65), 0 0 26px 8px rgba(255,122,41,0.3);
+    animation: scanSweep 3.4s cubic-bezier(.45,0,.55,1) infinite;
+  }
+  .scan-corner {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 2.5px solid var(--gold);
+    opacity: 0;
+    animation: scanCorner 3.4s ease-in-out infinite;
+  }
+  .scan-corner.tl { top: 14px; left: 14px; border-right: none; border-bottom: none; border-radius: 10px 0 0 0; }
+  .scan-corner.tr { top: 14px; right: 14px; border-left: none; border-bottom: none; border-radius: 0 10px 0 0; animation-delay: .08s; }
+  .scan-corner.bl { bottom: 14px; left: 14px; border-right: none; border-top: none; border-radius: 0 0 0 10px; animation-delay: .16s; }
+  .scan-corner.br { bottom: 14px; right: 14px; border-left: none; border-top: none; border-radius: 0 0 10px 0; animation-delay: .24s; }
+
+  @keyframes scanSweep {
+    0% { top: -4%; opacity: 0; }
+    6% { opacity: 1; }
+    50% { top: 100%; opacity: 1; }
+    58% { opacity: 0; }
+    100% { top: -4%; opacity: 0; }
+  }
+  @keyframes scanBand {
+    0% { top: -50%; opacity: 0; }
+    6% { opacity: 1; }
+    50% { top: 100%; opacity: 1; }
+    58% { opacity: 0; }
+    100% { top: -50%; opacity: 0; }
+  }
+  @keyframes scanCorner {
+    0%, 100% { opacity: 0; }
+    8%, 50% { opacity: 1; }
+    58% { opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .scan-overlay::before, .scan-line, .scan-corner { animation: none; display: none; }
   }
   .float-chip {
     position: absolute;
@@ -1035,6 +1096,13 @@
         <div class="phone-stage">
           <div class="phone-shell">
             <img src="assets/hero-food.jpg" alt="A cheeseburger with fries, plated and ready to be logged in PlateAI" />
+            <div class="scan-overlay" aria-hidden="true">
+              <div class="scan-line"></div>
+              <span class="scan-corner tl"></span>
+              <span class="scan-corner tr"></span>
+              <span class="scan-corner bl"></span>
+              <span class="scan-corner br"></span>
+            </div>
           </div>
           <div class="float-chip chip-a"><span class="dot"></span>Protein 68%</div>
           <div class="float-chip chip-b"><span class="dot"></span>Carbs 42g</div>
