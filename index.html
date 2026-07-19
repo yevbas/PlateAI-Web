@@ -178,19 +178,10 @@
     font-size: 14.5px;
     font-weight: 600;
     color: var(--muted);
-    transition: color .25s ease;
+    transition: color .25s ease, background .25s ease, box-shadow .25s ease;
     white-space: nowrap;
   }
-  .tabbar button.active { color: var(--ink); }
-  .tabbar .pill {
-    position: absolute;
-    inset: 4px;
-    background: var(--paper-raise);
-    border-radius: 999px;
-    box-shadow: 0 1px 2px rgba(var(--shadow-color)/0.06), 0 4px 14px rgba(var(--shadow-color)/0.08);
-    z-index: -1;
-    transition: transform .38s cubic-bezier(.22,1,.36,1), width .38s cubic-bezier(.22,1,.36,1);
-  }
+  .tabbar button.active { color: var(--ink); background: var(--paper-raise); box-shadow: 0 1px 2px rgba(var(--shadow-color)/0.06), 0 4px 14px rgba(var(--shadow-color)/0.08); }
 
   .nav-cta {
     display: flex;
@@ -979,7 +970,6 @@
       <span class="brand-word">PlateAI</span>
     </a>
     <div class="tabbar" id="tabbar" role="tablist" aria-label="Site sections">
-      <span class="pill" id="tabpill" aria-hidden="true"></span>
       <button role="tab" aria-selected="true" data-tab="home" class="active">Home</button>
       <button role="tab" aria-selected="false" data-tab="about">About Us</button>
       <button role="tab" aria-selected="false" data-tab="blog">Blog</button>
@@ -1445,22 +1435,11 @@
       blog: document.getElementById('tab-blog'),
       support: document.getElementById('tab-support')
     };
-    var pill = document.getElementById('tabpill');
-
-    function movePill(btn) {
-      var bar = document.getElementById('tabbar');
-      var barRect = bar.getBoundingClientRect();
-      var r = btn.getBoundingClientRect();
-      pill.style.width = r.width + 'px';
-      pill.style.transform = 'translateX(' + (r.left - barRect.left - 4) + 'px)';
-    }
-
     function activate(name, push) {
       buttons.forEach(function(b) {
         var on = b.dataset.tab === name;
         b.classList.toggle('active', on);
         b.setAttribute('aria-selected', on ? 'true' : 'false');
-        if (on) movePill(b);
       });
       Object.keys(panels).forEach(function(k) {
         panels[k].classList.toggle('active', k === name);
@@ -1486,10 +1465,6 @@
     var initial = (location.hash || '#home').replace('#', '');
     if (!panels[initial]) initial = 'home';
     requestAnimationFrame(function() { activate(initial, false); });
-    window.addEventListener('resize', function() {
-      var active = document.querySelector('.tabbar button.active');
-      if (active) movePill(active);
-    });
 
     var track = document.getElementById('showcaseTrack');
     var prevBtn = document.getElementById('showcasePrev');
