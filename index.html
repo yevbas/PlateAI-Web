@@ -170,9 +170,16 @@
     border: 1px solid var(--line);
     border-radius: 999px;
     padding: 4px;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  .tabbar::-webkit-scrollbar { display: none; }
   .tabbar button {
     position: relative;
+    flex-shrink: 0;
     padding: 9px 18px;
     border-radius: 999px;
     font-size: 14.5px;
@@ -200,15 +207,30 @@
   .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 24px -6px rgba(155,93,229,0.65); }
 
   @media (max-width: 720px) {
-    .topnav-row { gap: 10px; }
+    .wrap { padding: 0 18px; }
+    .topnav-row { gap: 8px; height: 60px; }
+    .tabbar { gap: 0; }
     .tabbar button { padding: 8px 12px; font-size: 13.5px; }
     .brand span.brand-word { display: none; }
+    .brand img { width: 26px; height: 26px; }
+    .nav-cta { padding: 9px 12px; }
     .nav-cta span.long { display: none; }
-    .theme-toggle { width: 34px; height: 34px; }
+    .theme-toggle { width: 32px; height: 32px; }
     .theme-toggle svg { width: 15px; height: 15px; }
   }
   @media (max-width: 400px) {
-    .tabbar button { padding: 7px 9px; font-size: 12.5px; }
+    .wrap { padding: 0 14px; }
+    .topnav-row { gap: 6px; }
+    .tabbar { gap: 0; -webkit-mask-image: linear-gradient(90deg, #000 0, #000 88%, transparent 100%); mask-image: linear-gradient(90deg, #000 0, #000 88%, transparent 100%); }
+    .tabbar button { padding: 7px 9px; font-size: 12px; }
+    .nav-cta { padding: 8px 10px; }
+  }
+  @media (max-width: 370px) {
+    .wrap { padding: 0 10px; }
+    .topnav-row { gap: 4px; }
+    .nav-cta { display: none; }
+    .theme-toggle { width: 30px; height: 30px; }
+    .theme-toggle svg { width: 14px; height: 14px; }
   }
 
   /* ---------- corner-bracket motif ---------- */
@@ -971,7 +993,7 @@
     </a>
     <div class="tabbar" id="tabbar" role="tablist" aria-label="Site sections">
       <button role="tab" aria-selected="true" data-tab="home" class="active">Home</button>
-      <button role="tab" aria-selected="false" data-tab="about">About Us</button>
+      <button role="tab" aria-selected="false" data-tab="about">About</button>
       <button role="tab" aria-selected="false" data-tab="blog">Blog</button>
       <button role="tab" aria-selected="false" data-tab="support">Support</button>
     </div>
