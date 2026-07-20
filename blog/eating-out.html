@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eating Out Without Blowing Your Macros — PlateAI Blog</title>
+<meta name="description" content="Restaurant meals aren't the enemy of tracking — a practical system for ordering, estimating, and logging food you didn't cook yourself.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+<meta property="og:title" content="Eating Out Without Blowing Your Macros — PlateAI Blog">
+<meta property="og:description" content="Restaurant meals aren't the enemy of tracking — a practical system for ordering, estimating, and logging food you didn't cook yourself.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<script>
+(function(){
+  try {
+    var stored = localStorage.getItem('plateai-theme');
+    var theme = stored || 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<style>
+  :root {
+    --ink: #17120E; --ink-soft: #4A4038; --muted: #8A8078;
+    --paper: #FFFFFF; --paper-soft: #F7F4F1;
+    --line: rgba(23,18,14,0.09); --line-strong: rgba(23,18,14,0.16);
+    --flame: #FF7A29; --gold: #FFB238; --periwinkle: #7AA3FF;
+    --cta-1: #4D7CFF; --cta-2: #9B5DE5; --cta-3: #F15BB5;
+    --font-display: ui-rounded, "SF Pro Rounded", "SFRounded", "Hiragino Maru Gothic ProN", -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  :root[data-theme="light"] { --ink:#17120E; --ink-soft:#4A4038; --muted:#8A8078; --paper:#FFFFFF; --paper-soft:#F7F4F1; --line:rgba(23,18,14,0.09); --line-strong:rgba(23,18,14,0.16); --flame:#FF7A29; --gold:#FFB238; --periwinkle:#7AA3FF; color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .eyebrow, .brand-word { font-family: var(--font-display); }
+  h1, h2, h3 { text-wrap: balance; }
+  a { color: var(--flame); text-decoration: none; }
+  a.plain:hover { text-decoration: underline; }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--line); }
+  .topnav-row { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--ink) !important; text-decoration: none !important; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, var(--flame), var(--gold)); flex-shrink: 0; }
+  .back { font-size: 13.5px; font-weight: 700; color: var(--muted) !important; white-space: nowrap; }
+
+  .theme-toggle {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    flex-shrink: 0;
+    transition: transform .25s cubic-bezier(.22,1,.36,1), border-color .25s ease, color .25s ease;
+  }
+  .theme-toggle:hover { transform: translateY(-2px); border-color: var(--flame); color: var(--flame); }
+  .theme-toggle:active { transform: translateY(0) scale(0.92); }
+  .theme-toggle svg { width: 17px; height: 17px; }
+  .theme-toggle .icon-sun, .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: dark) { .theme-toggle .icon-sun { display: block; } }
+  @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) { .theme-toggle .icon-moon { display: block; } }
+  :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+  header.hero { padding: 28px 0 0; }
+  .post-tag {
+    display: inline-flex; padding: 6px 12px; border-radius: 999px;
+    background: color-mix(in srgb, var(--periwinkle) 20%, transparent);
+    color: #2C4FBD; font-size: 11.5px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: .04em; margin-bottom: 18px;
+  }
+  @media (prefers-color-scheme: dark) { .post-tag { color: var(--periwinkle); } }
+  :root[data-theme="dark"] .post-tag { color: var(--periwinkle); }
+  h1.title { font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
+  .meta { display: flex; gap: 14px; align-items: center; margin-top: 20px; font-size: 13.5px; color: var(--muted); font-weight: 600; }
+  .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+
+  .hero-band {
+    margin-top: 32px;
+    height: 220px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, var(--periwinkle), var(--cta-1));
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-band::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(420px 220px at 85% 15%, rgba(255,255,255,0.35), transparent 60%);
+  }
+
+  article { padding: 44px 0 0; }
+  .lead { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 8px; }
+
+  .prose h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 44px 0 16px; }
+  .prose h3 { font-size: 18.5px; font-weight: 700; margin: 30px 0 10px; }
+  .prose p { font-size: 16.5px; line-height: 1.8; color: var(--ink-soft); margin: 0 0 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 16.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 8px; }
+  .prose strong { color: var(--ink); }
+
+  .pull {
+    margin: 34px 0;
+    padding: 26px 28px;
+    border-left: 3px solid var(--periwinkle);
+    background: var(--paper-soft);
+    border-radius: 0 16px 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+  }
+
+  .cue-list { display: flex; flex-direction: column; gap: 12px; margin: 8px 0 24px; }
+  .cue-item { display: flex; gap: 16px; padding: 18px 20px; border-radius: 14px; border: 1px solid var(--line); background: var(--paper-soft); align-items: flex-start; }
+  .cue-item .n { font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--periwinkle); flex-shrink: 0; width: 26px; }
+  .cue-item div b { display: block; font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+  .cue-item div span { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+  .inline-cta {
+    margin: 40px 0;
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--paper-soft);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .inline-cta .icon { width: 44px; height: 44px; border-radius: 13px; background: linear-gradient(135deg, var(--periwinkle), var(--cta-1)); flex-shrink: 0; }
+  .inline-cta h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .inline-cta p { font-size: 14px; color: var(--muted); margin: 0; }
+  .inline-cta .btn {
+    padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; color: #fff;
+    background: linear-gradient(100deg, var(--cta-1), var(--cta-2) 55%, var(--cta-3));
+    flex-shrink: 0;
+  }
+
+  .disclaimer { margin-top: 40px; font-size: 13px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 20px; }
+
+  .cta-banner { position: relative; margin-top: 64px; padding: 64px 0; background: linear-gradient(115deg, #221912 0%, #3C2415 48%, #1B140F 100%); overflow: hidden; }
+  .cta-glow { position: absolute; inset: 0; background: radial-gradient(480px 300px at 12% 20%, rgba(255,178,56,0.25), transparent 70%), radial-gradient(420px 280px at 88% 85%, rgba(255,122,41,0.22), transparent 70%); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; color: #FBF3EC; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .cta-inner h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+  .cta-inner p { margin-top: 8px; color: #D8C7BA; font-size: 15px; }
+  .store-badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 14px; background: #FBF3EC; color: #1B140F; font-weight: 700; }
+  .store-badge svg { width: 24px; height: 24px; }
+  .store-badge .lines { display: flex; flex-direction: column; line-height: 1.15; }
+  .store-badge .lines small { font-size: 10.5px; font-weight: 600; color: #6b6259; text-transform: uppercase; letter-spacing: .04em; }
+  .store-badge .lines span { font-size: 15.5px; }
+
+  footer { padding: 32px 0; border-top: 1px solid var(--line); }
+  .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: 700px; margin: 0 auto; padding: 0 28px; }
+</style>
+
+<nav class="topnav">
+  <div class="topnav-row">
+    <a class="brand" href="../index.html" target="_blank" rel="noopener">
+      <span class="mark"></span><span class="brand-word">PlateAI</span>
+    </a>
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a class="back" href="../index.html#blog" target="_blank" rel="noopener">← Back to Blog</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="post-tag">Guide</span>
+    <h1 class="title">Eating Out Without Blowing Your Macros</h1>
+    <div class="meta">
+      <span>PlateAI Team</span><span class="dot"></span><span>July 24, 2026</span><span class="dot"></span><span>6 min read</span>
+    </div>
+    <div class="hero-band" role="img" aria-label="Illustrative gradient banner"></div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+      <p class="lead">Restaurants are where most tracking attempts quietly fall apart — not because the food is worse, but because there's no nutrition label on the table. Here's how to order, estimate, and log a restaurant meal without either guessing wildly or skipping the log entirely.</p>
+
+      <h2>The order matters more than the tracking</h2>
+      <p>The biggest lever you have at a restaurant isn't your logging accuracy — it's what you order before any of that starts. A grilled protein with a starch and a vegetable side is close to home-cooked in macro terms. A dish described as "loaded," "crispy," or "smothered" usually means it's carrying calories in the preparation, not just the ingredients.</p>
+      <div class="pull">You don't need to eat differently at a restaurant. You need to order the version of the meal that isn't hiding calories in the cooking method.</div>
+
+      <h2>Four menu words worth reading twice</h2>
+      <div class="cue-list">
+        <div class="cue-item"><div class="n">01</div><div><b>"Crispy" or "battered"</b><span>Almost always fried or coated in a way that roughly doubles the fat content versus a grilled or roasted version of the same protein.</span></div></div>
+        <div class="cue-item"><div class="n">02</div><div><b>"Creamy" or "loaded"</b><span>Signals a dairy- or mayo-based sauce added on top — often 200-400 extra calories that don't show up in the dish's name.</span></div></div>
+        <div class="cue-item"><div class="n">03</div><div><b>"Dressed" or "tossed in"</b><span>A salad's calorie count usually lives in the dressing, not the vegetables. Asking for it on the side is one of the highest-leverage requests you can make.</span></div></div>
+        <div class="cue-item"><div class="n">04</div><div><b>"Family-style" or "sharing plate"</b><span>Portion sizes at restaurants routinely run 1.5-2x a standard serving — worth mentally splitting before you start eating, not after.</span></div></div>
+      </div>
+
+      <h2>You don't need the exact number — you need a defensible estimate</h2>
+      <p>Perfection isn't available when someone else cooked the meal. What's available is a reasonable estimate, logged consistently, which beats a perfect number logged occasionally. A few habits that get you close:</p>
+      <ul>
+        <li><strong>Log before you eat, not after.</strong> Committing to an estimate before the plate arrives keeps you from anchoring to how full you feel afterward, which has nothing to do with the actual calorie count.</li>
+        <li><strong>Round up on sauces and oil.</strong> Restaurant kitchens are far more generous with both than a home kitchen — when in doubt, assume more, not less.</li>
+        <li><strong>Use the closest match, not the exact dish.</strong> A dish that isn't in any database is still close enough to "grilled chicken, rice, vegetables" for tracking purposes.</li>
+      </ul>
+
+      <div class="inline-cta">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <div class="icon"></div>
+          <div>
+            <h4>This is exactly what a photo log is for</h4>
+            <p>No menu database required — point the camera at the plate in front of you and PlateAI estimates from what's actually there.</p>
+          </div>
+        </div>
+        <a class="btn" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">Try PlateAI free</a>
+      </div>
+
+      <h3>One meal doesn't undo a week</h3>
+      <p>The most common failure mode isn't a single big restaurant meal — it's the decision to stop logging entirely because that one meal felt "off plan." A dinner out that runs 400 calories over your target is a rounding error against a week; a week you stopped tracking because of it is not. Log it, move on, and let the next few days average it out.</p>
+
+      <div class="disclaimer">This article is general educational information, not medical or dietary advice.</div>
+    </div>
+  </div>
+</article>
+
+<div class="cta-banner">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-inner">
+    <div>
+      <h2>Eating out doesn't mean flying blind.</h2>
+      <p>Snap the plate. PlateAI handles the rest.</p>
+    </div>
+    <a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
+      <span class="lines"><small>Download on the</small><span>App Store</span></span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-row">
+    <span>PlateAI</span>
+    <span>&copy; 2026 Yevhen Basistyi. All rights reserved.</span>
+  </div>
+</footer>
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('plateai-theme', next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
