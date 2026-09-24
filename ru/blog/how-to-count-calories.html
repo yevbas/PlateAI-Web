@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<script>
+(function(){
+  try {
+    var stored = localStorage.getItem('plateai-theme');
+    var theme = stored || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Как считать калории: пошаговое руководство для начинающих | PlateAI</title>
+<meta content="Как считать калории для начинающих: поставьте цель, выберите метод записи, избегайте ошибок со скрытыми калориями и ведите учёт без кухонных весов. Шаг за шагом." name="description"/>
+<link href="../../assets/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../assets/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="PlateAI" property="og:site_name"/>
+<meta content="Как считать калории: пошаговое руководство для начинающих | PlateAI" property="og:title"/>
+<meta content="Как считать калории для начинающих: поставьте цель, выберите метод записи, избегайте ошибок со скрытыми калориями и ведите учёт без кухонных весов. Шаг за шагом." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/assets/icon.png" property="og:image"/>
+<meta content="2026-09-23" property="article:published_time"/>
+<meta content="summary" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Как считать калории: пошаговое руководство для начинающих", "description": "Как считать калории для начинающих: поставьте цель, выберите метод записи, избегайте ошибок со скрытыми калориями и ведите учёт без кухонных весов. Шаг за шагом.", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "author": {"@type": "Organization", "name": "PlateAI Team"}, "publisher": {"@type": "Organization", "name": "PlateAI", "logo": {"@type": "ImageObject", "url": "https://yevbas.github.io/PlateAI-Web/assets/icon.png"}}, "mainEntityOfPage": "https://yevbas.github.io/PlateAI-Web/ru/blog/how-to-count-calories.html", "image": "https://yevbas.github.io/PlateAI-Web/assets/icon.png", "inLanguage": "ru"}</script>
+<!-- i18n:head -->
+<link href="https://yevbas.github.io/PlateAI-Web/ru/blog/how-to-count-calories.html" rel="canonical"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/ru/blog/how-to-count-calories.html" property="og:url"/>
+<meta content="ru_RU" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="pl_PL" property="og:locale:alternate"/>
+<meta content="uk_UA" property="og:locale:alternate"/>
+<meta content="cs_CZ" property="og:locale:alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/blog/how-to-count-calories.html" hreflang="en" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/es/blog/how-to-count-calories.html" hreflang="es" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/de/blog/how-to-count-calories.html" hreflang="de" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/fr/blog/how-to-count-calories.html" hreflang="fr" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pt/blog/how-to-count-calories.html" hreflang="pt" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pl/blog/how-to-count-calories.html" hreflang="pl" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/uk/blog/how-to-count-calories.html" hreflang="uk" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/ru/blog/how-to-count-calories.html" hreflang="ru" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/cs/blog/how-to-count-calories.html" hreflang="cs" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/blog/how-to-count-calories.html" hreflang="x-default" rel="alternate"/>
+<style>.lang-picker{position:relative;flex-shrink:0}
+.lang-picker summary{list-style:none;cursor:pointer;height:38px;min-width:38px;padding:0 11px;border-radius:999px;border:1px solid var(--line-strong);background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:center;gap:6px;font:700 12.5px/1 -apple-system,system-ui,sans-serif;transition:border-color .25s ease,color .25s ease}
+.lang-picker summary::-webkit-details-marker{display:none}
+.lang-picker summary svg{width:17px;height:17px;flex-shrink:0}
+.lang-picker summary:hover,.lang-picker[open] summary{border-color:var(--flame);color:var(--flame)}
+.lang-picker ul{position:absolute;right:0;top:46px;margin:0;padding:6px;list-style:none;min-width:168px;max-height:70vh;overflow:auto;background:var(--paper);border:1px solid var(--line-strong);border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.16);z-index:60}
+.lang-picker li{margin:0}
+.lang-picker a{display:block;padding:9px 12px;border-radius:9px;color:var(--ink);font-weight:600;font-size:14px;white-space:nowrap}
+.lang-picker a:hover{background:var(--paper-soft)}
+.lang-picker a[aria-current="true"]{color:var(--flame)}
+@media (max-width:560px){.lang-picker summary{padding:0;width:38px}.lang-picker .lang-code{display:none}}</style>
+<!-- /i18n:head -->
+</head>
+<body>
+<style>
+  :root {
+    --ink: #17120E; --ink-soft: #4A4038; --muted: #8A8078;
+    --paper: #FFFFFF; --paper-soft: #F7F4F1;
+    --line: rgba(23,18,14,0.09); --line-strong: rgba(23,18,14,0.16);
+    --flame: #FF7A29; --gold: #FFB238; --periwinkle: #7AA3FF;
+    --cta-1: #4D7CFF; --cta-2: #9B5DE5; --cta-3: #F15BB5;
+    --font-display: ui-rounded, "SF Pro Rounded", "SFRounded", "Hiragino Maru Gothic ProN", -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  :root[data-theme="light"] { --ink:#17120E; --ink-soft:#4A4038; --muted:#8A8078; --paper:#FFFFFF; --paper-soft:#F7F4F1; --line:rgba(23,18,14,0.09); --line-strong:rgba(23,18,14,0.16); --flame:#FF7A29; --gold:#FFB238; --periwinkle:#7AA3FF; color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .eyebrow, .brand-word { font-family: var(--font-display); }
+  h1, h2, h3 { text-wrap: balance; }
+  a { color: var(--flame); text-decoration: none; }
+  a.plain:hover { text-decoration: underline; }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--line); }
+  .topnav-row { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--ink) !important; text-decoration: none !important; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, var(--flame), var(--gold)); flex-shrink: 0; }
+  .back { font-size: 13.5px; font-weight: 700; color: var(--muted) !important; white-space: nowrap; }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+    .topnav-row { gap: 8px; height: 58px; }
+    .brand span.brand-word { display: none; }
+    .brand .mark { width: 24px; height: 24px; }
+    .back { font-size: 11.5px; }
+    .theme-toggle { width: 32px; height: 32px; }
+    .theme-toggle svg { width: 15px; height: 15px; }
+  }
+  @media (max-width: 340px) {
+    .wrap { padding: 0 12px; }
+    .back { font-size: 10.5px; }
+  }
+
+  header.hero { padding: 28px 0 0; }
+  .post-tag {
+    display: inline-flex; padding: 6px 12px; border-radius: 999px;
+    background: color-mix(in srgb, var(--periwinkle) 20%, transparent);
+    color: #2C4FBD; font-size: 11.5px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: .04em; margin-bottom: 18px;
+  }
+  :root[data-theme="dark"] .post-tag { color: var(--periwinkle); }
+  @media (prefers-color-scheme: dark) { .post-tag { color: var(--periwinkle); } }
+  h1.title { font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
+  .meta { display: flex; gap: 14px; align-items: center; margin-top: 20px; font-size: 13.5px; color: var(--muted); font-weight: 600; }
+  .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+
+  .hero-band {
+    margin-top: 32px;
+    height: 220px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, var(--periwinkle), var(--cta-1));
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-band::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(420px 220px at 85% 15%, rgba(255,255,255,0.35), transparent 60%);
+  }
+
+  article { padding: 44px 0 0; }
+  .lead { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 8px; }
+
+  .prose h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 44px 0 16px; }
+  .prose h3 { font-size: 18.5px; font-weight: 700; margin: 30px 0 10px; }
+  .prose p { font-size: 16.5px; line-height: 1.8; color: var(--ink-soft); margin: 0 0 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 16.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 8px; }
+  .prose strong { color: var(--ink); }
+
+  .pull {
+    margin: 34px 0;
+    padding: 26px 28px;
+    border-left: 3px solid var(--periwinkle);
+    background: var(--paper-soft);
+    border-radius: 0 16px 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+  }
+
+  .ref-table { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 15px; }
+  .ref-table th, .ref-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  .ref-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 700; }
+  .ref-table td { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .ref-table td:first-child { color: var(--ink); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+
+  .food-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 8px 0 24px; }
+  @media (max-width: 520px) { .food-grid { grid-template-columns: 1fr; } }
+  .food-card { padding: 14px 16px; background: var(--paper-soft); border: 1px solid var(--line); border-radius: 12px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .food-card b { font-size: 14.5px; font-weight: 700; }
+  .food-card span { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .inline-cta {
+    margin: 40px 0;
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--paper-soft);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .inline-cta .icon { width: 44px; height: 44px; border-radius: 13px; background: linear-gradient(135deg, var(--periwinkle), var(--cta-1)); flex-shrink: 0; }
+  .inline-cta h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .inline-cta p { font-size: 14px; color: var(--muted); margin: 0; }
+  .inline-cta .btn {
+    padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; color: #fff;
+    background: linear-gradient(100deg, var(--cta-1), var(--cta-2) 55%, var(--cta-3));
+    flex-shrink: 0;
+  }
+
+  .disclaimer { margin-top: 40px; font-size: 13px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 20px; }
+
+  .cta-banner { position: relative; margin-top: 64px; padding: 64px 0; background: linear-gradient(115deg, #221912 0%, #3C2415 48%, #1B140F 100%); overflow: hidden; }
+  .cta-glow { position: absolute; inset: 0; background: radial-gradient(480px 300px at 12% 20%, rgba(255,178,56,0.25), transparent 70%), radial-gradient(420px 280px at 88% 85%, rgba(255,122,41,0.22), transparent 70%); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; color: #FBF3EC; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .cta-inner h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+  .cta-inner p { margin-top: 8px; color: #D8C7BA; font-size: 15px; }
+  .store-badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 14px; background: #FBF3EC; color: #1B140F; font-weight: 700; }
+  .store-badge svg { width: 24px; height: 24px; }
+  .store-badge .lines { display: flex; flex-direction: column; line-height: 1.15; }
+  .store-badge .lines small { font-size: 10.5px; font-weight: 600; color: #6b6259; text-transform: uppercase; letter-spacing: .04em; }
+  .store-badge .lines span { font-size: 15.5px; }
+
+  footer { padding: 32px 0; border-top: 1px solid var(--line); }
+  .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .theme-toggle {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    flex-shrink: 0;
+    transition: transform .25s cubic-bezier(.22,1,.36,1), border-color .25s ease, color .25s ease;
+  }
+  .theme-toggle:hover { transform: translateY(-2px); border-color: var(--flame); color: var(--flame); }
+  .theme-toggle:active { transform: translateY(0) scale(0.92); }
+  .theme-toggle svg { width: 17px; height: 17px; }
+  .theme-toggle .icon-sun, .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: dark) { .theme-toggle .icon-sun { display: block; } }
+  @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) { .theme-toggle .icon-moon { display: block; } }
+  :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+</style>
+<nav class="topnav">
+<div class="topnav-row">
+<a class="brand" href="../index.html" rel="noopener" target="_blank">
+<span class="mark"></span><span class="brand-word">PlateAI</span>
+</a>
+<!-- i18n:picker -->
+<details class="lang-picker"><summary aria-label="Язык"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="lang-code" translate="no">RU</span></summary><ul><li><a href="../../blog/how-to-count-calories.html" hreflang="en" lang="en" translate="no">English</a></li><li><a href="../../es/blog/how-to-count-calories.html" hreflang="es" lang="es" translate="no">Español</a></li><li><a href="../../de/blog/how-to-count-calories.html" hreflang="de" lang="de" translate="no">Deutsch</a></li><li><a href="../../fr/blog/how-to-count-calories.html" hreflang="fr" lang="fr" translate="no">Français</a></li><li><a href="../../pt/blog/how-to-count-calories.html" hreflang="pt" lang="pt" translate="no">Português</a></li><li><a href="../../pl/blog/how-to-count-calories.html" hreflang="pl" lang="pl" translate="no">Polski</a></li><li><a href="../../uk/blog/how-to-count-calories.html" hreflang="uk" lang="uk" translate="no">Українська</a></li><li><a aria-current="true" href="how-to-count-calories.html" hreflang="ru" lang="ru" translate="no">Русский</a></li><li><a href="../../cs/blog/how-to-count-calories.html" hreflang="cs" lang="cs" translate="no">Čeština</a></li></ul></details><script>(function(){var d=document.currentScript.previousElementSibling;if(!d)return;d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){try{a.href=a.getAttribute('href').split('#')[0]+location.hash;}catch(e){}});});d.addEventListener('toggle',function(){var u=d.querySelector('ul');u.style.left='';u.style.right='';if(d.open&&u.getBoundingClientRect().left<8){u.style.left='0';u.style.right='auto';}});document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});})();</script>
+<!-- /i18n:picker -->
+<button aria-label="Переключить цветовую тему" class="theme-toggle" id="themeToggle" type="button">
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<a class="back" href="../index.html#blog" rel="noopener" target="_blank">← Назад в блог</a>
+</div>
+</nav>
+<header class="hero">
+<div class="wrap">
+<span class="post-tag">Руководство</span>
+<h1 class="title">Как считать калории: пошаговое руководство для начинающих</h1>
+<div class="meta">
+<span>Команда PlateAI</span><span class="dot"></span><span>23 сентября 2026</span><span class="dot"></span><span>8 мин чтения</span>
+</div>
+<div aria-label="Иллюстративный баннер с градиентом" class="hero-band" role="img"></div>
+</div>
+</header>
+<article>
+<div class="wrap">
+<div class="prose">
+<p class="lead">Подсчёт калорий — один из самых надёжных способов похудеть, набрать мышцы или просто понять, что вы едите, — и одна из вещей, которые легче всего бросить в первую неделю. Почти всегда потому, что метод был слишком хлопотным, а не потому, что вы сделали что-то не так. Вот удобная для начинающих система, которая занимает минуты в день.</p>
+<h2>Что на самом деле означает считать калории</h2>
+<p>Калория — единица энергии. Еда даёт вам калории; тело тратит их на всё — от дыхания до бега. Если вы едите примерно столько, сколько тратите, вес держится. Если стабильно меньше — он имеет тенденцию падать; если больше — расти. Подсчёт калорий — это просто <strong>ведение текущего учёта того, что поступает</strong>, чтобы сравнивать это с целью.</p>
+<p>Вот и вся идея. Всё ниже — о том, как делать это с минимальным трением, — ведь план, которого вы действительно придерживаетесь, лучше идеального, который вы бросаете через десять дней.</p>
+<h2>Шаг 1: Задайте суточную калорийную цель</h2>
+<p>Вам нужно число, <em>относительно</em> которого считать. Начните с оценки калорий поддержания (ваш общий суточный расход энергии, TDEE) с помощью онлайн-калькулятора или формулы Миффлина — Сан-Жеора, а затем скорректируйте под свою цель:</p>
+<ul>
+<li><strong>Похудеть:</strong> ешьте примерно на 300–500 калорий ниже поддержания.</li>
+<li><strong>Поддерживать:</strong> ешьте на уровне поддержания.</li>
+<li><strong>Набрать мышцы:</strong> ешьте примерно на 200–300 калорий выше поддержания.</li>
+</ul>
+<p>Пример: если ваше оценённое поддержание — 2200 ккал и вы хотите стабильно худеть, стартовая цель около 1800 ккал разумна. Воспринимайте её как первый черновик, а не приговор — как уточнить её реальными данными, мы рассказываем в руководстве <a href="calorie-deficit.html">сколько калорий есть, чтобы похудеть</a>.</p>
+<h2>Шаг 2: Выберите, как будете записывать еду</h2>
+<p>Есть три распространённых метода. Ни один не «правильный» — они меняют точность на усилия, а усилия решают, будете ли вы ещё записывать на втором месяце.</p>
+<div class="table-wrap">
+<table class="ref-table">
+<thead><tr><th>Метод</th><th>Точность</th><th>Усилия</th><th>Лучше всего для</th></tr></thead>
+<tbody>
+<tr><td>Кухонные весы + база данных</td><td>Самая высокая</td><td>Высокие</td><td>Коротких точных периодов</td></tr>
+<tr><td>Приложение с поиском / штрихкодом</td><td>Хорошая (зависит от записей)</td><td>Средние</td><td>Фасованных продуктов, домашней кухни</td></tr>
+<tr><td>Учёт по фото</td><td>Хорошая для типичных блюд</td><td>Самые низкие</td><td>Повседневного использования, еды вне дома</td></tr>
+</tbody>
+</table>
+</div>
+<p>Кухонные весы незаменимы, чтобы научиться понимать, как выглядит настоящая порция, и их стоит использовать неделю-две, даже если потом вы их бросите. В повседневной жизни большинству лучше всего подходит метод с наименьшим трением, которого они действительно придерживаются. Вот идея учёта по фото: вы фотографируете тарелку, и калории с макросами возвращаются за секунды. (Если любопытно, что фото может и чего не может сказать, смотрите <a href="reading-a-photo.html">как оценить калории по фото еды</a>.)</p>
+<div class="inline-cta">
+<div style="display:flex; align-items:center; gap:16px;">
+<div class="icon"></div>
+<div>
+<h4>Пропустите ручной ввод</h4>
+<p>Наведите камеру PlateAI на блюдо и получите калории, белки, углеводы и жиры за секунды — без поиска, без набора.</p>
+</div>
+</div>
+<a class="btn" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">Попробовать PlateAI бесплатно</a>
+</div>
+<h2>Шаг 3: Записывайте во время еды, а не вечером</h2>
+<p>Самое большое повышение точности — это время. Записать блюдо через минуту-две после еды занимает секунды; восстановление целого дня по памяти в 22:00 означает, что вы забудете горсть орехов, второй кофе с молоком и каплю масла на сковороде. Эти мелкие пропуски складываются в сотни калорий в день.</p>
+<h2>Шаг 4: Знайте числа за числами</h2>
+<p>Калории поступают из трёх макронутриентов (плюс алкоголь), и каждый несёт разное количество энергии на грамм:</p>
+<div class="table-wrap">
+<table class="ref-table">
+<thead><tr><th>Нутриент</th><th>Калорий на грамм</th></tr></thead>
+<tbody>
+<tr><td>Белок</td><td>4</td></tr>
+<tr><td>Углеводы</td><td>4</td></tr>
+<tr><td>Жир</td><td>9</td></tr>
+<tr><td>Алкоголь</td><td>7</td></tr>
+</tbody>
+</table>
+</div>
+<p>Вот почему жирная еда так калорийна: грамм жира несёт более чем вдвое больше энергии, чем грамм белка или углеводов. Когда вы освоитесь с калориями, белок — первый макронутриент, который стоит отслеживать, — он помогает сохранить мышцы в дефиците и держит сытость. Наше руководство о том, <a href="protein-needs.html">сколько белка вам нужно в день</a>, содержит диапазоны по массе тела, а <a href="how-to-calculate-macros.html">как рассчитать макросы для похудения</a> показывает, как разделить остаток между углеводами и жирами.</p>
+<h2>Где прячутся калории (и где обжигаются начинающие)</h2>
+<p>Большая часть недоучёта — не в основном блюде, а в добавках. Вот обычные подозреваемые с приблизительными числами:</p>
+<div class="food-grid">
+<div class="food-card"><b>Оливковое масло, 1 ст. ложка</b><span>~120 ккал</span></div>
+<div class="food-card"><b>Арахисовая паста, 2 ст. ложки</b><span>~190 ккал</span></div>
+<div class="food-card"><b>Латте на цельном молоке, 500 мл</b><span>~190 ккал</span></div>
+<div class="food-card"><b>Горсть миндаля, 30 г</b><span>~175 ккал</span></div>
+<div class="food-card"><b>Соус ранч, 2 ст. ложки</b><span>~130 ккал</span></div>
+<div class="food-card"><b>Бокал вина, 150 мл</b><span>~125 ккал</span></div>
+</div>
+<p>То же относится к продуктам с ореолом здоровья — гранола, смузи и тост с авокадо могут тихо перевесить обычное блюдо. Почему, мы объясняем в <a href="healthy-doesnt-mean-low-calorie.html">полезные продукты, в которых на удивление много калорий</a>.</p>
+<h2>Пять ошибок начинающих, которых стоит избегать</h2>
+<ul>
+<li><strong>Путаница между сырым и готовым весом.</strong> 100 г сырой куриной грудки — примерно 120 ккал; 100 г готовой — примерно 165, потому что вода испаряется. Записывайте по состоянию, на котором основана запись.</li>
+<li><strong>Пропуск масла для жарки, соусов и напитков.</strong> Их легко забыть, и они калорийны.</li>
+<li><strong>Всё или ничего.</strong> Один незаписанный приём пищи не разрушает неделю. Запишите приблизительную оценку и двигайтесь дальше, а не бросайте день.</li>
+<li><strong>Слишком агрессивный дефицит.</strong> Большие сокращения трудно удержать. Выигрывает умеренный дефицит, который вы выдержите месяцами.</li>
+<li><strong>Оценка прогресса по весу одного дня.</strong> Ежедневный вес — это в основном вода и шум. Читайте тренд за недели — смотрите <a href="weight-tracking.html">как часто стоит взвешиваться</a>.</li>
+</ul>
+<h2>А как насчёт ресторанов и еды навынос?</h2>
+<p>Вам не нужно идеальное число, только обоснованная оценка. Запишите ближайшее совпадение, добавьте масло или соус, которые видите, и двигайтесь дальше. Для полной системы прочитайте наше руководство по <a href="eating-out.html">учёту калорий, когда ешь вне дома</a>.</p>
+<h2>Частые вопросы</h2>
+<h3>Насколько точным нужно быть?</h3>
+<p>Последовательность важнее точности. Держаться в пределах 10% большинство дней достаточно для результатов, а ошибки, как правило, взаимно компенсируются за неделю. Точность значит гораздо меньше, чем регулярная запись.</p>
+<h3>Можно ли считать калории без кухонных весов?</h3>
+<p>Да. Весы помогают научиться размерам порций, но вы можете записывать по сканированию штрихкодов, стандартным порциям или фото. Многие пользуются весами пару недель, чтобы откалибровать глаз, а потом полагаются на оценки.</p>
+<h3>Как долго стоит считать калории?</h3>
+<p>Многие ведут учёт несколько месяцев, пока не почувствуют порции и калорийные продукты, а потом лишь изредка проверяют. Это навык, который вы развиваете, а не пожизненный приговор.</p>
+<h3>Сколько калорий должен есть начинающий?</h3>
+<p>Зависит от возраста, пола, роста, веса и активности. Большинство взрослых попадает примерно между 1500 и 2500 ккал в день; используйте оценку TDEE как стартовую точку и уточните её после двух–трёх недель последовательной записи.</p>
+<h3>Работает ли подсчёт калорий для похудения?</h3>
+<p>Изменение веса в конечном счёте сводится к энергетическому балансу, а учёт потребления — один из самых прямых способов им управлять. Те, кто записывает последовательно, как правило, достигают лучших результатов, чем те, кто оценивает по памяти. Лучше всего работает в сочетании с достаточным белком и умеренным, устойчивым дефицитом.</p>
+<h2>Коротко</h2>
+<ol>
+<li>Оцените калории поддержания и задайте цель на 300–500 ккал ниже для похудения.</li>
+<li>Выберите метод записи, которым вы действительно будете продолжать пользоваться.</li>
+<li>Записывайте во время еды, включая масла, соусы и напитки.</li>
+<li>Следите за белком, когда калории станут лёгкими.</li>
+<li>Оценивайте прогресс по недельному тренду и корректируйте раз в две–три недели.</li>
+</ol>
+<div class="disclaimer">Эта статья — общая образовательная информация, а не медицинский или диетический совет. Потребность в калориях индивидуальна; если у вас есть заболевание, вы беременны или у вас была история расстройств пищевого поведения, проконсультируйтесь с квалифицированным медицинским работником или диетологом, прежде чем ограничивать калории.</div>
+</div>
+</div>
+</article>
+<div class="cta-banner">
+<div aria-hidden="true" class="cta-glow"></div>
+<div class="cta-inner">
+<div>
+<h2>Начните считать без хлопот.</h2>
+<p>Сделайте фото — PlateAI запишет калории и макросы за вас.</p>
+</div>
+<a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+<span class="lines"><small>Загрузите в</small><span>App Store</span></span>
+</a>
+</div>
+</div>
+<footer>
+<div class="foot-row">
+<span>PlateAI</span>
+<span>© 2026 Yevhen Basistyi. Все права защищены.</span>
+</div>
+</footer>
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('plateai-theme', next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>

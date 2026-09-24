@@ -38,7 +38,7 @@ then open `http://localhost:8000`.
 
 ## Translations
 
-Only the English pages (`index.html`, `blog/*.html`) are edited by hand. The language folders (`es/`, `de/`, `fr/`, `pt/`, `pl/`) are **generated** — don't edit them.
+Only the English pages (`index.html`, `blog/*.html`) are edited by hand. The language folders (`es/`, `de/`, `fr/`, `pt/`, `pl/`, `uk/`, `ru/`, `cs/`) are **generated** — don't edit them.
 
 ```
 tools/build_i18n.py    build script (needs: pip install beautifulsoup4)

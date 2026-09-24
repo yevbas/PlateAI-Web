@@ -37,6 +37,8 @@ LANGS = {
     'it': ('Italiano', 'it_IT'),
     'pl': ('Polski', 'pl_PL'),
     'uk': ('Українська', 'uk_UA'),
+    'ru': ('Русский', 'ru_RU'),
+    'cs': ('Čeština', 'cs_CZ'),
 }
 DEFAULT = 'en'
 
