@@ -34,4 +34,25 @@ then open `http://localhost:8000`.
 
 - Swap the placeholder App Store links (`href="#"` search — there shouldn't be any left, but double check) for your live listing once published: `https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240` is already wired in throughout.
 - `support@` / privacy contact emails are already set to the real addresses provided (`plateaibusiness0@gmail.com`, `yevhen.basistyi@gmail.com`).
-- New blog posts: copy an existing file under `blog/`, edit the content, then add a card linking to it from the Blog tab in `index.html`.
+- New blog posts: copy an existing file under `blog/`, edit the content, add a card linking to it from the Blog tab in `index.html`, then run `python3 tools/build_i18n.py` (see below).
+
+## Translations
+
+Only the English pages (`index.html`, `blog/*.html`) are edited by hand. The language folders (`es/`, `de/`, `fr/`, `pt/`, `pl/`) are **generated** — don't edit them.
+
+```
+tools/build_i18n.py    build script (needs: pip install beautifulsoup4)
+i18n/source.json       every English text segment, keyed by id (generated)
+i18n/<lang>.json       {id: translation} per language
+```
+
+`python3 tools/build_i18n.py` writes the language folders, the nav language picker, `hreflang`/canonical tags, and `sitemap.xml`. A language is only published when it has a translation for every segment.
+
+After adding or editing English text:
+
+1. Run `python3 tools/build_i18n.py` — it lists how many segments each language is missing.
+2. `python3 tools/build_i18n.py --todo de` writes `i18n/todo.de.json` (id → English for missing segments).
+3. Add those ids with translations to `i18n/de.json` (or `i18n/de.part2.json`; run `--merge` to fold chunks in). Keep HTML tags and `href`s identical — the build rejects mismatches.
+4. Rebuild and commit the generated folders.
+
+To add a language, add it to `LANGS` in the script and create `i18n/<code>.json`.

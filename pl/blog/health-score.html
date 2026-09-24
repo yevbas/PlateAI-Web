@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pl">
 <head>
 <script>
 (function(){
@@ -10,37 +11,37 @@
   } catch (e) {}
 })();
 </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What Is a Food Health Score? How It&#x27;s Calculated | PlateAI</title>
-<meta name="description" content="Why two meals with identical calories can score very differently: how a food health score weighs macro balance, nutrient density, and portion signals.">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
-<meta property="og:site_name" content="PlateAI">
-<meta property="og:title" content="What Is a Food Health Score? How It&#x27;s Calculated | PlateAI">
-<meta property="og:description" content="Why two meals with identical calories can score very differently: how a food health score weighs macro balance, nutrient density, and portion signals.">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://yevbas.github.io/PlateAI-Web/assets/icon.png">
-<meta property="article:published_time" content="2026-06-26">
-<meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "What Is a Food Health Score — and What Does It Actually Measure?", "description": "Why two meals with identical calories can score very differently: how a food health score weighs macro balance, nutrient density, and portion signals.", "datePublished": "2026-06-26", "dateModified": "2026-06-26", "author": {"@type": "Organization", "name": "PlateAI Team"}, "publisher": {"@type": "Organization", "name": "PlateAI", "logo": {"@type": "ImageObject", "url": "https://yevbas.github.io/PlateAI-Web/assets/icon.png"}}, "mainEntityOfPage": "https://yevbas.github.io/PlateAI-Web/blog/health-score.html", "image": "https://yevbas.github.io/PlateAI-Web/assets/icon.png"}</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Czym jest ocena zdrowotna żywności? Jak się ją liczy | PlateAI</title>
+<meta content="Dlaczego dwa posiłki o identycznych kaloriach mogą dostać bardzo różne oceny: jak ocena zdrowotna waży równowagę makro, gęstość odżywczą i sygnały porcji." name="description"/>
+<link href="../../assets/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../assets/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="PlateAI" property="og:site_name"/>
+<meta content="Czym jest ocena zdrowotna żywności? Jak się ją liczy | PlateAI" property="og:title"/>
+<meta content="Dlaczego dwa posiłki o identycznych kaloriach mogą dostać bardzo różne oceny: jak ocena zdrowotna waży równowagę makro, gęstość odżywczą i sygnały porcji." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/assets/icon.png" property="og:image"/>
+<meta content="2026-06-26" property="article:published_time"/>
+<meta content="summary" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Czym jest ocena zdrowotna żywności — i co naprawdę mierzy?", "description": "Dlaczego dwa posiłki o identycznych kaloriach mogą dostać bardzo różne oceny: jak ocena zdrowotna waży równowagę makro, gęstość odżywczą i sygnały porcji.", "datePublished": "2026-06-26", "dateModified": "2026-06-26", "author": {"@type": "Organization", "name": "PlateAI Team"}, "publisher": {"@type": "Organization", "name": "PlateAI", "logo": {"@type": "ImageObject", "url": "https://yevbas.github.io/PlateAI-Web/assets/icon.png"}}, "mainEntityOfPage": "https://yevbas.github.io/PlateAI-Web/pl/blog/health-score.html", "image": "https://yevbas.github.io/PlateAI-Web/assets/icon.png", "inLanguage": "pl"}</script>
 <!-- i18n:head -->
-<link rel="canonical" href="https://yevbas.github.io/PlateAI-Web/blog/health-score.html">
-<meta property="og:url" content="https://yevbas.github.io/PlateAI-Web/blog/health-score.html">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="es_ES">
-<meta property="og:locale:alternate" content="de_DE">
-<meta property="og:locale:alternate" content="fr_FR">
-<meta property="og:locale:alternate" content="pt_BR">
-<meta property="og:locale:alternate" content="pl_PL">
-<link rel="alternate" hreflang="en" href="https://yevbas.github.io/PlateAI-Web/blog/health-score.html">
-<link rel="alternate" hreflang="es" href="https://yevbas.github.io/PlateAI-Web/es/blog/health-score.html">
-<link rel="alternate" hreflang="de" href="https://yevbas.github.io/PlateAI-Web/de/blog/health-score.html">
-<link rel="alternate" hreflang="fr" href="https://yevbas.github.io/PlateAI-Web/fr/blog/health-score.html">
-<link rel="alternate" hreflang="pt" href="https://yevbas.github.io/PlateAI-Web/pt/blog/health-score.html">
-<link rel="alternate" hreflang="pl" href="https://yevbas.github.io/PlateAI-Web/pl/blog/health-score.html">
-<link rel="alternate" hreflang="x-default" href="https://yevbas.github.io/PlateAI-Web/blog/health-score.html">
+<link href="https://yevbas.github.io/PlateAI-Web/pl/blog/health-score.html" rel="canonical"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/pl/blog/health-score.html" property="og:url"/>
+<meta content="pl_PL" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/blog/health-score.html" hreflang="en" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/es/blog/health-score.html" hreflang="es" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/de/blog/health-score.html" hreflang="de" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/fr/blog/health-score.html" hreflang="fr" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pt/blog/health-score.html" hreflang="pt" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pl/blog/health-score.html" hreflang="pl" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/blog/health-score.html" hreflang="x-default" rel="alternate"/>
 <style>.lang-picker{position:relative;flex-shrink:0}
 .lang-picker summary{list-style:none;cursor:pointer;height:38px;min-width:38px;padding:0 11px;border-radius:999px;border:1px solid var(--line-strong);background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:center;gap:6px;font:700 12.5px/1 -apple-system,system-ui,sans-serif;transition:border-color .25s ease,color .25s ease}
 .lang-picker summary::-webkit-details-marker{display:none}
@@ -214,102 +215,89 @@
   :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
   :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 </style>
-
 <nav class="topnav">
-  <div class="topnav-row">
-    <a class="brand" href="../index.html" target="_blank" rel="noopener">
-      <span class="mark"></span><span class="brand-word">PlateAI</span>
-    </a>
-    <!-- i18n:picker -->
-<details class="lang-picker"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span class="lang-code" translate="no">EN</span></summary><ul><li><a href="health-score.html" hreflang="en" lang="en" translate="no" aria-current="true">English</a></li><li><a href="../es/blog/health-score.html" hreflang="es" lang="es" translate="no">Español</a></li><li><a href="../de/blog/health-score.html" hreflang="de" lang="de" translate="no">Deutsch</a></li><li><a href="../fr/blog/health-score.html" hreflang="fr" lang="fr" translate="no">Français</a></li><li><a href="../pt/blog/health-score.html" hreflang="pt" lang="pt" translate="no">Português</a></li><li><a href="../pl/blog/health-score.html" hreflang="pl" lang="pl" translate="no">Polski</a></li></ul></details><script>(function(){var d=document.currentScript.previousElementSibling;if(!d)return;d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){try{a.href=a.getAttribute('href').split('#')[0]+location.hash;}catch(e){}});});d.addEventListener('toggle',function(){var u=d.querySelector('ul');u.style.left='';u.style.right='';if(d.open&&u.getBoundingClientRect().left<8){u.style.left='0';u.style.right='auto';}});document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});})();</script>
+<div class="topnav-row">
+<a class="brand" href="../index.html" rel="noopener" target="_blank">
+<span class="mark"></span><span class="brand-word">PlateAI</span>
+</a>
+<!-- i18n:picker -->
+<details class="lang-picker"><summary aria-label="Język"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="lang-code" translate="no">PL</span></summary><ul><li><a href="../../blog/health-score.html" hreflang="en" lang="en" translate="no">English</a></li><li><a href="../../es/blog/health-score.html" hreflang="es" lang="es" translate="no">Español</a></li><li><a href="../../de/blog/health-score.html" hreflang="de" lang="de" translate="no">Deutsch</a></li><li><a href="../../fr/blog/health-score.html" hreflang="fr" lang="fr" translate="no">Français</a></li><li><a href="../../pt/blog/health-score.html" hreflang="pt" lang="pt" translate="no">Português</a></li><li><a aria-current="true" href="health-score.html" hreflang="pl" lang="pl" translate="no">Polski</a></li></ul></details><script>(function(){var d=document.currentScript.previousElementSibling;if(!d)return;d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){try{a.href=a.getAttribute('href').split('#')[0]+location.hash;}catch(e){}});});d.addEventListener('toggle',function(){var u=d.querySelector('ul');u.style.left='';u.style.right='';if(d.open&&u.getBoundingClientRect().left<8){u.style.left='0';u.style.right='auto';}});document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});})();</script>
 <!-- /i18n:picker -->
-<button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
-    <a class="back" href="../index.html#blog" target="_blank" rel="noopener">← Back to Blog</a>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <span class="post-tag">Behind the scenes</span>
-    <h1 class="title">What Is a Food Health Score — and What Does It Actually Measure?</h1>
-    <div class="meta">
-      <span>PlateAI Team</span><span class="dot"></span><span>June 26, 2026</span><span class="dot"></span><span>3 min read</span>
-    </div>
-    <div class="hero-band" role="img" aria-label="Illustrative gradient banner"></div>
-  </div>
-</header>
-
-<article>
-  <div class="wrap">
-    <div class="prose">
-      <p class="lead">Two meals can have identical calories and completely different health scores — which confuses people the first time they see it. That gap is the entire point. Calories tell you about energy; they don't tell you much about what a meal is actually made of.</p>
-
-      <h2>It's not a calorie count wearing a different label</h2>
-      <p>A 500-calorie plate of grilled salmon, greens, and quinoa is not nutritionally interchangeable with a 500-calorie serving of fries and a soda, even though your calorie total for the day would look identical either way. The health score exists to surface that difference — a single number that reflects the quality of a meal, not just its energy content.</p>
-
-      <div class="pull">Calories answer "how much energy." The health score answers "how well does this meal serve the rest of your body."</div>
-
-      <h2>What actually goes into the number</h2>
-      <p>The score blends several signals from the same analysis that generates your macros, weighted toward what the evidence on diet quality consistently points to:</p>
-
-      <div class="factor-list">
-        <div class="factor-item">
-          <div class="pct">Macros</div>
-          <div><b>Balance across protein, carbs, and fat</b><span>A plate isn't scored on being "low-carb" or "low-fat" in isolation — it's scored on whether the macro mix is reasonably balanced for a single meal, rather than dominated by one macro at the expense of the others.</span></div>
-        </div>
-        <div class="factor-item">
-          <div class="pct">Nutrients</div>
-          <div><b>Density of fiber, vitamins, and minerals</b><span>Two meals with the same calories can differ enormously in fiber and micronutrient content. Whole, minimally processed ingredients tend to score higher here than refined or heavily processed ones.</span></div>
-        </div>
-        <div class="factor-item">
-          <div class="pct">Portion</div>
-          <div><b>Signals from the photo itself</b><span>Plate coverage and apparent portion size feed into the estimate — a reasonable serving reads differently than one that visibly overshoots a typical meal.</span></div>
-        </div>
-      </div>
-
-      <h2>Why it's a relative signal, not a grade</h2>
-      <p>The most useful way to read the health score is comparatively — across your own meals, over time — rather than as a pass/fail grade on any single plate. A 6 today and an 8 tomorrow tells you something real about the shift in what you ate. A 6 in isolation doesn't mean you did something wrong; the occasional lower-scoring meal is normal and expected. It's the pattern across a week that's worth paying attention to, the same way the weight trend line matters more than any single day.</p>
-
-      <div class="inline-cta">
-        <div style="display:flex; align-items:center; gap:16px;">
-          <div class="icon"></div>
-          <div>
-            <h4>The score arrives after your macros, not instead of them</h4>
-            <p>It's stage three of PlateAI's analysis — core macros land first, the health score follows once the fuller nutrient picture is in.</p>
-          </div>
-        </div>
-        <a class="btn" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">Try PlateAI free</a>
-      </div>
-
-      <p>None of this replaces judgment — a score is a compressed signal, not a verdict. But when you're deciding between two lunch options and the calories look about the same, it's the fastest way to see which one is actually doing more for you.</p>
-
-      <div class="disclaimer">The health score is a general wellness indicator generated from photo analysis and is not a substitute for professional dietary or medical advice.</div>
-    </div>
-  </div>
-</article>
-
-<div class="cta-banner">
-  <div class="cta-glow" aria-hidden="true"></div>
-  <div class="cta-inner">
-    <div>
-      <h2>See past the calorie count.</h2>
-      <p>Every logged plate gets a health score, automatically.</p>
-    </div>
-    <a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
-      <span class="lines"><small>Download on the</small><span>App Store</span></span>
-    </a>
-  </div>
+<button aria-label="Zmień motyw kolorystyczny" class="theme-toggle" id="themeToggle" type="button">
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<a class="back" href="../index.html#blog" rel="noopener" target="_blank">← Powrót do bloga</a>
 </div>
-
+</nav>
+<header class="hero">
+<div class="wrap">
+<span class="post-tag">Za kulisami</span>
+<h1 class="title">Czym jest ocena zdrowotna żywności — i co naprawdę mierzy?</h1>
+<div class="meta">
+<span>Zespół PlateAI</span><span class="dot"></span><span>26 czerwca 2026</span><span class="dot"></span><span>3 min czytania</span>
+</div>
+<div aria-label="Ilustracyjny baner z gradientem" class="hero-band" role="img"></div>
+</div>
+</header>
+<article>
+<div class="wrap">
+<div class="prose">
+<p class="lead">Dwa posiłki mogą mieć identyczne kalorie i zupełnie różne oceny zdrowotne — co za pierwszym razem dziwi ludzi. Ta różnica jest właśnie sednem. Kalorie mówią o energii; niewiele mówią o tym, z czego posiłek faktycznie się składa.</p>
+<h2>To nie jest liczba kalorii pod inną etykietą</h2>
+<p>Talerz 500 kalorii z grillowanego łososia, zieleniny i komosy ryżowej nie jest odżywczo zamienny z porcją 500 kalorii frytek i napoju gazowanego, nawet jeśli Twoja dzienna suma kalorii wyglądałaby w obu przypadkach tak samo. Ocena zdrowotna istnieje, by uwidocznić tę różnicę — jedna liczba, która odzwierciedla jakość posiłku, a nie tylko jego zawartość energii.</p>
+<div class="pull">Kalorie odpowiadają na pytanie „ile energii”. Ocena zdrowotna odpowiada: „jak dobrze ten posiłek służy reszcie Twojego ciała”.</div>
+<h2>Co faktycznie wchodzi do tej liczby</h2>
+<p>Ocena łączy kilka sygnałów z tej samej analizy, która generuje Twoje makro, ważonych zgodnie z tym, na co konsekwentnie wskazują badania nad jakością diety:</p>
+<div class="factor-list">
+<div class="factor-item">
+<div class="pct">Makro</div>
+<div><b>Równowaga między białkiem, węglowodanami i tłuszczem</b><span>Talerz nie jest oceniany za bycie „low-carb” czy „low-fat” w izolacji — tylko za to, czy mieszanka makro jest rozsądnie zrównoważona jak na pojedynczy posiłek, zamiast zdominowana przez jeden składnik kosztem pozostałych.</span></div>
+</div>
+<div class="factor-item">
+<div class="pct">Składniki odżywcze</div>
+<div><b>Gęstość błonnika, witamin i minerałów</b><span>Dwa posiłki o tych samych kaloriach mogą się ogromnie różnić zawartością błonnika i mikroskładników. Pełne, mało przetworzone składniki zwykle dostają tu wyższą ocenę niż rafinowane lub mocno przetworzone.</span></div>
+</div>
+<div class="factor-item">
+<div class="pct">Porcja</div>
+<div><b>Sygnały ze samego zdjęcia</b><span>Wypełnienie talerza i pozorna wielkość porcji wchodzą do szacunku — rozsądna porcja jest odczytywana inaczej niż taka, która wyraźnie przekracza typowy posiłek.</span></div>
+</div>
+</div>
+<h2>Dlaczego to sygnał względny, a nie ocena</h2>
+<p>Najbardziej użyteczny sposób czytania oceny zdrowotnej jest porównawczy — między własnymi posiłkami, w czasie — a nie jako zaliczenie lub oblanie pojedynczego talerza. 6 dzisiaj i 8 jutro mówi coś realnego o zmianie w tym, co jadłeś. Samotne 6 nie oznacza, że zrobiłeś coś źle; od czasu do czasu niżej oceniony posiłek jest normalny i oczekiwany. Uwagi wymaga wzorzec w skali tygodnia, podobnie jak linia trendu wagi liczy się bardziej niż pojedynczy dzień.</p>
+<div class="inline-cta">
+<div style="display:flex; align-items:center; gap:16px;">
+<div class="icon"></div>
+<div>
+<h4>Ocena przychodzi po makro, nie zamiast nich</h4>
+<p>To trzeci etap analizy PlateAI — najpierw docierają podstawowe makro, a ocena zdrowotna podąża za nimi, gdy pełny obraz składników jest gotowy.</p>
+</div>
+</div>
+<a class="btn" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">Wypróbuj PlateAI za darmo</a>
+</div>
+<p>Nic z tego nie zastępuje osądu — ocena to skompresowany sygnał, nie wyrok. Ale gdy wybierasz między dwoma opcjami na lunch, a kalorie wyglądają podobnie, to najszybszy sposób, by zobaczyć, która naprawdę robi dla Ciebie więcej.</p>
+<div class="disclaimer">Ocena zdrowotna to ogólny wskaźnik dobrostanu generowany z analizy zdjęć i nie zastępuje profesjonalnej porady dietetycznej ani medycznej.</div>
+</div>
+</div>
+</article>
+<div class="cta-banner">
+<div aria-hidden="true" class="cta-glow"></div>
+<div class="cta-inner">
+<div>
+<h2>Spójrz poza liczbę kalorii.</h2>
+<p>Każdy zapisany talerz automatycznie dostaje ocenę zdrowotną.</p>
+</div>
+<a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+<span class="lines"><small>Pobierz z</small><span>App Store</span></span>
+</a>
+</div>
+</div>
 <footer>
-  <div class="foot-row">
-    <span>PlateAI</span>
-    <span>&copy; 2026 Yevhen Basistyi. All rights reserved.</span>
-  </div>
+<div class="foot-row">
+<span>PlateAI</span>
+<span>© 2026 Yevhen Basistyi. Wszelkie prawa zastrzeżone.</span>
+</div>
 </footer>
 <script>
 (function(){

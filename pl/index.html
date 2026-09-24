@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pl">
 <head>
 <script>
 (function(){
@@ -10,33 +11,33 @@
   } catch (e) {}
 })();
 </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PlateAI — Point, Shoot, Know</title>
-<meta name="description" content="PlateAI — point your camera at a plate and get calories, protein, carbs, and fat back in seconds. AI food photo logging, macro tracking, and weight control for iPhone.">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<meta property="og:title" content="PlateAI — Point, Shoot, Know">
-<meta property="og:description" content="PlateAI — point your camera at a plate and get calories, protein, carbs, and fat back in seconds. AI food photo logging, macro tracking, and weight control for iPhone.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>PlateAI — Wyceluj, zrób zdjęcie, wiedz</title>
+<meta content="PlateAI — skieruj aparat na talerz i w kilka sekund poznaj kalorie, białko, węglowodany i tłuszcze. Rejestrowanie posiłków ze zdjęć dzięki AI, śledzenie makroskładników i kontrola wagi na iPhone'a." name="description"/>
+<link href="../assets/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../assets/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="PlateAI — Wyceluj, zrób zdjęcie, wiedz" property="og:title"/>
+<meta content="PlateAI — skieruj aparat na talerz i w kilka sekund poznaj kalorie, białko, węglowodany i tłuszcze. Rejestrowanie posiłków ze zdjęć dzięki AI, śledzenie makroskładników i kontrola wagi na iPhone'a." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary" name="twitter:card"/>
 <!-- i18n:head -->
-<link rel="canonical" href="https://yevbas.github.io/PlateAI-Web/">
-<meta property="og:url" content="https://yevbas.github.io/PlateAI-Web/">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="es_ES">
-<meta property="og:locale:alternate" content="de_DE">
-<meta property="og:locale:alternate" content="fr_FR">
-<meta property="og:locale:alternate" content="pt_BR">
-<meta property="og:locale:alternate" content="pl_PL">
-<link rel="alternate" hreflang="en" href="https://yevbas.github.io/PlateAI-Web/">
-<link rel="alternate" hreflang="es" href="https://yevbas.github.io/PlateAI-Web/es/">
-<link rel="alternate" hreflang="de" href="https://yevbas.github.io/PlateAI-Web/de/">
-<link rel="alternate" hreflang="fr" href="https://yevbas.github.io/PlateAI-Web/fr/">
-<link rel="alternate" hreflang="pt" href="https://yevbas.github.io/PlateAI-Web/pt/">
-<link rel="alternate" hreflang="pl" href="https://yevbas.github.io/PlateAI-Web/pl/">
-<link rel="alternate" hreflang="x-default" href="https://yevbas.github.io/PlateAI-Web/">
+<link href="https://yevbas.github.io/PlateAI-Web/pl/" rel="canonical"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/pl/" property="og:url"/>
+<meta content="pl_PL" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/" hreflang="en" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/es/" hreflang="es" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/de/" hreflang="de" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/fr/" hreflang="fr" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pt/" hreflang="pt" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pl/" hreflang="pl" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/" hreflang="x-default" rel="alternate"/>
 <style>.lang-picker{position:relative;flex-shrink:0}
 .lang-picker summary{list-style:none;cursor:pointer;height:38px;min-width:38px;padding:0 11px;border-radius:999px;border:1px solid var(--line-strong);background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:center;gap:6px;font:700 12.5px/1 -apple-system,system-ui,sans-serif;transition:border-color .25s ease,color .25s ease}
 .lang-picker summary::-webkit-details-marker{display:none}
@@ -1111,540 +1112,510 @@
   :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
   :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 </style>
-
 <nav class="topnav">
-  <div class="wrap topnav-row">
-    <a href="#home" class="brand" data-tab-link="home">
-      <img src="assets/icon.png" alt="PlateAI icon" />
-      <span class="brand-word">PlateAI</span>
-    </a>
-    <div class="tabbar" id="tabbar" role="tablist" aria-label="Site sections">
-      <button role="tab" aria-selected="true" data-tab="home" class="active">Home</button>
-      <button role="tab" aria-selected="false" data-tab="about">About</button>
-      <button role="tab" aria-selected="false" data-tab="blog">Blog</button>
-      <button role="tab" aria-selected="false" data-tab="support">Support</button>
-    </div>
-    <!-- i18n:picker -->
-<details class="lang-picker"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span class="lang-code" translate="no">EN</span></summary><ul><li><a href="./" hreflang="en" lang="en" translate="no" aria-current="true">English</a></li><li><a href="es/" hreflang="es" lang="es" translate="no">Español</a></li><li><a href="de/" hreflang="de" lang="de" translate="no">Deutsch</a></li><li><a href="fr/" hreflang="fr" lang="fr" translate="no">Français</a></li><li><a href="pt/" hreflang="pt" lang="pt" translate="no">Português</a></li><li><a href="pl/" hreflang="pl" lang="pl" translate="no">Polski</a></li></ul></details><script>(function(){var d=document.currentScript.previousElementSibling;if(!d)return;d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){try{a.href=a.getAttribute('href').split('#')[0]+location.hash;}catch(e){}});});d.addEventListener('toggle',function(){var u=d.querySelector('ul');u.style.left='';u.style.right='';if(d.open&&u.getBoundingClientRect().left<8){u.style.left='0';u.style.right='auto';}});document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});})();</script>
+<div class="wrap topnav-row">
+<a class="brand" data-tab-link="home" href="#home">
+<img alt="Ikona PlateAI" src="../assets/icon.png"/>
+<span class="brand-word">PlateAI</span>
+</a>
+<div aria-label="Sekcje strony" class="tabbar" id="tabbar" role="tablist">
+<button aria-selected="true" class="active" data-tab="home" role="tab">Start</button>
+<button aria-selected="false" data-tab="about" role="tab">O nas</button>
+<button aria-selected="false" data-tab="blog" role="tab">Blog</button>
+<button aria-selected="false" data-tab="support" role="tab">Pomoc</button>
+</div>
+<!-- i18n:picker -->
+<details class="lang-picker"><summary aria-label="Język"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="lang-code" translate="no">PL</span></summary><ul><li><a href="../" hreflang="en" lang="en" translate="no">English</a></li><li><a href="../es/" hreflang="es" lang="es" translate="no">Español</a></li><li><a href="../de/" hreflang="de" lang="de" translate="no">Deutsch</a></li><li><a href="../fr/" hreflang="fr" lang="fr" translate="no">Français</a></li><li><a href="../pt/" hreflang="pt" lang="pt" translate="no">Português</a></li><li><a aria-current="true" href="./" hreflang="pl" lang="pl" translate="no">Polski</a></li></ul></details><script>(function(){var d=document.currentScript.previousElementSibling;if(!d)return;d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){try{a.href=a.getAttribute('href').split('#')[0]+location.hash;}catch(e){}});});d.addEventListener('toggle',function(){var u=d.querySelector('ul');u.style.left='';u.style.right='';if(d.open&&u.getBoundingClientRect().left<8){u.style.left='0';u.style.right='auto';}});document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});})();</script>
 <!-- /i18n:picker -->
-<button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
-    <a class="nav-cta" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
-      <span class="long">Download</span>
-    </a>
-  </div>
+<button aria-label="Zmień motyw kolorystyczny" class="theme-toggle" id="themeToggle" type="button">
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<a class="nav-cta" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" height="15" viewbox="0 0 24 24" width="15"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+<span class="long">Pobierz</span>
+</a>
+</div>
 </nav>
-
 <!-- ============ HOME ============ -->
 <section class="tabpanel active" id="tab-home" role="tabpanel">
-  <div class="hero">
-    <div class="hero-bloom" aria-hidden="true"></div>
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">AI food logging</div>
-        <h1>Point your camera.<br>Get <span class="grad">real macros</span><br>in seconds.</h1>
-        <p class="lead">PlateAI turns a single photo of your plate into calories, protein, carbs, and fat — no searching, no barcodes, no guessing. Just shoot and know.</p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
-            Download on the App Store
+<div class="hero">
+<div aria-hidden="true" class="hero-bloom"></div>
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">Rejestrowanie posiłków z AI</div>
+<h1>Skieruj aparat.<br/>Poznaj <span class="grad">prawdziwe makro</span><br/>w kilka sekund.</h1>
+<p class="lead">PlateAI zamienia jedno zdjęcie talerza w kalorie, białko, węglowodany i tłuszcze — bez wyszukiwania, bez kodów kreskowych, bez zgadywania. Wystarczy zrobić zdjęcie i wiedzieć.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+            Pobierz z App Store
           </a>
-          <a class="btn-ghost" data-tab-link="home" href="#how-it-works">See how it works →</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><b>&lt;5s</b><span>PER PHOTO ANALYSIS</span></div>
-          <div class="stat"><b>3-stage</b><span>MACROS → NUTRIENTS → HEALTH SCORE</span></div>
-          <div class="stat"><b>iOS 16+</b><span>BUILT FOR IPHONE</span></div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="phone-stage">
-          <div class="phone-shell">
-            <img src="assets/hero-food.jpg" alt="A cheeseburger with fries, plated and ready to be logged in PlateAI" />
-            <div class="scan-overlay" aria-hidden="true">
-              <div class="scan-line"></div>
-              <span class="scan-corner tl"></span>
-              <span class="scan-corner tr"></span>
-              <span class="scan-corner bl"></span>
-              <span class="scan-corner br"></span>
-            </div>
-          </div>
-          <div class="float-chip chip-a"><span class="dot"></span>Protein 68%</div>
-          <div class="float-chip chip-b"><span class="dot"></span>Carbs 42g</div>
-          <div class="float-chip chip-c"><span class="dot"></span>Health score 8.6</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section class="showcase">
-    <div class="showcase-bloom" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="showcase-head">
-        <div>
-          <div class="eyebrow">App preview</div>
-          <h2 style="font-size:clamp(28px,3.6vw,40px);font-weight:800;letter-spacing:-0.015em;">See PlateAI in action.</h2>
-          <p style="margin-top:14px;font-size:16.5px;color:var(--muted);line-height:1.6;max-width:52ch;">Real screens, real logged meals — no mockups.</p>
-        </div>
-        <div class="showcase-nav">
-          <button type="button" id="showcasePrev" aria-label="Scroll previous">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <button type="button" id="showcaseNext" aria-label="Scroll next">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="showcase-track-wrap">
-      <div class="showcase-track" id="showcaseTrack">
-        <div class="preview-card">
-          <div class="preview-frame"><div class="preview-screen"><img src="assets/screenshots/home.jpg" alt="PlateAI home dashboard showing calories and macro rings" loading="lazy" /></div></div>
-          <span class="preview-tag pt-orange">Home</span>
-          <p class="preview-caption">Today's calories and macros, at a glance</p>
-        </div>
-        <div class="preview-card">
-          <div class="preview-frame"><div class="preview-screen"><img src="assets/screenshots/meal-sweet-potato.jpg" alt="PlateAI meal detail screen for sweet potato supper" loading="lazy" /></div></div>
-          <span class="preview-tag pt-orange">Meal log</span>
-          <p class="preview-caption">Snap a plate, get calories back instantly</p>
-        </div>
-        <div class="preview-card">
-          <div class="preview-frame"><div class="preview-screen"><img src="assets/screenshots/statistics.jpg" alt="PlateAI statistics screen showing weekly calorie trend" loading="lazy" /></div></div>
-          <span class="preview-tag pt-peri">Statistics</span>
-          <p class="preview-caption">Weekly and monthly trends, not just today</p>
-        </div>
-        <div class="preview-card">
-          <div class="preview-frame"><div class="preview-screen"><img src="assets/screenshots/meal-omelette.jpg" alt="PlateAI meal detail screen for omelette with smoked salmon" loading="lazy" /></div></div>
-          <span class="preview-tag pt-orange">Meal log</span>
-          <p class="preview-caption">Every ingredient accounted for, down to sodium</p>
-        </div>
-        <div class="preview-card">
-          <div class="preview-frame"><div class="preview-screen"><img src="assets/screenshots/weight-control.jpg" alt="PlateAI Weight Control screen showing weight trend and a personalized insight" loading="lazy" /></div></div>
-          <span class="preview-tag pt-mint">Weight control</span>
-          <p class="preview-caption">A trend line and a nudge when it's time to adjust</p>
-        </div>
-        <div class="preview-card">
-          <div class="preview-frame"><div class="preview-screen"><img src="assets/screenshots/meal-eggs.jpg" alt="PlateAI meal detail screen for eggs with smoked salmon" loading="lazy" /></div></div>
-          <span class="preview-tag pt-orange">Meal log</span>
-          <p class="preview-caption">High protein, logged in seconds</p>
-        </div>
-      </div>
-    </div>
-    <div class="showcase-dots" id="showcaseDots"></div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Why PlateAI</div>
-        <h2>Everything you need to actually keep the habit.</h2>
-        <p>Tracking only works if it takes less effort than skipping it. Every feature below exists to remove a step.</p>
-      </div>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon fi-coral">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-          </div>
-          <h3>Snap-to-macros</h3>
-          <p>One photo returns calories, protein, carbs, and fat — the camera does the work a food diary used to.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon fi-mint">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18"/><path d="M12 3v18"/></svg>
-          </div>
-          <h3>Daily macro rings</h3>
-          <p>Color-coded rings for protein, carbs, and fat fill up through the day so you can see the gap at a glance.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon fi-peri">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-6 3 3 5-7"/></svg>
-          </div>
-          <h3>Weight control</h3>
-          <p>Log weigh-ins, chart the trend, and get a weekly or monthly nudge — synced quietly with your goals.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon fi-gold">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
-          </div>
-          <h3>Real statistics</h3>
-          <p>Week and month views turn every logged plate into a trend line, not just a number you forget tomorrow.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="tight" id="how-it-works">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Under the hood</div>
-        <h2>One photo, three passes.</h2>
-        <p>Instead of one slow call that makes you stare at a spinner, analysis runs in three stages — so you see numbers almost immediately, and precision keeps arriving after.</p>
-      </div>
-      <div class="stage-row">
-        <div class="stage">
-          <span class="stage-num">1</span>
-          <h3>Core macros, instantly</h3>
-          <p>Calories, protein, carbs, and fat land within seconds of the shutter — enough to log the meal and move on.</p>
-        </div>
-        <div class="stage">
-          <span class="stage-num">2</span>
-          <h3>Nutrient enrichment</h3>
-          <p>A batched pass fills in the rest — fiber, sugars, sodium, and the micronutrients that don't need to block your first read.</p>
-        </div>
-        <div class="stage">
-          <span class="stage-num">3</span>
-          <h3>Health score</h3>
-          <p>Once the full picture is in, PlateAI scores the meal so you can compare plates at a glance, not just calories.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <div class="cta-banner">
-    <div class="cta-glow" aria-hidden="true"></div>
-    <div class="wrap cta-inner">
-      <div>
-        <h2>Your next meal, decoded in one photo.</h2>
-        <p>Free to start. No barcode scanning, no manual entry.</p>
-      </div>
-      <div class="store-badges">
-        <a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
-          <span class="lines"><small>Download on the</small><span>App Store</span></span>
-        </a>
-      </div>
-    </div>
-  </div>
+<a class="btn-ghost" data-tab-link="home" href="#how-it-works">Zobacz, jak to działa →</a>
+</div>
+<div class="hero-stats">
+<div class="stat"><b>&lt;5 s</b><span>NA ANALIZĘ ZDJĘCIA</span></div>
+<div class="stat"><b>3 etapy</b><span>MAKRO → SKŁADNIKI ODŻYWCZE → OCENA ZDROWOTNA</span></div>
+<div class="stat"><b>iOS 16+</b><span>STWORZONE DLA IPHONE'A</span></div>
+</div>
+</div>
+<div class="hero-visual">
+<div class="phone-stage">
+<div class="phone-shell">
+<img alt="Cheeseburger z frytkami, podany i gotowy do zapisania w PlateAI" src="../assets/hero-food.jpg"/>
+<div aria-hidden="true" class="scan-overlay">
+<div class="scan-line"></div>
+<span class="scan-corner tl"></span>
+<span class="scan-corner tr"></span>
+<span class="scan-corner bl"></span>
+<span class="scan-corner br"></span>
+</div>
+</div>
+<div class="float-chip chip-a"><span class="dot"></span>Białko 68%</div>
+<div class="float-chip chip-b"><span class="dot"></span>Węglowodany 42 g</div>
+<div class="float-chip chip-c"><span class="dot"></span>Ocena zdrowotna 8,6</div>
+</div>
+</div>
+</div>
+</div>
+<section class="showcase">
+<div aria-hidden="true" class="showcase-bloom"></div>
+<div class="wrap">
+<div class="showcase-head">
+<div>
+<div class="eyebrow">Podgląd aplikacji</div>
+<h2 style="font-size:clamp(28px,3.6vw,40px);font-weight:800;letter-spacing:-0.015em;">Zobacz PlateAI w akcji.</h2>
+<p style="margin-top:14px;font-size:16.5px;color:var(--muted);line-height:1.6;max-width:52ch;">Prawdziwe ekrany, prawdziwe zapisane posiłki — żadnych makiet.</p>
+</div>
+<div class="showcase-nav">
+<button aria-label="Przewiń wstecz" id="showcasePrev" type="button">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><path d="M15 18l-6-6 6-6"></path></svg>
+</button>
+<button aria-label="Przewiń dalej" id="showcaseNext" type="button">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><path d="M9 18l6-6-6-6"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<div class="showcase-track-wrap">
+<div class="showcase-track" id="showcaseTrack">
+<div class="preview-card">
+<div class="preview-frame"><div class="preview-screen"><img alt="Ekran główny PlateAI z kaloriami i pierścieniami makroskładników" loading="lazy" src="../assets/screenshots/home.jpg"/></div></div>
+<span class="preview-tag pt-orange">Start</span>
+<p class="preview-caption">Dzisiejsze kalorie i makro w jednym rzucie oka</p>
+</div>
+<div class="preview-card">
+<div class="preview-frame"><div class="preview-screen"><img alt="Ekran szczegółów posiłku w PlateAI: kolacja ze słodkich ziemniaków" loading="lazy" src="../assets/screenshots/meal-sweet-potato.jpg"/></div></div>
+<span class="preview-tag pt-orange">Dziennik posiłków</span>
+<p class="preview-caption">Zrób zdjęcie talerza, natychmiast poznaj kalorie</p>
+</div>
+<div class="preview-card">
+<div class="preview-frame"><div class="preview-screen"><img alt="Ekran statystyk PlateAI z tygodniowym trendem kalorii" loading="lazy" src="../assets/screenshots/statistics.jpg"/></div></div>
+<span class="preview-tag pt-peri">Statystyki</span>
+<p class="preview-caption">Trendy tygodniowe i miesięczne, nie tylko dzisiejsze</p>
+</div>
+<div class="preview-card">
+<div class="preview-frame"><div class="preview-screen"><img alt="Ekran szczegółów posiłku w PlateAI: omlet z wędzonym łososiem" loading="lazy" src="../assets/screenshots/meal-omelette.jpg"/></div></div>
+<span class="preview-tag pt-orange">Dziennik posiłków</span>
+<p class="preview-caption">Każdy składnik uwzględniony, aż po sód</p>
+</div>
+<div class="preview-card">
+<div class="preview-frame"><div class="preview-screen"><img alt="Ekran Kontroli wagi w PlateAI z trendem wagi i spersonalizowaną wskazówką" loading="lazy" src="../assets/screenshots/weight-control.jpg"/></div></div>
+<span class="preview-tag pt-mint">Kontrola wagi</span>
+<p class="preview-caption">Linia trendu i sygnał, kiedy czas coś zmienić</p>
+</div>
+<div class="preview-card">
+<div class="preview-frame"><div class="preview-screen"><img alt="Ekran szczegółów posiłku w PlateAI: jajka z wędzonym łososiem" loading="lazy" src="../assets/screenshots/meal-eggs.jpg"/></div></div>
+<span class="preview-tag pt-orange">Dziennik posiłków</span>
+<p class="preview-caption">Dużo białka, zapisane w kilka sekund</p>
+</div>
+</div>
+</div>
+<div class="showcase-dots" id="showcaseDots"></div>
 </section>
-
+<section>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Dlaczego PlateAI</div>
+<h2>Wszystko, czego potrzeba, by naprawdę utrzymać nawyk.</h2>
+<p>Śledzenie działa tylko wtedy, gdy wymaga mniej wysiłku niż jego pominięcie. Każda funkcja poniżej istnieje po to, by usunąć jeden krok.</p>
+</div>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="feature-icon fi-coral">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+</div>
+<h3>Od zdjęcia do makro</h3>
+<p>Jedno zdjęcie zwraca kalorie, białko, węglowodany i tłuszcze — aparat robi to, co dawniej robił dzienniczek żywieniowy.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon fi-mint">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 1 0 18"></path><path d="M12 3v18"></path></svg>
+</div>
+<h3>Dzienne pierścienie makro</h3>
+<p>Kolorowe pierścienie białka, węglowodanów i tłuszczów wypełniają się w ciągu dnia, więc od razu widzisz, czego brakuje.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon fi-peri">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M3 3v18h18"></path><path d="M7 15l4-6 3 3 5-7"></path></svg>
+</div>
+<h3>Kontrola wagi</h3>
+<p>Zapisuj pomiary wagi, śledź trend i otrzymuj cotygodniowe lub comiesięczne przypomnienie — dyskretnie zsynchronizowane z Twoimi celami.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon fi-gold">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="9" rx="1" width="7" x="3" y="3"></rect><rect height="5" rx="1" width="7" x="14" y="3"></rect><rect height="9" rx="1" width="7" x="14" y="12"></rect><rect height="5" rx="1" width="7" x="3" y="16"></rect></svg>
+</div>
+<h3>Prawdziwe statystyki</h3>
+<p>Widoki tygodniowy i miesięczny zamieniają każdy zapisany talerz w linię trendu, a nie liczbę, o której jutro zapomnisz.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="tight" id="how-it-works">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Pod maską</div>
+<h2>Jedno zdjęcie, trzy przebiegi.</h2>
+<p>Zamiast jednego wolnego wywołania, przy którym gapisz się na kółko ładowania, analiza przebiega w trzech etapach — liczby widzisz niemal od razu, a dokładność dociera później.</p>
+</div>
+<div class="stage-row">
+<div class="stage">
+<span class="stage-num">1</span>
+<h3>Podstawowe makro, natychmiast</h3>
+<p>Kalorie, białko, węglowodany i tłuszcze pojawiają się w kilka sekund po zdjęciu — dość, by zapisać posiłek i iść dalej.</p>
+</div>
+<div class="stage">
+<span class="stage-num">2</span>
+<h3>Uzupełnienie składników odżywczych</h3>
+<p>Zbiorczy przebieg uzupełnia resztę — błonnik, cukry, sód i mikroskładniki, które nie muszą blokować pierwszego odczytu.</p>
+</div>
+<div class="stage">
+<span class="stage-num">3</span>
+<h3>Ocena zdrowotna</h3>
+<p>Gdy pełny obraz jest gotowy, PlateAI ocenia posiłek, żebyś mógł porównywać talerze na pierwszy rzut oka, a nie tylko po kaloriach.</p>
+</div>
+</div>
+</div>
+</section>
+<div class="cta-banner">
+<div aria-hidden="true" class="cta-glow"></div>
+<div class="wrap cta-inner">
+<div>
+<h2>Twój następny posiłek, rozszyfrowany jednym zdjęciem.</h2>
+<p>Na start za darmo. Bez skanowania kodów kreskowych, bez ręcznego wpisywania.</p>
+</div>
+<div class="store-badges">
+<a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+<span class="lines"><small>Pobierz z</small><span>App Store</span></span>
+</a>
+</div>
+</div>
+</div>
+</section>
 <!-- ============ ABOUT ============ -->
 <section class="tabpanel" id="tab-about" role="tabpanel">
-  <section>
-    <div class="wrap about-hero">
-      <div>
-        <div class="eyebrow">About PlateAI</div>
-        <h1>An apple and a pie chart, because that's the whole idea.</h1>
-        <p class="lead">The icon is the mission statement: real food, read as real data. PlateAI exists to close the gap between eating something and knowing what you just ate — without turning every meal into data entry.</p>
-      </div>
-      <div class="mark-card bracket-frame">
-        <span class="bk-tr"></span><span class="bk-bl"></span>
-        <img src="assets/icon.png" alt="PlateAI app icon" />
-      </div>
-    </div>
-  </section>
-
-  <section class="tight">
-    <div class="wrap">
-      <div class="story-block">
-        <div class="label">The problem</div>
-        <div class="body">
-          <h3>Food tracking has always cost more than it gives back</h3>
-          <p>Searching a database, weighing ingredients, scanning barcodes — every extra step is a reason to quit by day four. Most nutrition apps optimize for completeness. We optimized for the thing people actually do: take a photo before they eat.</p>
-        </div>
-      </div>
-      <div class="story-block">
-        <div class="label">The approach</div>
-        <div class="body">
-          <h3>Let the camera replace the spreadsheet</h3>
-          <p>PlateAI reads a plate the way a nutritionist would glance at one — estimating portions and ingredients from the image itself, then staging the analysis so a usable number shows up before the detailed one finishes computing.</p>
-        </div>
-      </div>
-      <div class="story-block">
-        <div class="label">The team</div>
-        <div class="body">
-          <h3>Small, independent, and still shipping weekly</h3>
-          <p>PlateAI is built by a small independent team who eats its own dog food — every macro ring, weight chart, and reminder shipped because someone on the team wanted it for themselves first.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="tight">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">What we optimize for</div>
-        <h2>Four things we won't compromise on.</h2>
-      </div>
-      <div class="values-grid">
-        <div class="value-card"><span class="n">Speed</span><h3>Seconds, not minutes</h3><p>If logging a meal takes longer than eating it, the feature has already failed.</p></div>
-        <div class="value-card"><span class="n">Accuracy</span><h3>Numbers you can trust</h3><p>Estimates are labeled as estimates, and refine automatically as richer analysis lands.</p></div>
-        <div class="value-card"><span class="n">Privacy</span><h3>Your plate is yours</h3><p>Photos and logs exist to serve you, not to be resold as a training set for someone else.</p></div>
-        <div class="value-card"><span class="n">Simplicity</span><h3>One clear number</h3><p>Every screen answers one question well instead of every question badly.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-banner">
-    <div class="cta-glow" aria-hidden="true"></div>
-    <div class="wrap cta-inner">
-      <div>
-        <h2>Try the app the icon promises.</h2>
-        <p>Free to download, ready in under a minute.</p>
-      </div>
-      <div class="store-badges">
-        <a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
-          <span class="lines"><small>Download on the</small><span>App Store</span></span>
-        </a>
-      </div>
-    </div>
-  </div>
+<section>
+<div class="wrap about-hero">
+<div>
+<div class="eyebrow">O PlateAI</div>
+<h1>Jabłko i wykres kołowy, bo o to właśnie chodzi.</h1>
+<p class="lead">Ikona to nasza misja: prawdziwe jedzenie odczytane jako prawdziwe dane. PlateAI istnieje, by zamknąć lukę między zjedzeniem czegoś a wiedzą, co właśnie zjadłeś — bez zamieniania każdego posiłku we wpisywanie danych.</p>
+</div>
+<div class="mark-card bracket-frame">
+<span class="bk-tr"></span><span class="bk-bl"></span>
+<img alt="Ikona aplikacji PlateAI" src="../assets/icon.png"/>
+</div>
+</div>
 </section>
-
+<section class="tight">
+<div class="wrap">
+<div class="story-block">
+<div class="label">Problem</div>
+<div class="body">
+<h3>Śledzenie jedzenia zawsze kosztowało więcej, niż dawało</h3>
+<p>Szukanie w bazie danych, ważenie składników, skanowanie kodów kreskowych — każdy dodatkowy krok to powód, by odpuścić do czwartego dnia. Większość aplikacji żywieniowych optymalizuje kompletność. My zoptymalizowaliśmy to, co ludzie faktycznie robią: zdjęcie przed jedzeniem.</p>
+</div>
+</div>
+<div class="story-block">
+<div class="label">Podejście</div>
+<div class="body">
+<h3>Niech aparat zastąpi arkusz kalkulacyjny</h3>
+<p>PlateAI czyta talerz tak, jak zrobiłby to dietetyk jednym spojrzeniem — szacuje porcje i składniki na podstawie samego obrazu, a analizę rozkłada na etapy, tak by użyteczna liczba pojawiła się, zanim szczegółowa skończy się liczyć.</p>
+</div>
+</div>
+<div class="story-block">
+<div class="label">Zespół</div>
+<div class="body">
+<h3>Mały, niezależny i wciąż wydający nowości co tydzień</h3>
+<p>PlateAI tworzy mały, niezależny zespół, który sam używa własnego produktu — każdy pierścień makro, wykres wagi i przypomnienie powstały, bo ktoś z zespołu chciał ich najpierw dla siebie.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="tight">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Na czym się skupiamy</div>
+<h2>Cztery rzeczy, w których nie idziemy na kompromis.</h2>
+</div>
+<div class="values-grid">
+<div class="value-card"><span class="n">Szybkość</span><h3>Sekundy, nie minuty</h3><p>Jeśli zapisanie posiłku trwa dłużej niż jego zjedzenie, funkcja już zawiodła.</p></div>
+<div class="value-card"><span class="n">Dokładność</span><h3>Liczby, którym możesz ufać</h3><p>Szacunki są oznaczone jako szacunki i doprecyzowują się automatycznie, gdy dociera bogatsza analiza.</p></div>
+<div class="value-card"><span class="n">Prywatność</span><h3>Twój talerz jest Twój</h3><p>Zdjęcia i dzienniki istnieją, by służyć Tobie, a nie by być odsprzedawane jako zbiór treningowy komuś innemu.</p></div>
+<div class="value-card"><span class="n">Prostota</span><h3>Jedna wyraźna liczba</h3><p>Każdy ekran dobrze odpowiada na jedno pytanie zamiast źle na wszystkie.</p></div>
+</div>
+</div>
+</section>
+<div class="cta-banner">
+<div aria-hidden="true" class="cta-glow"></div>
+<div class="wrap cta-inner">
+<div>
+<h2>Wypróbuj aplikację, którą obiecuje ikona.</h2>
+<p>Darmowe pobranie, gotowe w mniej niż minutę.</p>
+</div>
+<div class="store-badges">
+<a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+<span class="lines"><small>Pobierz z</small><span>App Store</span></span>
+</a>
+</div>
+</div>
+</div>
+</section>
 <!-- ============ BLOG ============ -->
 <section class="tabpanel" id="tab-blog" role="tabpanel">
-  <section>
-    <div class="wrap">
-      <div class="blog-head">
-        <div>
-          <div class="eyebrow">From the team</div>
-          <h1 style="font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-0.015em;">The PlateAI Blog</h1>
-          <p class="lead" style="margin-top:12px;">Notes on nutrition, product decisions, and what we're shipping next.</p>
-        </div>
-        <div class="cadence-pill"><span class="pulse"></span>New post every week</div>
-      </div>
-
-      <div class="blog-grid">
-        <a class="post-card featured" href="blog/how-to-calculate-macros.html" target="_blank" rel="noopener">
-          <div class="post-media" style="--tag-a:var(--flame);--tag-b:var(--cta-3);">
-            <span class="post-tag">Guide</span>
-          </div>
-          <div class="post-body">
-            <span class="post-date">September 24, 2026 · 7 min read</span>
-            <h3>How to Calculate Your Macros for Weight Loss (Step by Step)</h3>
-            <p>Set calories, then protein and fat by bodyweight, and let carbs fill the rest — with a worked example and gram targets for four body sizes.</p>
-            <span class="post-read">Read the post →</span>
-          </div>
-        </a>
-
-        <a class="post-card" href="blog/how-to-count-calories.html" target="_blank" rel="noopener">
-          <div class="post-media" style="--tag-a:var(--periwinkle);--tag-b:var(--cta-2);">
-            <span class="post-tag">Guide</span>
-          </div>
-          <div class="post-body">
-            <span class="post-date">September 23, 2026 · 8 min read</span>
-            <h3>How to Count Calories: A Beginner's Step-by-Step Guide</h3>
-            <p>Set a target, pick a logging method you'll actually keep, and avoid the hidden-calorie mistakes that sink most first attempts — no food scale required.</p>
-            <span class="post-read">Read the post →</span>
-          </div>
-        </a>
-
-        <a class="post-card" href="blog/calorie-deficit.html" target="_blank" rel="noopener">
-          <div class="post-media" style="--tag-a:var(--flame);--tag-b:var(--gold);">
-            <span class="post-tag">Nutrition</span>
-          </div>
-          <div class="post-body">
-            <span class="post-date">July 17, 2026 · 7 min read</span>
-            <h3>How Many Calories Should You Eat to Lose Weight?</h3>
-            <p>TDEE, deficit size, and why the formula only gets you in the neighborhood — a practical guide to finding your real number.</p>
-            <span class="post-read">Read the post →</span>
-          </div>
-        </a>
-
-        <a class="post-card" href="blog/protein-needs.html" target="_blank" rel="noopener">
-          <div class="post-media" style="--tag-a:var(--periwinkle);--tag-b:#4D7CFF;">
-            <span class="post-tag">Nutrition</span>
-          </div>
-          <div class="post-body">
-            <span class="post-date">July 10, 2026 · 6 min read</span>
-            <h3>How Much Protein Do You Need Per Day?</h3>
-            <p>Why the RDA is a floor, not a target — practical ranges, real food examples, and what changes in a deficit.</p>
-            <span class="post-read">Read the post →</span>
-          </div>
-        </a>
-
-        <a class="post-card" href="blog/weight-tracking.html" target="_blank" rel="noopener">
-          <div class="post-media" style="--tag-a:var(--mint-bg);--tag-b:#5BAE34;">
-            <span class="post-tag">Guide</span>
-          </div>
-          <div class="post-body">
-            <span class="post-date">July 3, 2026 · 5 min read</span>
-            <h3>How Often Should You Weigh Yourself?</h3>
-            <p>Why we default the Weight Control reminder to weekly instead of daily, and how to read a trend line instead of a single number.</p>
-            <span class="post-read">Read the post →</span>
-          </div>
-        </a>
-
-        <a class="post-card" href="blog/health-score.html" target="_blank" rel="noopener">
-          <div class="post-media" style="--tag-a:var(--saffron);--tag-b:#FF7A29;">
-            <span class="post-tag">Behind the scenes</span>
-          </div>
-          <div class="post-body">
-            <span class="post-date">June 26, 2026 · 3 min read</span>
-            <h3>What Is a Food Health Score — and What Does It Actually Measure?</h3>
-            <p>It's not a calorie count in disguise — here's the mix of macro balance, nutrient density, and portion signals that make up a single score.</p>
-            <span class="post-read">Read the post →</span>
-          </div>
-        </a>
-
-        <a class="post-card" href="blog/reading-a-photo.html" target="_blank" rel="noopener">
-          <div class="post-media" style="--tag-a:var(--coral);--tag-b:#E85A3E;">
-            <span class="post-tag">Nutrition</span>
-          </div>
-          <div class="post-body">
-            <span class="post-date">June 19, 2026 · 4 min read</span>
-            <h3>How to Estimate Calories From a Food Photo</h3>
-            <p>The visual cues — plate coverage, sauce sheen, char marks — that carry more signal than people expect, and where photo estimates still need a gut-check.</p>
-            <span class="post-read">Read the post →</span>
-          </div>
-        </a>
-
-        <a class="post-card" href="blog/eating-out.html" target="_blank" rel="noopener">
-          <div class="post-media" style="--tag-a:var(--periwinkle);--tag-b:#4D7CFF;">
-            <span class="post-tag">Guide</span>
-          </div>
-          <div class="post-body">
-            <span class="post-date">June 12, 2026 · 6 min read</span>
-            <h3>How to Track Calories and Macros When Eating Out</h3>
-            <p>A practical system for ordering, estimating, and logging restaurant food you didn't cook yourself.</p>
-            <span class="post-read">Read the post →</span>
-          </div>
-        </a>
-
-        <a class="post-card" href="blog/healthy-doesnt-mean-low-calorie.html" target="_blank" rel="noopener">
-          <div class="post-media" style="--tag-a:var(--coral);--tag-b:#E85A3E;">
-            <span class="post-tag">Nutrition</span>
-          </div>
-          <div class="post-body">
-            <span class="post-date">June 5, 2026 · 5 min read</span>
-            <h3>Healthy Foods That Are Surprisingly High in Calories</h3>
-            <p>Granola, avocado toast, smoothies — the foods that feel virtuous are often the ones quietly working against a calorie goal.</p>
-            <span class="post-read">Read the post →</span>
-          </div>
-        </a>
-
-        <a class="post-card" href="blog/intermittent-fasting.html" target="_blank" rel="noopener">
-          <div class="post-media" style="--tag-a:var(--saffron);--tag-b:var(--flame);">
-            <span class="post-tag">Nutrition</span>
-          </div>
-          <div class="post-body">
-            <span class="post-date">May 29, 2026 · 7 min read</span>
-            <h3>Does Intermittent Fasting Actually Work for Weight Loss?</h3>
-            <p>What the evidence actually says about time-restricted eating — and why the window matters less than what's on the plate.</p>
-            <span class="post-read">Read the post →</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-banner">
-    <div class="cta-glow" aria-hidden="true"></div>
-    <div class="wrap cta-inner">
-      <div>
-        <h2>Read about it, then try it yourself.</h2>
-        <p>Free to download on the App Store.</p>
-      </div>
-      <div class="store-badges">
-        <a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
-          <span class="lines"><small>Download on the</small><span>App Store</span></span>
-        </a>
-      </div>
-    </div>
-  </div>
+<section>
+<div class="wrap">
+<div class="blog-head">
+<div>
+<div class="eyebrow">Od zespołu</div>
+<h1 style="font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-0.015em;">Blog PlateAI</h1>
+<p class="lead" style="margin-top:12px;">Notatki o żywieniu, decyzjach produktowych i tym, co wydamy następnie.</p>
+</div>
+<div class="cadence-pill"><span class="pulse"></span>Nowy wpis co tydzień</div>
+</div>
+<div class="blog-grid">
+<a class="post-card featured" href="blog/how-to-calculate-macros.html" rel="noopener" target="_blank">
+<div class="post-media" style="--tag-a:var(--flame);--tag-b:var(--cta-3);">
+<span class="post-tag">Poradnik</span>
+</div>
+<div class="post-body">
+<span class="post-date">24 września 2026 · 7 min czytania</span>
+<h3>Jak obliczyć makro na odchudzanie (krok po kroku)</h3>
+<p>Ustal kalorie, potem białko i tłuszcze według masy ciała, a węglowodany niech wypełnią resztę — z rozwiązanym przykładem i celami w gramach dla czterech wagowych profili.</p>
+<span class="post-read">Czytaj wpis →</span>
+</div>
+</a>
+<a class="post-card" href="blog/how-to-count-calories.html" rel="noopener" target="_blank">
+<div class="post-media" style="--tag-a:var(--periwinkle);--tag-b:var(--cta-2);">
+<span class="post-tag">Poradnik</span>
+</div>
+<div class="post-body">
+<span class="post-date">23 września 2026 · 8 min czytania</span>
+<h3>Jak liczyć kalorie: poradnik krok po kroku dla początkujących</h3>
+<p>Wyznacz cel, wybierz metodę zapisu, której naprawdę się utrzymasz, i unikaj błędów ukrytych kalorii, które wykoleją większość pierwszych prób — bez wagi kuchennej.</p>
+<span class="post-read">Czytaj wpis →</span>
+</div>
+</a>
+<a class="post-card" href="blog/calorie-deficit.html" rel="noopener" target="_blank">
+<div class="post-media" style="--tag-a:var(--flame);--tag-b:var(--gold);">
+<span class="post-tag">Żywienie</span>
+</div>
+<div class="post-body">
+<span class="post-date">17 lipca 2026 · 7 min czytania</span>
+<h3>Ile kalorii jeść, żeby schudnąć?</h3>
+<p>Całkowite dobowe zapotrzebowanie, wielkość deficytu i dlaczego wzór tylko Cię zbliża — praktyczny poradnik, jak znaleźć swoją prawdziwą liczbę.</p>
+<span class="post-read">Czytaj wpis →</span>
+</div>
+</a>
+<a class="post-card" href="blog/protein-needs.html" rel="noopener" target="_blank">
+<div class="post-media" style="--tag-a:var(--periwinkle);--tag-b:#4D7CFF;">
+<span class="post-tag">Żywienie</span>
+</div>
+<div class="post-body">
+<span class="post-date">10 lipca 2026 · 6 min czytania</span>
+<h3>Ile białka potrzebujesz dziennie?</h3>
+<p>Dlaczego zalecane spożycie to dolna granica, a nie cel — praktyczne zakresy, przykłady prawdziwych produktów i co zmienia się w deficycie.</p>
+<span class="post-read">Czytaj wpis →</span>
+</div>
+</a>
+<a class="post-card" href="blog/weight-tracking.html" rel="noopener" target="_blank">
+<div class="post-media" style="--tag-a:var(--mint-bg);--tag-b:#5BAE34;">
+<span class="post-tag">Poradnik</span>
+</div>
+<div class="post-body">
+<span class="post-date">3 lipca 2026 · 5 min czytania</span>
+<h3>Jak często powinieneś się ważyć?</h3>
+<p>Dlaczego przypomnienie Kontroli wagi domyślnie jest tygodniowe, a nie codzienne, i jak czytać linię trendu zamiast pojedynczej liczby.</p>
+<span class="post-read">Czytaj wpis →</span>
+</div>
+</a>
+<a class="post-card" href="blog/health-score.html" rel="noopener" target="_blank">
+<div class="post-media" style="--tag-a:var(--saffron);--tag-b:#FF7A29;">
+<span class="post-tag">Za kulisami</span>
+</div>
+<div class="post-body">
+<span class="post-date">26 czerwca 2026 · 3 min czytania</span>
+<h3>Czym jest ocena zdrowotna żywności — i co naprawdę mierzy?</h3>
+<p>To nie jest przebrane liczenie kalorii — to połączenie równowagi makro, gęstości odżywczej i sygnałów porcji, które tworzą jedną ocenę.</p>
+<span class="post-read">Czytaj wpis →</span>
+</div>
+</a>
+<a class="post-card" href="blog/reading-a-photo.html" rel="noopener" target="_blank">
+<div class="post-media" style="--tag-a:var(--coral);--tag-b:#E85A3E;">
+<span class="post-tag">Żywienie</span>
+</div>
+<div class="post-body">
+<span class="post-date">19 czerwca 2026 · 4 min czytania</span>
+<h3>Jak oszacować kalorie na podstawie zdjęcia jedzenia</h3>
+<p>Wizualne wskazówki — wypełnienie talerza, połysk sosu, ślady grilla — niosące więcej informacji, niż się spodziewasz, i miejsca, w których szacunki ze zdjęcia wciąż wymagają zdrowego rozsądku.</p>
+<span class="post-read">Czytaj wpis →</span>
+</div>
+</a>
+<a class="post-card" href="blog/eating-out.html" rel="noopener" target="_blank">
+<div class="post-media" style="--tag-a:var(--periwinkle);--tag-b:#4D7CFF;">
+<span class="post-tag">Poradnik</span>
+</div>
+<div class="post-body">
+<span class="post-date">12 czerwca 2026 · 6 min czytania</span>
+<h3>Jak śledzić kalorie i makro, jedząc na mieście</h3>
+<p>Praktyczny system zamawiania, szacowania i zapisywania jedzenia z restauracji, którego sam nie ugotowałeś.</p>
+<span class="post-read">Czytaj wpis →</span>
+</div>
+</a>
+<a class="post-card" href="blog/healthy-doesnt-mean-low-calorie.html" rel="noopener" target="_blank">
+<div class="post-media" style="--tag-a:var(--coral);--tag-b:#E85A3E;">
+<span class="post-tag">Żywienie</span>
+</div>
+<div class="post-body">
+<span class="post-date">5 czerwca 2026 · 5 min czytania</span>
+<h3>Zdrowe produkty, które zaskakująco dużo mają kalorii</h3>
+<p>Granola, tost z awokado, smoothie — produkty, które wyglądają cnotliwie, często po cichu działają przeciw celowi kalorycznemu.</p>
+<span class="post-read">Czytaj wpis →</span>
+</div>
+</a>
+<a class="post-card" href="blog/intermittent-fasting.html" rel="noopener" target="_blank">
+<div class="post-media" style="--tag-a:var(--saffron);--tag-b:var(--flame);">
+<span class="post-tag">Żywienie</span>
+</div>
+<div class="post-body">
+<span class="post-date">29 maja 2026 · 7 min czytania</span>
+<h3>Czy post przerywany naprawdę działa na odchudzanie?</h3>
+<p>Co naprawdę mówią badania o jedzeniu w ograniczonym oknie czasowym — i dlaczego okno znaczy mniej niż to, co leży na talerzu.</p>
+<span class="post-read">Czytaj wpis →</span>
+</div>
+</a>
+</div>
+</div>
 </section>
-
+<div class="cta-banner">
+<div aria-hidden="true" class="cta-glow"></div>
+<div class="wrap cta-inner">
+<div>
+<h2>Przeczytaj, potem wypróbuj sam.</h2>
+<p>Darmowe pobranie z App Store.</p>
+</div>
+<div class="store-badges">
+<a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+<span class="lines"><small>Pobierz z</small><span>App Store</span></span>
+</a>
+</div>
+</div>
+</div>
+</section>
 <!-- ============ SUPPORT ============ -->
 <section class="tabpanel" id="tab-support" role="tabpanel">
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Support</div>
-        <h1 style="font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-0.015em;">How can we help?</h1>
-        <p class="lead" style="margin-top:12px;">Answers to what we hear most. Can't find it here — email us directly.</p>
-      </div>
-
-      <div class="support-grid">
-        <div class="faq-list">
-          <details class="faq-item" open>
-            <summary class="faq-q">How accurate is the photo analysis?<span class="plus"></span></summary>
-            <div class="faq-a">Core macros arrive within seconds and are labeled as estimates based on what's visible in the photo. A second, batched pass refines micronutrients shortly after, so accuracy improves the longer you leave the entry open — but you're never blocked waiting for it.</div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-q">Can I correct a meal if the AI gets it wrong?<span class="plus"></span></summary>
-            <div class="faq-a">Yes — every logged plate is editable. Adjust portion size, swap an ingredient, or enter macros manually, and PlateAI uses your correction for that entry going forward.</div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-q">What does Weight Control do?<span class="plus"></span></summary>
-            <div class="faq-a">It's an optional module for logging weigh-ins and charting the trend over time, with weekly or monthly reminder notifications. Turn it on or off anytime from Settings — your tab bar updates instantly.</div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-q">Is PlateAI free?<span class="plus"></span></summary>
-            <div class="faq-a">Yes, with a free tier covering core logging. A premium subscription unlocks higher daily limits and deeper insights — you'll see exactly what's included before you're asked to pay.</div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-q">What happens to my food photos?<span class="plus"></span></summary>
-            <div class="faq-a">Photos are used to generate your nutrition estimate and are stored to power your history and statistics. They are not sold or used to train models for anyone outside of improving PlateAI itself.</div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-q">I have a feature request — where does it go?<span class="plus"></span></summary>
-            <div class="faq-a">Straight to the team's inbox. We read every request and a good number of shipped features started as one, including the weekly weigh-in reminder.</div>
-          </details>
-        </div>
-
-        <div class="support-side">
-          <div class="contact-card">
-            <div class="icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-            </div>
-            <h3>Email support</h3>
-            <p>For bugs, billing, or anything account-related. We reply within one business day.</p>
-            <a class="link" href="mailto:plateaibusiness0@gmail.com">plateaibusiness0@gmail.com</a>
-          </div>
-          <div class="contact-card">
-            <div class="icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <h3>Feature requests</h3>
-            <p>Tell us what's missing. Weekly reminders and the health score both started here.</p>
-            <a class="link" href="mailto:plateaibusiness0@gmail.com">plateaibusiness0@gmail.com</a>
-          </div>
-          <div class="contact-card">
-            <div class="icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
-            <h3>Status &amp; known issues</h3>
-            <p>Nothing broken right now. If something feels off, email support first — we'll confirm before it's posted anywhere public.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-banner">
-    <div class="cta-glow" aria-hidden="true"></div>
-    <div class="wrap cta-inner">
-      <div>
-        <h2>Still the fastest way to log a meal.</h2>
-        <p>Get PlateAI free on the App Store.</p>
-      </div>
-      <div class="store-badges">
-        <a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"/></svg>
-          <span class="lines"><small>Download on the</small><span>App Store</span></span>
-        </a>
-      </div>
-    </div>
-  </div>
+<section>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Pomoc</div>
+<h1 style="font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-0.015em;">W czym możemy pomóc?</h1>
+<p class="lead" style="margin-top:12px;">Odpowiedzi na to, o co pytacie najczęściej. Nie znalazłeś? Napisz do nas bezpośrednio.</p>
+</div>
+<div class="support-grid">
+<div class="faq-list">
+<details class="faq-item" open="">
+<summary class="faq-q">Jak dokładna jest analiza zdjęć?<span class="plus"></span></summary>
+<div class="faq-a">Podstawowe makro docierają w kilka sekund i są oznaczone jako szacunki oparte na tym, co widać na zdjęciu. Drugi, zbiorczy przebieg chwilę później doprecyzowuje mikroskładniki, więc dokładność rośnie, im dłużej zostawisz wpis otwarty — ale nigdy nie musisz na to czekać.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">Czy mogę poprawić posiłek, jeśli AI się pomyli?<span class="plus"></span></summary>
+<div class="faq-a">Tak — każdy zapisany talerz można edytować. Zmień wielkość porcji, podmień składnik lub wpisz makro ręcznie, a PlateAI będzie używać Twojej poprawki dla tego wpisu w przyszłości.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">Do czego służy Kontrola wagi?<span class="plus"></span></summary>
+<div class="faq-a">To opcjonalny moduł do zapisywania pomiarów wagi i śledzenia trendu w czasie, z cotygodniowymi lub comiesięcznymi powiadomieniami. Włącz go lub wyłącz w Ustawieniach w dowolnym momencie — pasek kart aktualizuje się natychmiast.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">Czy PlateAI jest darmowe?<span class="plus"></span></summary>
+<div class="faq-a">Tak, z darmowym planem obejmującym podstawowe rejestrowanie. Subskrypcja premium odblokowuje wyższe dzienne limity i głębsze wnioski — zobaczysz dokładnie, co zawiera, zanim ktoś poprosi Cię o płatność.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">Co dzieje się z moimi zdjęciami jedzenia?<span class="plus"></span></summary>
+<div class="faq-a">Zdjęcia służą do wygenerowania szacunku żywieniowego i są przechowywane, by zasilać Twoją historię i statystyki. Nie są sprzedawane ani używane do trenowania modeli nikogo spoza usprawniania samego PlateAI.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">Mam pomysł na funkcję — dokąd go wysłać?<span class="plus"></span></summary>
+<div class="faq-a">Prosto do skrzynki zespołu. Czytamy każde zgłoszenie, a sporo wydanych funkcji zaczęło się od takiego, w tym cotygodniowe przypomnienie o ważeniu.</div>
+</details>
+</div>
+<div class="support-side">
+<div class="contact-card">
+<div class="icon-badge">
+<svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M22 6l-10 7L2 6"></path><rect height="16" rx="2" width="20" x="2" y="4"></rect></svg>
+</div>
+<h3>Pomoc e-mailowa</h3>
+<p>W sprawie błędów, rozliczeń i wszystkiego związanego z kontem. Odpowiadamy w ciągu jednego dnia roboczego.</p>
+<a class="link" href="mailto:plateaibusiness0@gmail.com">plateaibusiness0@gmail.com</a>
+</div>
+<div class="contact-card">
+<div class="icon-badge">
+<svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+</div>
+<h3>Propozycje funkcji</h3>
+<p>Powiedz nam, czego brakuje. Cotygodniowe przypomnienia i ocena zdrowotna zaczęły się właśnie tutaj.</p>
+<a class="link" href="mailto:plateaibusiness0@gmail.com">plateaibusiness0@gmail.com</a>
+</div>
+<div class="contact-card">
+<div class="icon-badge">
+<svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" x2="12.01" y1="17" y2="17"></line></svg>
+</div>
+<h3>Status i znane problemy</h3>
+<p>Na razie nic się nie psuje. Jeśli coś wydaje się nie tak, najpierw napisz do pomocy — potwierdzimy, zanim cokolwiek ogłosimy publicznie.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
+<div class="cta-banner">
+<div aria-hidden="true" class="cta-glow"></div>
+<div class="wrap cta-inner">
+<div>
+<h2>Wciąż najszybszy sposób na zapisanie posiłku.</h2>
+<p>Pobierz PlateAI za darmo z App Store.</p>
+</div>
+<div class="store-badges">
+<a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+<span class="lines"><small>Pobierz z</small><span>App Store</span></span>
+</a>
+</div>
+</div>
+</div>
+</section>
 <footer>
-  <div class="wrap foot-row">
-    <span class="brand">PlateAI</span>
-    <nav class="foot-legal">
-      <a href="terms.html" target="_blank" rel="noopener">Terms of Use</a>
-      <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
-    </nav>
-    <span>&copy; 2026 Yevhen Basistyi. All rights reserved.</span>
-  </div>
+<div class="wrap foot-row">
+<span class="brand">PlateAI</span>
+<nav class="foot-legal">
+<a href="../terms.html" rel="noopener" target="_blank">Warunki korzystania</a>
+<a href="../privacy.html" rel="noopener" target="_blank">Polityka prywatności</a>
+</nav>
+<span>© 2026 Yevhen Basistyi. Wszelkie prawa zastrzeżone.</span>
+</div>
 </footer>
-
 <script>
   (function() {
     var buttons = Array.prototype.slice.call(document.querySelectorAll('.tabbar button'));

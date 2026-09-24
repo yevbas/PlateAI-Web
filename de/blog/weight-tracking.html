@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<script>
+(function(){
+  try {
+    var stored = localStorage.getItem('plateai-theme');
+    var theme = stored || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Wie oft solltest du dich wiegen? Täglich oder wöchentlich | PlateAI</title>
+<meta content="Täglich oder wöchentlich wiegen? Warum die Waage schwankt, wie du eine Gewichtstrendlinie liest und eine Wäge-Routine, die nicht zur Obsession wird." name="description"/>
+<link href="../../assets/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../assets/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="PlateAI" property="og:site_name"/>
+<meta content="Wie oft solltest du dich wiegen? Täglich oder wöchentlich | PlateAI" property="og:title"/>
+<meta content="Täglich oder wöchentlich wiegen? Warum die Waage schwankt, wie du eine Gewichtstrendlinie liest und eine Wäge-Routine, die nicht zur Obsession wird." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/assets/icon.png" property="og:image"/>
+<meta content="2026-07-03" property="article:published_time"/>
+<meta content="summary" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Wie oft solltest du dich wiegen?", "description": "Täglich oder wöchentlich wiegen? Warum die Waage schwankt, wie du eine Gewichtstrendlinie liest und eine Wäge-Routine, die nicht zur Obsession wird.", "datePublished": "2026-07-03", "dateModified": "2026-07-03", "author": {"@type": "Organization", "name": "PlateAI Team"}, "publisher": {"@type": "Organization", "name": "PlateAI", "logo": {"@type": "ImageObject", "url": "https://yevbas.github.io/PlateAI-Web/assets/icon.png"}}, "mainEntityOfPage": "https://yevbas.github.io/PlateAI-Web/de/blog/weight-tracking.html", "image": "https://yevbas.github.io/PlateAI-Web/assets/icon.png", "inLanguage": "de"}</script>
+<!-- i18n:head -->
+<link href="https://yevbas.github.io/PlateAI-Web/de/blog/weight-tracking.html" rel="canonical"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/de/blog/weight-tracking.html" property="og:url"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="pl_PL" property="og:locale:alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/blog/weight-tracking.html" hreflang="en" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/es/blog/weight-tracking.html" hreflang="es" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/de/blog/weight-tracking.html" hreflang="de" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/fr/blog/weight-tracking.html" hreflang="fr" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pt/blog/weight-tracking.html" hreflang="pt" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pl/blog/weight-tracking.html" hreflang="pl" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/blog/weight-tracking.html" hreflang="x-default" rel="alternate"/>
+<style>.lang-picker{position:relative;flex-shrink:0}
+.lang-picker summary{list-style:none;cursor:pointer;height:38px;min-width:38px;padding:0 11px;border-radius:999px;border:1px solid var(--line-strong);background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:center;gap:6px;font:700 12.5px/1 -apple-system,system-ui,sans-serif;transition:border-color .25s ease,color .25s ease}
+.lang-picker summary::-webkit-details-marker{display:none}
+.lang-picker summary svg{width:17px;height:17px;flex-shrink:0}
+.lang-picker summary:hover,.lang-picker[open] summary{border-color:var(--flame);color:var(--flame)}
+.lang-picker ul{position:absolute;right:0;top:46px;margin:0;padding:6px;list-style:none;min-width:168px;max-height:70vh;overflow:auto;background:var(--paper);border:1px solid var(--line-strong);border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.16);z-index:60}
+.lang-picker li{margin:0}
+.lang-picker a{display:block;padding:9px 12px;border-radius:9px;color:var(--ink);font-weight:600;font-size:14px;white-space:nowrap}
+.lang-picker a:hover{background:var(--paper-soft)}
+.lang-picker a[aria-current="true"]{color:var(--flame)}
+@media (max-width:560px){.lang-picker summary{padding:0;width:38px}.lang-picker .lang-code{display:none}}</style>
+<!-- /i18n:head -->
+</head>
+<body>
+<style>
+  :root {
+    --ink: #17120E; --ink-soft: #4A4038; --muted: #8A8078;
+    --paper: #FFFFFF; --paper-soft: #F7F4F1;
+    --line: rgba(23,18,14,0.09); --line-strong: rgba(23,18,14,0.16);
+    --flame: #FF7A29; --gold: #FFB238; --mint: #5BAE34; --mint-bg: #BCEF8F;
+    --cta-1: #4D7CFF; --cta-2: #9B5DE5; --cta-3: #F15BB5;
+    --font-display: ui-rounded, "SF Pro Rounded", "SFRounded", "Hiragino Maru Gothic ProN", -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --mint:#7FCB55; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --mint:#7FCB55; color-scheme: dark; }
+  :root[data-theme="light"] { --ink:#17120E; --ink-soft:#4A4038; --muted:#8A8078; --paper:#FFFFFF; --paper-soft:#F7F4F1; --line:rgba(23,18,14,0.09); --line-strong:rgba(23,18,14,0.16); --flame:#FF7A29; --gold:#FFB238; --mint:#5BAE34; color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .eyebrow, .brand-word { font-family: var(--font-display); }
+  h1, h2, h3 { text-wrap: balance; }
+  a { color: var(--flame); text-decoration: none; }
+  a.plain:hover { text-decoration: underline; }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--line); }
+  .topnav-row { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--ink) !important; text-decoration: none !important; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, var(--flame), var(--gold)); flex-shrink: 0; }
+  .back { font-size: 13.5px; font-weight: 700; color: var(--muted) !important; white-space: nowrap; }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+    .topnav-row { gap: 8px; height: 58px; }
+    .brand span.brand-word { display: none; }
+    .brand .mark { width: 24px; height: 24px; }
+    .back { font-size: 11.5px; }
+    .theme-toggle { width: 32px; height: 32px; }
+    .theme-toggle svg { width: 15px; height: 15px; }
+  }
+  @media (max-width: 340px) {
+    .wrap { padding: 0 12px; }
+    .back { font-size: 10.5px; }
+  }
+
+  header.hero { padding: 28px 0 0; }
+  .post-tag {
+    display: inline-flex; padding: 6px 12px; border-radius: 999px;
+    background: color-mix(in srgb, var(--mint) 18%, transparent);
+    color: var(--mint); font-size: 11.5px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: .04em; margin-bottom: 18px;
+  }
+  h1.title { font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
+  .meta { display: flex; gap: 14px; align-items: center; margin-top: 20px; font-size: 13.5px; color: var(--muted); font-weight: 600; }
+  .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+
+  .hero-band {
+    margin-top: 32px;
+    height: 220px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, var(--mint-bg), var(--mint));
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-band::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(420px 220px at 85% 15%, rgba(255,255,255,0.35), transparent 60%);
+  }
+
+  article { padding: 44px 0 0; }
+  .lead { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 8px; }
+
+  .prose h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 44px 0 16px; }
+  .prose h3 { font-size: 18.5px; font-weight: 700; margin: 30px 0 10px; }
+  .prose p { font-size: 16.5px; line-height: 1.8; color: var(--ink-soft); margin: 0 0 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 16.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 8px; }
+  .prose strong { color: var(--ink); }
+
+  .pull {
+    margin: 34px 0;
+    padding: 26px 28px;
+    border-left: 3px solid var(--mint);
+    background: var(--paper-soft);
+    border-radius: 0 16px 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+  }
+
+  .example-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 8px 0 24px; }
+  @media (max-width: 560px) { .example-row { grid-template-columns: 1fr; } }
+  .example-card { padding: 18px 20px; border-radius: 14px; border: 1px solid var(--line); background: var(--paper-soft); }
+  .example-card b { display: block; font-size: 13px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .example-card .val { font-family: var(--font-display); font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .example-card p { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+
+  .inline-cta {
+    margin: 40px 0;
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--paper-soft);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .inline-cta .icon { width: 44px; height: 44px; border-radius: 13px; background: linear-gradient(135deg, var(--mint-bg), var(--mint)); flex-shrink: 0; }
+  .inline-cta h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .inline-cta p { font-size: 14px; color: var(--muted); margin: 0; }
+  .inline-cta .btn {
+    padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; color: #fff;
+    background: linear-gradient(100deg, var(--cta-1), var(--cta-2) 55%, var(--cta-3));
+    flex-shrink: 0;
+  }
+
+  .disclaimer { margin-top: 40px; font-size: 13px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 20px; }
+
+  .cta-banner { position: relative; margin-top: 64px; padding: 64px 0; background: linear-gradient(115deg, #221912 0%, #3C2415 48%, #1B140F 100%); overflow: hidden; }
+  .cta-glow { position: absolute; inset: 0; background: radial-gradient(480px 300px at 12% 20%, rgba(255,178,56,0.25), transparent 70%), radial-gradient(420px 280px at 88% 85%, rgba(255,122,41,0.22), transparent 70%); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; color: #FBF3EC; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .cta-inner h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+  .cta-inner p { margin-top: 8px; color: #D8C7BA; font-size: 15px; }
+  .store-badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 14px; background: #FBF3EC; color: #1B140F; font-weight: 700; }
+  .store-badge svg { width: 24px; height: 24px; }
+  .store-badge .lines { display: flex; flex-direction: column; line-height: 1.15; }
+  .store-badge .lines small { font-size: 10.5px; font-weight: 600; color: #6b6259; text-transform: uppercase; letter-spacing: .04em; }
+  .store-badge .lines span { font-size: 15.5px; }
+
+  footer { padding: 32px 0; border-top: 1px solid var(--line); }
+  .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .theme-toggle {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    flex-shrink: 0;
+    transition: transform .25s cubic-bezier(.22,1,.36,1), border-color .25s ease, color .25s ease;
+  }
+  .theme-toggle:hover { transform: translateY(-2px); border-color: var(--flame); color: var(--flame); }
+  .theme-toggle:active { transform: translateY(0) scale(0.92); }
+  .theme-toggle svg { width: 17px; height: 17px; }
+  .theme-toggle .icon-sun, .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: dark) { .theme-toggle .icon-sun { display: block; } }
+  @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) { .theme-toggle .icon-moon { display: block; } }
+  :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+</style>
+<nav class="topnav">
+<div class="topnav-row">
+<a class="brand" href="../index.html" rel="noopener" target="_blank">
+<span class="mark"></span><span class="brand-word">PlateAI</span>
+</a>
+<!-- i18n:picker -->
+<details class="lang-picker"><summary aria-label="Sprache"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="lang-code" translate="no">DE</span></summary><ul><li><a href="../../blog/weight-tracking.html" hreflang="en" lang="en" translate="no">English</a></li><li><a href="../../es/blog/weight-tracking.html" hreflang="es" lang="es" translate="no">Español</a></li><li><a aria-current="true" href="weight-tracking.html" hreflang="de" lang="de" translate="no">Deutsch</a></li><li><a href="../../fr/blog/weight-tracking.html" hreflang="fr" lang="fr" translate="no">Français</a></li><li><a href="../../pt/blog/weight-tracking.html" hreflang="pt" lang="pt" translate="no">Português</a></li><li><a href="../../pl/blog/weight-tracking.html" hreflang="pl" lang="pl" translate="no">Polski</a></li></ul></details><script>(function(){var d=document.currentScript.previousElementSibling;if(!d)return;d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){try{a.href=a.getAttribute('href').split('#')[0]+location.hash;}catch(e){}});});d.addEventListener('toggle',function(){var u=d.querySelector('ul');u.style.left='';u.style.right='';if(d.open&&u.getBoundingClientRect().left<8){u.style.left='0';u.style.right='auto';}});document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});})();</script>
+<!-- /i18n:picker -->
+<button aria-label="Farbschema wechseln" class="theme-toggle" id="themeToggle" type="button">
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<a class="back" href="../index.html#blog" rel="noopener" target="_blank">← Zurück zum Blog</a>
+</div>
+</nav>
+<header class="hero">
+<div class="wrap">
+<span class="post-tag">Ratgeber</span>
+<h1 class="title">Wie oft solltest du dich wiegen?</h1>
+<div class="meta">
+<span>PlateAI-Team</span><span class="dot"></span><span>3. Juli 2026</span><span class="dot"></span><span>5 Min. Lesezeit</span>
+</div>
+<div aria-label="Illustratives Farbverlaufsbanner" class="hero-band" role="img"></div>
+</div>
+</header>
+<article>
+<div class="wrap">
+<div class="prose">
+<p class="lead">Die Waage kann einen Morgen ruinieren. Über Nacht 0,6 kg (1,4 lb) mehr, und plötzlich fühlt sich der ganze Tag wie ein Urteil über die Entscheidungen von gestern an — obwohl fast nichts von diesem Ausschlag tatsächlich Fett war. Hier steht, was sich wirklich bewegt, und wie du dein Gewicht so verfolgst, dass es dir die Wahrheit sagt, statt eine Spirale auszulösen.</p>
+<h2>Dein Gewicht ist keine einzelne Zahl — es ist Rauschen um einen Trend</h2>
+<p>Das Körpergewicht kann an einem einzigen Tag um 1–2 kg (2–4 lb) schwanken, durch Dinge, die nichts mit Fettzu- oder -abnahme zu tun haben: Natriumzufuhr, Kohlenhydratzufuhr (jedes Gramm gespeicherte Kohlenhydrate bindet etwa 3 g Wasser), Flüssigkeitshaushalt, Hormonzyklen, wie lange die letzte Mahlzeit her ist und sogar wie gut du geschlafen hast. Nichts davon ist „Fortschritt“ oder „Scheitern“ — es ist nur Wasser, das sich verschiebt.</p>
+<div class="pull">Eine einzelne Wägung ist ein Datenpunkt. Eine Trendlinie aus 7–14 Tagen Wägungen ist Information.</div>
+<div class="example-row">
+<div class="example-card"><b>Montag</b><div class="val">172,4 lb</div><p>Salzreiches Abendessen am Vorabend</p></div>
+<div class="example-card"><b>Dienstag</b><div class="val">170,9 lb</div><p>Wassergewicht wird abgegeben — nicht „1,5 lb Fett verloren“</p></div>
+</div>
+<p>Beide Werte sind echt. Keiner sagt für sich allein etwas darüber aus, ob du tatsächlich Fett verlierst. Der Trend über zwei Wochen tut es.</p>
+<h2>Warum wir die Erinnerung auf wöchentlich statt täglich stellen</h2>
+<p>Die Gewichtskontrolle-Erinnerung von PlateAI steht standardmäßig auf einem wöchentlichen Check-in (montagmorgens) statt auf einem täglichen, und das ist eine bewusste Entscheidung, keine fehlende Funktion. Tägliches Wiegen funktioniert gut für Menschen, die verrauschte Daten wirklich anschauen können, ohne darauf zu reagieren — aber bei den meisten macht eine schlechte Zahl an einem beliebigen Mittwoch eine Woche guter Gewohnheiten still zunichte, sei es durch Entmutigung oder eine unbegründete Überkorrektur.</p>
+<p>Ein wöchentlicher Rhythmus unter gleichbleibenden Bedingungen (gleiche Tageszeit, idealerweise nach dem Aufwachen und vor dem Essen) mittelt den Großteil des täglichen Rauschens von selbst heraus, ohne dass du rechnen musst.</p>
+<h3>Wenn du lieber täglich wiegst</h3>
+<p>Auch das ist in Ordnung — manche finden das Ritual erdend statt stressig. Entscheidend ist nicht die Häufigkeit, sondern was du mit der Zahl machst:</p>
+<ul>
+<li><strong>Reagiere nie auf einen einzelnen Tag.</strong> Schau auf einen gleitenden 7-Tage-Durchschnitt, nicht auf den Wert von gestern.</li>
+<li><strong>Wiege dich unter gleichen Bedingungen</strong> — gleiche Zeit, gleiche Kleidung, idealerweise nach dem Toilettengang und vor dem Essen oder Trinken.</li>
+<li><strong>Beurteile Fortschritt in Fenstern von zwei bis drei Wochen.</strong> Eine Woche „ohne Bewegung“ ist normale Schwankung, kein stagnierender Plan.</li>
+</ul>
+<h2>Die Trendlinie lesen statt die Zahl</h2>
+<p>Sobald du ein paar Wochen an Daten hast, zählt die Form der Linie mehr als jeder einzelne Punkt. Ein Trend, der sanft abfällt — auch wenn einzelne Wägungen darüber und darunter springen — ist genau das, wie echter Fettverlust aussieht. Ein flacher Trend über drei oder mehr konsequente Wochen ist das eigentliche Signal, dass sich etwas ändern muss, sei es deine Zufuhr, deine Aktivität oder deine Konsequenz.</p>
+<div class="inline-cta">
+<div style="display:flex; align-items:center; gap:16px;">
+<div class="icon"></div>
+<div>
+<h4>Die Gewichtskontrolle macht aus deinen Wägungen automatisch einen Trend</h4>
+<p>Gewicht erfassen, Diagramm erhalten — mit wöchentlicher oder monatlicher Erinnerung, damit du nie selbst daran denken musst.</p>
+</div>
+</div>
+<a class="btn" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">PlateAI kostenlos testen</a>
+</div>
+<h3>Die Kurzfassung</h3>
+<ol>
+<li>Eine einzelne Wägung spiegelt Wasser und Nahrungsvolumen ebenso wie Fett — beurteile sie nicht isoliert.</li>
+<li>Wiege dich konsequent (gleiche Zeit, gleiche Bedingungen), egal welche Häufigkeit du wählst.</li>
+<li>Beurteile Fortschritt an einem gleitenden 7-Tage-Durchschnitt, alle zwei bis drei Wochen geprüft.</li>
+<li>Wenn der Trend trotz konsequenten Trackings drei Wochen oder länger flach bleibt, ist das das echte Signal zum Anpassen — nicht der Wert eines einzelnen Morgens.</li>
+</ol>
+<div class="disclaimer">Dieser Artikel enthält allgemeine Bildungsinformationen und ist keine medizinische Beratung. Wenn häufiges Wiegen deine psychische Gesundheit oder dein Verhältnis zum Essen negativ beeinflusst, erwäge, seltener zu erfassen, oder sprich mit einer medizinischen Fachperson.</div>
+</div>
+</div>
+</article>
+<div class="cta-banner">
+<div aria-hidden="true" class="cta-glow"></div>
+<div class="cta-inner">
+<div>
+<h2>Verfolge den Trend, nicht das Rauschen.</h2>
+<p>Die Gewichtskontrolle zeichnet deinen echten Fortschritt automatisch auf.</p>
+</div>
+<a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+<span class="lines"><small>Laden im</small><span>App Store</span></span>
+</a>
+</div>
+</div>
+<footer>
+<div class="foot-row">
+<span>PlateAI</span>
+<span>© 2026 Yevhen Basistyi. Alle Rechte vorbehalten.</span>
+</div>
+</footer>
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('plateai-theme', next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>

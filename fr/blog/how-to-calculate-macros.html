@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<script>
+(function(){
+  try {
+    var stored = localStorage.getItem('plateai-theme');
+    var theme = stored || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Comment calculer vos macros pour perdre du poids | PlateAI</title>
+<meta content="Comment calculer ses macros pour perdre du poids : fixez les calories, puis protéines, lipides et glucides selon votre poids. Avec un exemple détaillé et des objectifs en grammes par poids." name="description"/>
+<link href="../../assets/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../assets/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="PlateAI" property="og:site_name"/>
+<meta content="Comment calculer vos macros pour perdre du poids | PlateAI" property="og:title"/>
+<meta content="Comment calculer ses macros pour perdre du poids : fixez les calories, puis protéines, lipides et glucides selon votre poids. Avec un exemple détaillé et des objectifs en grammes par poids." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/assets/icon.png" property="og:image"/>
+<meta content="2026-09-24" property="article:published_time"/>
+<meta content="summary" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Comment calculer vos macros pour perdre du poids (pas à pas)", "description": "Comment calculer ses macros pour perdre du poids : fixez les calories, puis protéines, lipides et glucides selon votre poids. Avec un exemple détaillé et des objectifs en grammes par poids.", "datePublished": "2026-09-24", "dateModified": "2026-09-24", "author": {"@type": "Organization", "name": "PlateAI Team"}, "publisher": {"@type": "Organization", "name": "PlateAI", "logo": {"@type": "ImageObject", "url": "https://yevbas.github.io/PlateAI-Web/assets/icon.png"}}, "mainEntityOfPage": "https://yevbas.github.io/PlateAI-Web/fr/blog/how-to-calculate-macros.html", "image": "https://yevbas.github.io/PlateAI-Web/assets/icon.png", "inLanguage": "fr"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "De combien de protéines avez-vous besoin par jour ?", "description": "De combien de protéines avez-vous besoin par jour ? Plages pratiques selon le poids corporel (1,6–2,2 g/kg), exemples d'aliments réels et pourquoi les besoins augmentent en déficit calorique.", "datePublished": "2026-07-10", "dateModified": "2026-07-10", "author": {"@type": "Organization", "name": "PlateAI Team"}, "publisher": {"@type": "Organization", "name": "PlateAI", "logo": {"@type": "ImageObject", "url": "https://yevbas.github.io/PlateAI-Web/assets/icon.png"}}, "mainEntityOfPage": "https://yevbas.github.io/PlateAI-Web/fr/blog/how-to-calculate-macros.html", "image": "https://yevbas.github.io/PlateAI-Web/assets/icon.png", "inLanguage": "fr"}</script>
+<!-- i18n:head -->
+<link href="https://yevbas.github.io/PlateAI-Web/fr/blog/how-to-calculate-macros.html" rel="canonical"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/fr/blog/how-to-calculate-macros.html" property="og:url"/>
+<meta content="fr_FR" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="de_DE" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="pl_PL" property="og:locale:alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/blog/how-to-calculate-macros.html" hreflang="en" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/es/blog/how-to-calculate-macros.html" hreflang="es" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/de/blog/how-to-calculate-macros.html" hreflang="de" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/fr/blog/how-to-calculate-macros.html" hreflang="fr" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pt/blog/how-to-calculate-macros.html" hreflang="pt" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pl/blog/how-to-calculate-macros.html" hreflang="pl" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/blog/how-to-calculate-macros.html" hreflang="x-default" rel="alternate"/>
+<style>.lang-picker{position:relative;flex-shrink:0}
+.lang-picker summary{list-style:none;cursor:pointer;height:38px;min-width:38px;padding:0 11px;border-radius:999px;border:1px solid var(--line-strong);background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:center;gap:6px;font:700 12.5px/1 -apple-system,system-ui,sans-serif;transition:border-color .25s ease,color .25s ease}
+.lang-picker summary::-webkit-details-marker{display:none}
+.lang-picker summary svg{width:17px;height:17px;flex-shrink:0}
+.lang-picker summary:hover,.lang-picker[open] summary{border-color:var(--flame);color:var(--flame)}
+.lang-picker ul{position:absolute;right:0;top:46px;margin:0;padding:6px;list-style:none;min-width:168px;max-height:70vh;overflow:auto;background:var(--paper);border:1px solid var(--line-strong);border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.16);z-index:60}
+.lang-picker li{margin:0}
+.lang-picker a{display:block;padding:9px 12px;border-radius:9px;color:var(--ink);font-weight:600;font-size:14px;white-space:nowrap}
+.lang-picker a:hover{background:var(--paper-soft)}
+.lang-picker a[aria-current="true"]{color:var(--flame)}
+@media (max-width:560px){.lang-picker summary{padding:0;width:38px}.lang-picker .lang-code{display:none}}</style>
+<!-- /i18n:head -->
+</head>
+<body>
+<style>
+  :root {
+    --ink: #17120E; --ink-soft: #4A4038; --muted: #8A8078;
+    --paper: #FFFFFF; --paper-soft: #F7F4F1;
+    --line: rgba(23,18,14,0.09); --line-strong: rgba(23,18,14,0.16);
+    --flame: #FF7A29; --gold: #FFB238; --periwinkle: #7AA3FF;
+    --cta-1: #4D7CFF; --cta-2: #9B5DE5; --cta-3: #F15BB5;
+    --font-display: ui-rounded, "SF Pro Rounded", "SFRounded", "Hiragino Maru Gothic ProN", -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  :root[data-theme="light"] { --ink:#17120E; --ink-soft:#4A4038; --muted:#8A8078; --paper:#FFFFFF; --paper-soft:#F7F4F1; --line:rgba(23,18,14,0.09); --line-strong:rgba(23,18,14,0.16); --flame:#FF7A29; --gold:#FFB238; --periwinkle:#7AA3FF; color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .eyebrow, .brand-word { font-family: var(--font-display); }
+  h1, h2, h3 { text-wrap: balance; }
+  a { color: var(--flame); text-decoration: none; }
+  a.plain:hover { text-decoration: underline; }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--line); }
+  .topnav-row { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--ink) !important; text-decoration: none !important; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, var(--flame), var(--gold)); flex-shrink: 0; }
+  .back { font-size: 13.5px; font-weight: 700; color: var(--muted) !important; white-space: nowrap; }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+    .topnav-row { gap: 8px; height: 58px; }
+    .brand span.brand-word { display: none; }
+    .brand .mark { width: 24px; height: 24px; }
+    .back { font-size: 11.5px; }
+    .theme-toggle { width: 32px; height: 32px; }
+    .theme-toggle svg { width: 15px; height: 15px; }
+  }
+  @media (max-width: 340px) {
+    .wrap { padding: 0 12px; }
+    .back { font-size: 10.5px; }
+  }
+
+  header.hero { padding: 28px 0 0; }
+  .post-tag {
+    display: inline-flex; padding: 6px 12px; border-radius: 999px;
+    background: color-mix(in srgb, var(--periwinkle) 20%, transparent);
+    color: #2C4FBD; font-size: 11.5px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: .04em; margin-bottom: 18px;
+  }
+  :root[data-theme="dark"] .post-tag { color: var(--periwinkle); }
+  @media (prefers-color-scheme: dark) { .post-tag { color: var(--periwinkle); } }
+  h1.title { font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
+  .meta { display: flex; gap: 14px; align-items: center; margin-top: 20px; font-size: 13.5px; color: var(--muted); font-weight: 600; }
+  .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+
+  .hero-band {
+    margin-top: 32px;
+    height: 220px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, var(--periwinkle), var(--cta-1));
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-band::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(420px 220px at 85% 15%, rgba(255,255,255,0.35), transparent 60%);
+  }
+
+  article { padding: 44px 0 0; }
+  .lead { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 8px; }
+
+  .prose h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 44px 0 16px; }
+  .prose h3 { font-size: 18.5px; font-weight: 700; margin: 30px 0 10px; }
+  .prose p { font-size: 16.5px; line-height: 1.8; color: var(--ink-soft); margin: 0 0 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 16.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 8px; }
+  .prose strong { color: var(--ink); }
+
+  .pull {
+    margin: 34px 0;
+    padding: 26px 28px;
+    border-left: 3px solid var(--periwinkle);
+    background: var(--paper-soft);
+    border-radius: 0 16px 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+  }
+
+  .ref-table { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 15px; }
+  .ref-table th, .ref-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  .ref-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 700; }
+  .ref-table td { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .ref-table td:first-child { color: var(--ink); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+
+  .food-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 8px 0 24px; }
+  @media (max-width: 520px) { .food-grid { grid-template-columns: 1fr; } }
+  .food-card { padding: 14px 16px; background: var(--paper-soft); border: 1px solid var(--line); border-radius: 12px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .food-card b { font-size: 14.5px; font-weight: 700; }
+  .food-card span { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .inline-cta {
+    margin: 40px 0;
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--paper-soft);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .inline-cta .icon { width: 44px; height: 44px; border-radius: 13px; background: linear-gradient(135deg, var(--periwinkle), var(--cta-1)); flex-shrink: 0; }
+  .inline-cta h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .inline-cta p { font-size: 14px; color: var(--muted); margin: 0; }
+  .inline-cta .btn {
+    padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; color: #fff;
+    background: linear-gradient(100deg, var(--cta-1), var(--cta-2) 55%, var(--cta-3));
+    flex-shrink: 0;
+  }
+
+  .disclaimer { margin-top: 40px; font-size: 13px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 20px; }
+
+  .cta-banner { position: relative; margin-top: 64px; padding: 64px 0; background: linear-gradient(115deg, #221912 0%, #3C2415 48%, #1B140F 100%); overflow: hidden; }
+  .cta-glow { position: absolute; inset: 0; background: radial-gradient(480px 300px at 12% 20%, rgba(255,178,56,0.25), transparent 70%), radial-gradient(420px 280px at 88% 85%, rgba(255,122,41,0.22), transparent 70%); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; color: #FBF3EC; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .cta-inner h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+  .cta-inner p { margin-top: 8px; color: #D8C7BA; font-size: 15px; }
+  .store-badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 14px; background: #FBF3EC; color: #1B140F; font-weight: 700; }
+  .store-badge svg { width: 24px; height: 24px; }
+  .store-badge .lines { display: flex; flex-direction: column; line-height: 1.15; }
+  .store-badge .lines small { font-size: 10.5px; font-weight: 600; color: #6b6259; text-transform: uppercase; letter-spacing: .04em; }
+  .store-badge .lines span { font-size: 15.5px; }
+
+  footer { padding: 32px 0; border-top: 1px solid var(--line); }
+  .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .theme-toggle {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    flex-shrink: 0;
+    transition: transform .25s cubic-bezier(.22,1,.36,1), border-color .25s ease, color .25s ease;
+  }
+  .theme-toggle:hover { transform: translateY(-2px); border-color: var(--flame); color: var(--flame); }
+  .theme-toggle:active { transform: translateY(0) scale(0.92); }
+  .theme-toggle svg { width: 17px; height: 17px; }
+  .theme-toggle .icon-sun, .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: dark) { .theme-toggle .icon-sun { display: block; } }
+  @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) { .theme-toggle .icon-moon { display: block; } }
+  :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+</style>
+<nav class="topnav">
+<div class="topnav-row">
+<a class="brand" href="../index.html" rel="noopener" target="_blank">
+<span class="mark"></span><span class="brand-word">PlateAI</span>
+</a>
+<!-- i18n:picker -->
+<details class="lang-picker"><summary aria-label="Langue"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="lang-code" translate="no">FR</span></summary><ul><li><a href="../../blog/how-to-calculate-macros.html" hreflang="en" lang="en" translate="no">English</a></li><li><a href="../../es/blog/how-to-calculate-macros.html" hreflang="es" lang="es" translate="no">Español</a></li><li><a href="../../de/blog/how-to-calculate-macros.html" hreflang="de" lang="de" translate="no">Deutsch</a></li><li><a aria-current="true" href="how-to-calculate-macros.html" hreflang="fr" lang="fr" translate="no">Français</a></li><li><a href="../../pt/blog/how-to-calculate-macros.html" hreflang="pt" lang="pt" translate="no">Português</a></li><li><a href="../../pl/blog/how-to-calculate-macros.html" hreflang="pl" lang="pl" translate="no">Polski</a></li></ul></details><script>(function(){var d=document.currentScript.previousElementSibling;if(!d)return;d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){try{a.href=a.getAttribute('href').split('#')[0]+location.hash;}catch(e){}});});d.addEventListener('toggle',function(){var u=d.querySelector('ul');u.style.left='';u.style.right='';if(d.open&&u.getBoundingClientRect().left<8){u.style.left='0';u.style.right='auto';}});document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});})();</script>
+<!-- /i18n:picker -->
+<button aria-label="Changer le thème de couleur" class="theme-toggle" id="themeToggle" type="button">
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<a class="back" href="../index.html#blog" rel="noopener" target="_blank">← Retour au blog</a>
+</div>
+</nav>
+<header class="hero">
+<div class="wrap">
+<span class="post-tag">Guide</span>
+<h1 class="title">Comment calculer vos macros pour perdre du poids (pas à pas)</h1>
+<div class="meta">
+<span>L'équipe PlateAI</span><span class="dot"></span><span>24 septembre 2026</span><span class="dot"></span><span>7 min de lecture</span>
+</div>
+<div aria-label="Bannière dégradée illustrative" class="hero-band" role="img"></div>
+</div>
+</header>
+<article>
+<div class="wrap">
+<div class="prose">
+<p class="lead">La plupart des calculateurs de macros vous donnent une répartition du type 40/30/30 et s'arrêtent là. Le problème, c'est que les pourcentages masquent l'essentiel : combien de grammes de protéines vous consommez, et si vos lipides sont assez bas pour nuire. Voici une façon simple de calculer ses macros pour perdre du poids en partant de votre poids corporel.</p>
+<h2>Que sont les macros, et pourquoi les suivre ?</h2>
+<p>Les macros — abréviation de macronutriments — sont les trois nutriments qui fournissent vos calories : <strong>protéines, glucides et lipides</strong>. Les calories déterminent si vous perdez du poids. Les macros déterminent <em>ce que</em> vous perdez (graisse ou muscle), votre sensation de satiété et la qualité de votre entraînement.</p>
+<p>Si le suivi est nouveau pour vous, commencez par notre guide pour débutants sur <a href="how-to-count-calories.html">comment compter les calories</a> — les macros s'appuient directement dessus.</p>
+<h2>Étape 1 : fixez votre objectif calorique</h2>
+<p>Tout le reste se déduit de ce chiffre. Estimez vos calories de maintien (DET), puis retirez environ 300 à 500 kcal pour une perte de poids régulière. Si vous ne l'avez pas encore fait, notre guide <a href="calorie-deficit.html">combien de calories manger pour perdre du poids</a> vous l'explique pas à pas. Pour les exemples ci-dessous, nous prendrons une personne de 73 kg (160 lb) qui mange <strong>1 800 kcal</strong> par jour.</p>
+<h2>Étape 2 : fixez d'abord les protéines</h2>
+<p>Les protéines passent en premier parce que c'est le macro qui gagne le plus à être fixé délibérément. En déficit calorique, un apport plus élevé aide à préserver le muscle et à garder la faim sous contrôle. Une plage pratique est de <strong>1,6 à 2,2 g par kg de poids corporel</strong> (environ 0,7 à 1,0 g par lb) — voir <a href="protein-needs.html">de combien de protéines vous avez besoin par jour</a> pour le raisonnement.</p>
+<p>Pour notre exemple, nous prendrons 0,8 g par lb : 160 × 0,8 = <strong>128 g de protéines</strong>. Les protéines apportent 4 calories par gramme, soit 512 kcal.</p>
+<h2>Étape 3 : fixez un plancher de lipides</h2>
+<p>Les lipides sont denses en calories (9 kcal par gramme), il est donc facile de dépasser — mais descendre trop bas se retourne contre vous. Les lipides aident à absorber les vitamines A, D, E et K et rendent les repas plus rassasiants. Un objectif raisonnable pour la plupart des gens est d'environ <strong>0,3 à 0,45 g par lb</strong> de poids corporel, ce qui se situe généralement entre 20 % et 35 % des calories totales.</p>
+<p>Pour notre exemple, 0,35 g par lb : 160 × 0,35 = <strong>56 g de lipides</strong>, soit 504 kcal.</p>
+<h2>Étape 4 : laissez les glucides combler le reste</h2>
+<p>Les glucides sont le macro flexible. Les calories restantes après les protéines et les lipides vont aux glucides, à 4 kcal par gramme :</p>
+<div class="pull">1 800 kcal − 512 (protéines) − 504 (lipides) = 784 kcal ÷ 4 = environ 196 g de glucides.</div>
+<p>Cela donne un objectif final d'environ <strong>128 g de protéines / 56 g de lipides / 196 g de glucides</strong> — soit à peu près 28 % de protéines, 28 % de lipides et 44 % de glucides. Les glucides alimentent l'entraînement ; si vous soulevez des poids ou courez régulièrement, c'est le macro à protéger.</p>
+<h2>Objectifs de macros selon le poids corporel</h2>
+<p>Avec la même méthode (0,8 g de protéines et 0,35 g de lipides par lb, les glucides comblent le reste), voici des points de départ approximatifs pour quelques corpulences. Arrondissez librement — ce sont des points de départ, pas des prescriptions.</p>
+<div class="table-wrap">
+<table class="ref-table">
+<thead><tr><th>Poids corporel</th><th>Calories</th><th>Protéines</th><th>Lipides</th><th>Glucides</th></tr></thead>
+<tbody>
+<tr><td>130 lb / 59 kg</td><td>1,500</td><td>104 g</td><td>46 g</td><td>168 g</td></tr>
+<tr><td>160 lb / 73 kg</td><td>1,800</td><td>128 g</td><td>56 g</td><td>196 g</td></tr>
+<tr><td>190 lb / 86 kg</td><td>2,200</td><td>152 g</td><td>67 g</td><td>247 g</td></tr>
+<tr><td>220 lb / 100 kg</td><td>2,600</td><td>176 g</td><td>77 g</td><td>301 g</td></tr>
+</tbody>
+</table>
+</div>
+<div class="inline-cta">
+<div style="display:flex; align-items:center; gap:16px;">
+<div class="icon"></div>
+<div>
+<h4>Atteindre les chiffres, c'est la partie difficile</h4>
+<p>PlateAI affiche vos calories, protéines, glucides et lipides face à vos objectifs quotidiens à partir d'une seule photo — vous savez dès midi ce que le dîner doit compenser.</p>
+</div>
+</div>
+<a class="btn" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">Essayer PlateAI gratuitement</a>
+</div>
+<h2>Pourquoi les grammes valent mieux que les pourcentages</h2>
+<p>Une répartition « 40/30/30 » paraît précise, mais les pourcentages bougent avec vos calories. À 1 400 kcal, 30 % de protéines font 105 g ; à 2 800 kcal, 210 g — le même pourcentage, des quantités très différentes. Fixer protéines et lipides selon le poids corporel garde stable ce dont votre corps a réellement besoin, et laisse les glucides s'adapter à votre objectif calorique et à votre activité.</p>
+<h2>Erreurs courantes avec les macros</h2>
+<ul>
+<li><strong>Courir après des ratios parfaits.</strong> Rester à environ 10 % de votre objectif de protéines la plupart des jours compte bien plus que de tomber sur une répartition exacte chaque jour.</li>
+<li><strong>Réduire trop les lipides.</strong> Descendre sous la plage ci-dessus peut vous laisser affamé et insatisfait sans rien accélérer.</li>
+<li><strong>Supprimer les glucides par défaut.</strong> Le régime pauvre en glucides peut convenir à certaines personnes, mais réduire trop les glucides nuit souvent à l'entraînement et à la constance. Les calories restent ce qui décide de la perte de poids.</li>
+<li><strong>Oublier les fibres.</strong> Visez environ 25 à 35 g par jour via légumes, fruits, légumineuses et céréales complètes. Elles favorisent la satiété et la digestion.</li>
+<li><strong>Négliger les lipides cachés.</strong> Huiles, vinaigrettes et matières grasses de cuisson sont faciles à oublier — voir <a href="healthy-doesnt-mean-low-calorie.html">ces aliments sains étonnamment riches en calories</a>.</li>
+</ul>
+<h2>Comment ajuster vos macros au fil du temps</h2>
+<p>Considérez votre premier jeu de chiffres comme un brouillon. Suivez régulièrement pendant deux à trois semaines, puis regardez votre poids moyen hebdomadaire, pas la lecture d'un seul matin — notre guide sur <a href="weight-tracking.html">la fréquence des pesées</a> explique pourquoi. Si la tendance reste plate malgré un suivi régulier, retirez environ 100 à 150 calories, surtout sur les glucides ou les lipides, et gardez les protéines telles quelles. Si l'énergie ou l'entraînement s'effondrent, remettez-en un peu.</p>
+<p>Vous mangez dehors ou enregistrez des repas que vous n'avez pas cuisinés ? Une estimation proche suffit — voir <a href="eating-out.html">comment suivre calories et macros quand on mange au restaurant</a>.</p>
+<h2>Questions fréquentes</h2>
+<h3>Quelle est la meilleure répartition de macros pour perdre du poids ?</h3>
+<p>Il n'existe pas de meilleure répartition unique. Ce qui compte le plus, c'est un déficit calorique tenable et assez de protéines. Un point de départ courant est d'environ 25 à 35 % de protéines, 25 à 35 % de lipides et le reste en glucides, mais fixer protéines et lipides selon le poids corporel, comme ci-dessus, est plus fiable.</p>
+<h3>Dois-je atteindre mes macros à la lettre ?</h3>
+<p>Non. Visez environ 10 % d'écart sur vos objectifs de protéines et de calories la plupart des jours. Les moyennes hebdomadaires comptent plus que n'importe quel jour isolé.</p>
+<h3>Les macros ou les calories comptent-ils plus pour perdre du poids ?</h3>
+<p>Les calories déterminent si vous perdez du poids ; les macros influencent la façon dont cela se passe — préservation du muscle, faim et performance. Réglez d'abord les calories, puis les protéines, puis affinez le reste.</p>
+<h3>Dois-je suivre les macros ou seulement les protéines ?</h3>
+<p>Si tout suivre vous paraît trop lourd, suivre uniquement calories et protéines apporte l'essentiel du bénéfice. Ajoutez glucides et lipides quand cela devient automatique.</p>
+<h3>Combien de glucides manger pour perdre du poids ?</h3>
+<p>Cela dépend de votre objectif calorique et de votre niveau d'activité. Les glucides sont ce qui reste après avoir fixé protéines et lipides, soit pour beaucoup de gens entre 100 et 300 g par jour.</p>
+<h2>En résumé</h2>
+<ol>
+<li>Fixez votre objectif calorique — environ 300 à 500 kcal sous le maintien.</li>
+<li>Fixez les protéines à environ 0,7–1,0 g par lb de poids corporel.</li>
+<li>Fixez les lipides à environ 0,3–0,45 g par lb.</li>
+<li>Comblez les calories restantes avec des glucides (4 kcal par gramme).</li>
+<li>Vérifiez votre moyenne hebdomadaire après deux à trois semaines et ajustez.</li>
+</ol>
+<div class="disclaimer">Cet article est une information éducative générale, pas un avis médical ou diététique. Les besoins en macros varient selon l'âge, l'état de santé et l'entraînement ; si vous avez un problème de santé, êtes enceinte ou avez des antécédents de troubles du comportement alimentaire, consultez un professionnel de santé qualifié ou un diététicien avant de modifier votre alimentation.</div>
+</div>
+</div>
+</article>
+<div class="cta-banner">
+<div aria-hidden="true" class="cta-glow"></div>
+<div class="cta-inner">
+<div>
+<h2>Connaissez vos macros, à chaque repas.</h2>
+<p>Prenez une photo — PlateAI suit calories et macros face à vos objectifs.</p>
+</div>
+<a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+<span class="lines"><small>Télécharger sur l'</small><span>App Store</span></span>
+</a>
+</div>
+</div>
+<footer>
+<div class="foot-row">
+<span>PlateAI</span>
+<span>© 2026 Yevhen Basistyi. Tous droits réservés.</span>
+</div>
+</footer>
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('plateai-theme', next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>

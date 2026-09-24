@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<script>
+(function(){
+  try {
+    var stored = localStorage.getItem('plateai-theme');
+    var theme = stored || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>So berechnest du deine Makros zum Abnehmen | PlateAI</title>
+<meta content="So berechnest du Makros zum Abnehmen: Kalorien festlegen, dann Eiweiß, Fett und Kohlenhydrate nach Körpergewicht. Mit durchgerechnetem Beispiel und Gramm-Zielen nach Gewicht." name="description"/>
+<link href="../../assets/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../assets/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="PlateAI" property="og:site_name"/>
+<meta content="So berechnest du deine Makros zum Abnehmen | PlateAI" property="og:title"/>
+<meta content="So berechnest du Makros zum Abnehmen: Kalorien festlegen, dann Eiweiß, Fett und Kohlenhydrate nach Körpergewicht. Mit durchgerechnetem Beispiel und Gramm-Zielen nach Gewicht." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/assets/icon.png" property="og:image"/>
+<meta content="2026-09-24" property="article:published_time"/>
+<meta content="summary" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "So berechnest du deine Makros zum Abnehmen (Schritt für Schritt)", "description": "So berechnest du Makros zum Abnehmen: Kalorien festlegen, dann Eiweiß, Fett und Kohlenhydrate nach Körpergewicht. Mit durchgerechnetem Beispiel und Gramm-Zielen nach Gewicht.", "datePublished": "2026-09-24", "dateModified": "2026-09-24", "author": {"@type": "Organization", "name": "PlateAI Team"}, "publisher": {"@type": "Organization", "name": "PlateAI", "logo": {"@type": "ImageObject", "url": "https://yevbas.github.io/PlateAI-Web/assets/icon.png"}}, "mainEntityOfPage": "https://yevbas.github.io/PlateAI-Web/de/blog/how-to-calculate-macros.html", "image": "https://yevbas.github.io/PlateAI-Web/assets/icon.png", "inLanguage": "de"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Wie viel Eiweiß brauchst du pro Tag?", "description": "Wie viel Eiweiß brauchst du pro Tag? Praktische Bereiche nach Körpergewicht (1,6–2,2 g/kg), echte Lebensmittelbeispiele und warum der Bedarf im Kaloriendefizit steigt.", "datePublished": "2026-07-10", "dateModified": "2026-07-10", "author": {"@type": "Organization", "name": "PlateAI Team"}, "publisher": {"@type": "Organization", "name": "PlateAI", "logo": {"@type": "ImageObject", "url": "https://yevbas.github.io/PlateAI-Web/assets/icon.png"}}, "mainEntityOfPage": "https://yevbas.github.io/PlateAI-Web/de/blog/how-to-calculate-macros.html", "image": "https://yevbas.github.io/PlateAI-Web/assets/icon.png", "inLanguage": "de"}</script>
+<!-- i18n:head -->
+<link href="https://yevbas.github.io/PlateAI-Web/de/blog/how-to-calculate-macros.html" rel="canonical"/>
+<meta content="https://yevbas.github.io/PlateAI-Web/de/blog/how-to-calculate-macros.html" property="og:url"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="es_ES" property="og:locale:alternate"/>
+<meta content="fr_FR" property="og:locale:alternate"/>
+<meta content="pt_BR" property="og:locale:alternate"/>
+<meta content="pl_PL" property="og:locale:alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/blog/how-to-calculate-macros.html" hreflang="en" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/es/blog/how-to-calculate-macros.html" hreflang="es" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/de/blog/how-to-calculate-macros.html" hreflang="de" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/fr/blog/how-to-calculate-macros.html" hreflang="fr" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pt/blog/how-to-calculate-macros.html" hreflang="pt" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/pl/blog/how-to-calculate-macros.html" hreflang="pl" rel="alternate"/>
+<link href="https://yevbas.github.io/PlateAI-Web/blog/how-to-calculate-macros.html" hreflang="x-default" rel="alternate"/>
+<style>.lang-picker{position:relative;flex-shrink:0}
+.lang-picker summary{list-style:none;cursor:pointer;height:38px;min-width:38px;padding:0 11px;border-radius:999px;border:1px solid var(--line-strong);background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:center;gap:6px;font:700 12.5px/1 -apple-system,system-ui,sans-serif;transition:border-color .25s ease,color .25s ease}
+.lang-picker summary::-webkit-details-marker{display:none}
+.lang-picker summary svg{width:17px;height:17px;flex-shrink:0}
+.lang-picker summary:hover,.lang-picker[open] summary{border-color:var(--flame);color:var(--flame)}
+.lang-picker ul{position:absolute;right:0;top:46px;margin:0;padding:6px;list-style:none;min-width:168px;max-height:70vh;overflow:auto;background:var(--paper);border:1px solid var(--line-strong);border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.16);z-index:60}
+.lang-picker li{margin:0}
+.lang-picker a{display:block;padding:9px 12px;border-radius:9px;color:var(--ink);font-weight:600;font-size:14px;white-space:nowrap}
+.lang-picker a:hover{background:var(--paper-soft)}
+.lang-picker a[aria-current="true"]{color:var(--flame)}
+@media (max-width:560px){.lang-picker summary{padding:0;width:38px}.lang-picker .lang-code{display:none}}</style>
+<!-- /i18n:head -->
+</head>
+<body>
+<style>
+  :root {
+    --ink: #17120E; --ink-soft: #4A4038; --muted: #8A8078;
+    --paper: #FFFFFF; --paper-soft: #F7F4F1;
+    --line: rgba(23,18,14,0.09); --line-strong: rgba(23,18,14,0.16);
+    --flame: #FF7A29; --gold: #FFB238; --periwinkle: #7AA3FF;
+    --cta-1: #4D7CFF; --cta-2: #9B5DE5; --cta-3: #F15BB5;
+    --font-display: ui-rounded, "SF Pro Rounded", "SFRounded", "Hiragino Maru Gothic ProN", -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --ink:#FBF3EC; --ink-soft:#E4D8CE; --muted:#B3A79C; --paper:#130E0B; --paper-soft:#1C1511; --line:rgba(251,243,236,0.10); --line-strong:rgba(251,243,236,0.18); --flame:#FF8A42; --gold:#FFC155; --periwinkle:#8FB4FF; color-scheme: dark; }
+  :root[data-theme="light"] { --ink:#17120E; --ink-soft:#4A4038; --muted:#8A8078; --paper:#FFFFFF; --paper-soft:#F7F4F1; --line:rgba(23,18,14,0.09); --line-strong:rgba(23,18,14,0.16); --flame:#FF7A29; --gold:#FFB238; --periwinkle:#7AA3FF; color-scheme: light; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .eyebrow, .brand-word { font-family: var(--font-display); }
+  h1, h2, h3 { text-wrap: balance; }
+  a { color: var(--flame); text-decoration: none; }
+  a.plain:hover { text-decoration: underline; }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--line); }
+  .topnav-row { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--ink) !important; text-decoration: none !important; }
+  .brand .mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, var(--flame), var(--gold)); flex-shrink: 0; }
+  .back { font-size: 13.5px; font-weight: 700; color: var(--muted) !important; white-space: nowrap; }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+    .topnav-row { gap: 8px; height: 58px; }
+    .brand span.brand-word { display: none; }
+    .brand .mark { width: 24px; height: 24px; }
+    .back { font-size: 11.5px; }
+    .theme-toggle { width: 32px; height: 32px; }
+    .theme-toggle svg { width: 15px; height: 15px; }
+  }
+  @media (max-width: 340px) {
+    .wrap { padding: 0 12px; }
+    .back { font-size: 10.5px; }
+  }
+
+  header.hero { padding: 28px 0 0; }
+  .post-tag {
+    display: inline-flex; padding: 6px 12px; border-radius: 999px;
+    background: color-mix(in srgb, var(--periwinkle) 20%, transparent);
+    color: #2C4FBD; font-size: 11.5px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: .04em; margin-bottom: 18px;
+  }
+  :root[data-theme="dark"] .post-tag { color: var(--periwinkle); }
+  @media (prefers-color-scheme: dark) { .post-tag { color: var(--periwinkle); } }
+  h1.title { font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
+  .meta { display: flex; gap: 14px; align-items: center; margin-top: 20px; font-size: 13.5px; color: var(--muted); font-weight: 600; }
+  .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+
+  .hero-band {
+    margin-top: 32px;
+    height: 220px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, var(--periwinkle), var(--cta-1));
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-band::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(420px 220px at 85% 15%, rgba(255,255,255,0.35), transparent 60%);
+  }
+
+  article { padding: 44px 0 0; }
+  .lead { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 8px; }
+
+  .prose h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 44px 0 16px; }
+  .prose h3 { font-size: 18.5px; font-weight: 700; margin: 30px 0 10px; }
+  .prose p { font-size: 16.5px; line-height: 1.8; color: var(--ink-soft); margin: 0 0 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 16.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 8px; }
+  .prose strong { color: var(--ink); }
+
+  .pull {
+    margin: 34px 0;
+    padding: 26px 28px;
+    border-left: 3px solid var(--periwinkle);
+    background: var(--paper-soft);
+    border-radius: 0 16px 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+  }
+
+  .ref-table { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 15px; }
+  .ref-table th, .ref-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  .ref-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 700; }
+  .ref-table td { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .ref-table td:first-child { color: var(--ink); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+
+  .food-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 8px 0 24px; }
+  @media (max-width: 520px) { .food-grid { grid-template-columns: 1fr; } }
+  .food-card { padding: 14px 16px; background: var(--paper-soft); border: 1px solid var(--line); border-radius: 12px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .food-card b { font-size: 14.5px; font-weight: 700; }
+  .food-card span { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .inline-cta {
+    margin: 40px 0;
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--paper-soft);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .inline-cta .icon { width: 44px; height: 44px; border-radius: 13px; background: linear-gradient(135deg, var(--periwinkle), var(--cta-1)); flex-shrink: 0; }
+  .inline-cta h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .inline-cta p { font-size: 14px; color: var(--muted); margin: 0; }
+  .inline-cta .btn {
+    padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; color: #fff;
+    background: linear-gradient(100deg, var(--cta-1), var(--cta-2) 55%, var(--cta-3));
+    flex-shrink: 0;
+  }
+
+  .disclaimer { margin-top: 40px; font-size: 13px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 20px; }
+
+  .cta-banner { position: relative; margin-top: 64px; padding: 64px 0; background: linear-gradient(115deg, #221912 0%, #3C2415 48%, #1B140F 100%); overflow: hidden; }
+  .cta-glow { position: absolute; inset: 0; background: radial-gradient(480px 300px at 12% 20%, rgba(255,178,56,0.25), transparent 70%), radial-gradient(420px 280px at 88% 85%, rgba(255,122,41,0.22), transparent 70%); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; color: #FBF3EC; max-width: 700px; margin: 0 auto; padding: 0 28px; }
+  .cta-inner h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+  .cta-inner p { margin-top: 8px; color: #D8C7BA; font-size: 15px; }
+  .store-badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 14px; background: #FBF3EC; color: #1B140F; font-weight: 700; }
+  .store-badge svg { width: 24px; height: 24px; }
+  .store-badge .lines { display: flex; flex-direction: column; line-height: 1.15; }
+  .store-badge .lines small { font-size: 10.5px; font-weight: 600; color: #6b6259; text-transform: uppercase; letter-spacing: .04em; }
+  .store-badge .lines span { font-size: 15.5px; }
+
+  footer { padding: 32px 0; border-top: 1px solid var(--line); }
+  .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: 700px; margin: 0 auto; padding: 0 28px; }
+
+  .theme-toggle {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    flex-shrink: 0;
+    transition: transform .25s cubic-bezier(.22,1,.36,1), border-color .25s ease, color .25s ease;
+  }
+  .theme-toggle:hover { transform: translateY(-2px); border-color: var(--flame); color: var(--flame); }
+  .theme-toggle:active { transform: translateY(0) scale(0.92); }
+  .theme-toggle svg { width: 17px; height: 17px; }
+  .theme-toggle .icon-sun, .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: dark) { .theme-toggle .icon-sun { display: block; } }
+  @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) { .theme-toggle .icon-moon { display: block; } }
+  :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+</style>
+<nav class="topnav">
+<div class="topnav-row">
+<a class="brand" href="../index.html" rel="noopener" target="_blank">
+<span class="mark"></span><span class="brand-word">PlateAI</span>
+</a>
+<!-- i18n:picker -->
+<details class="lang-picker"><summary aria-label="Sprache"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="lang-code" translate="no">DE</span></summary><ul><li><a href="../../blog/how-to-calculate-macros.html" hreflang="en" lang="en" translate="no">English</a></li><li><a href="../../es/blog/how-to-calculate-macros.html" hreflang="es" lang="es" translate="no">Español</a></li><li><a aria-current="true" href="how-to-calculate-macros.html" hreflang="de" lang="de" translate="no">Deutsch</a></li><li><a href="../../fr/blog/how-to-calculate-macros.html" hreflang="fr" lang="fr" translate="no">Français</a></li><li><a href="../../pt/blog/how-to-calculate-macros.html" hreflang="pt" lang="pt" translate="no">Português</a></li><li><a href="../../pl/blog/how-to-calculate-macros.html" hreflang="pl" lang="pl" translate="no">Polski</a></li></ul></details><script>(function(){var d=document.currentScript.previousElementSibling;if(!d)return;d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){try{a.href=a.getAttribute('href').split('#')[0]+location.hash;}catch(e){}});});d.addEventListener('toggle',function(){var u=d.querySelector('ul');u.style.left='';u.style.right='';if(d.open&&u.getBoundingClientRect().left<8){u.style.left='0';u.style.right='auto';}});document.addEventListener('click',function(e){if(d.open&&!d.contains(e.target))d.open=false;});document.addEventListener('keydown',function(e){if(e.key==='Escape')d.open=false;});})();</script>
+<!-- /i18n:picker -->
+<button aria-label="Farbschema wechseln" class="theme-toggle" id="themeToggle" type="button">
+<svg class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+<svg class="icon-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<a class="back" href="../index.html#blog" rel="noopener" target="_blank">← Zurück zum Blog</a>
+</div>
+</nav>
+<header class="hero">
+<div class="wrap">
+<span class="post-tag">Ratgeber</span>
+<h1 class="title">So berechnest du deine Makros zum Abnehmen (Schritt für Schritt)</h1>
+<div class="meta">
+<span>PlateAI-Team</span><span class="dot"></span><span>24. September 2026</span><span class="dot"></span><span>7 Min. Lesezeit</span>
+</div>
+<div aria-label="Illustratives Farbverlaufsbanner" class="hero-band" role="img"></div>
+</div>
+</header>
+<article>
+<div class="wrap">
+<div class="prose">
+<p class="lead">Die meisten Makro-Rechner geben dir eine Aufteilung wie 40/30/30 und lassen es dabei bewenden. Das Problem: Prozente verbergen, worauf es wirklich ankommt — wie viele Gramm Eiweiß du bekommst und ob dein Fett so niedrig ist, dass es schadet. Hier ist ein einfacher Weg, Makros zum Abnehmen zu berechnen, der stattdessen von deinem Körpergewicht ausgeht.</p>
+<h2>Was sind Makros, und warum sie erfassen?</h2>
+<p>Makros — kurz für Makronährstoffe — sind die drei Nährstoffe, die deine Kalorien liefern: <strong>Eiweiß, Kohlenhydrate und Fett</strong>. Kalorien entscheiden, ob du abnimmst. Makros bestimmen, <em>was</em> du verlierst (Fett oder Muskeln), wie satt du dich fühlst und wie gut du trainierst.</p>
+<p>Wenn du neu beim Tracking bist, beginne zuerst mit unserer Einsteiger-Anleitung zum <a href="how-to-count-calories.html">Kalorienzählen</a> — Makros bauen direkt darauf auf.</p>
+<h2>Schritt 1: Lege dein Kalorienziel fest</h2>
+<p>Alles andere wird aus dieser Zahl herausgeschnitten. Schätze deinen Erhaltungsbedarf (TDEE) und ziehe dann etwa 300–500 kcal für stetiges Abnehmen ab. Falls du das noch nicht getan hast, führt dich unsere Anleitung <a href="calorie-deficit.html">wie viele Kalorien du zum Abnehmen essen solltest</a> Schritt für Schritt durch. Für die Beispiele unten nehmen wir eine Person mit 73 kg (160 lb), die <strong>1.800 kcal</strong> pro Tag isst.</p>
+<h2>Schritt 2: Lege zuerst das Eiweiß fest</h2>
+<p>Eiweiß kommt zuerst, weil es das Makro ist, das am meisten davon profitiert, bewusst festgelegt zu werden. Im Kaloriendefizit hilft eine höhere Zufuhr, Muskeln zu erhalten, und hält den Hunger im Griff. Ein praktischer Bereich sind <strong>1,6–2,2 g pro kg Körpergewicht</strong> (etwa 0,7–1,0 g pro lb) — die Begründung findest du unter <a href="protein-needs.html">wie viel Eiweiß du pro Tag brauchst</a>.</p>
+<p>Für unser Beispiel nehmen wir 0,8 g pro lb: 160 × 0,8 = <strong>128 g Eiweiß</strong>. Eiweiß hat 4 Kalorien pro Gramm, das sind also 512 kcal.</p>
+<h2>Schritt 3: Lege eine Fett-Untergrenze fest</h2>
+<p>Fett ist kalorienreich (9 kcal pro Gramm), man überschreitet also leicht — aber zu wenig geht nach hinten los. Fett hilft bei der Aufnahme der Vitamine A, D, E und K und macht Mahlzeiten sättigender. Ein sinnvolles Ziel für die meisten sind etwa <strong>0,3–0,45 g pro lb</strong> Körpergewicht, was meist zwischen 20 % und 35 % der Gesamtkalorien liegt.</p>
+<p>Für unser Beispiel 0,35 g pro lb: 160 × 0,35 = <strong>56 g Fett</strong>, also 504 kcal.</p>
+<h2>Schritt 4: Die Kohlenhydrate füllen den Rest</h2>
+<p>Kohlenhydrate sind das flexible Makro. Die Kalorien, die nach Eiweiß und Fett übrig bleiben, gehen an die Kohlenhydrate, zu 4 kcal pro Gramm:</p>
+<div class="pull">1.800 kcal − 512 (Eiweiß) − 504 (Fett) = 784 kcal ÷ 4 = etwa 196 g Kohlenhydrate.</div>
+<p>Das ergibt ein Endziel von etwa <strong>128 g Eiweiß / 56 g Fett / 196 g Kohlenhydrate</strong> — rund 28 % Eiweiß, 28 % Fett und 44 % Kohlenhydrate. Kohlenhydrate treiben das Training an; wenn du regelmäßig Gewichte hebst oder läufst, ist das das Makro, das du schützen solltest.</p>
+<h2>Makro-Ziele nach Körpergewicht</h2>
+<p>Mit derselben Methode (0,8 g Eiweiß und 0,35 g Fett pro lb, Kohlenhydrate füllen den Rest) hier ungefähre Ausgangswerte für einige Größen. Runde großzügig — es sind Ausgangswerte, keine Vorschriften.</p>
+<div class="table-wrap">
+<table class="ref-table">
+<thead><tr><th>Körpergewicht</th><th>Kalorien</th><th>Eiweiß</th><th>Fett</th><th>Kohlenhydrate</th></tr></thead>
+<tbody>
+<tr><td>130 lb / 59 kg</td><td>1,500</td><td>104 g</td><td>46 g</td><td>168 g</td></tr>
+<tr><td>160 lb / 73 kg</td><td>1,800</td><td>128 g</td><td>56 g</td><td>196 g</td></tr>
+<tr><td>190 lb / 86 kg</td><td>2,200</td><td>152 g</td><td>67 g</td><td>247 g</td></tr>
+<tr><td>220 lb / 100 kg</td><td>2,600</td><td>176 g</td><td>77 g</td><td>301 g</td></tr>
+</tbody>
+</table>
+</div>
+<div class="inline-cta">
+<div style="display:flex; align-items:center; gap:16px;">
+<div class="icon"></div>
+<div>
+<h4>Die Zahlen zu treffen, ist der schwere Teil</h4>
+<p>PlateAI zeigt dir Kalorien, Eiweiß, Kohlenhydrate und Fett gegenüber deinen Tageszielen anhand eines einzigen Fotos — so weißt du mittags, was das Abendessen ausgleichen muss.</p>
+</div>
+</div>
+<a class="btn" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">PlateAI kostenlos testen</a>
+</div>
+<h2>Warum Gramm Prozente schlagen</h2>
+<p>Eine „40/30/30“-Aufteilung klingt präzise, aber Prozente wandern mit deinen Kalorien. Bei 1.400 kcal sind 30 % Eiweiß 105 g; bei 2.800 kcal sind es 210 g — derselbe Prozentsatz, völlig unterschiedliche Mengen. Eiweiß und Fett nach Körpergewicht festzulegen hält das stabil, was dein Körper wirklich braucht, und lässt die Kohlenhydrate mit deinem Kalorienziel und deiner Aktivität mitschwingen.</p>
+<h2>Häufige Makro-Fehler</h2>
+<ul>
+<li><strong>Perfekten Verhältnissen nachjagen.</strong> An den meisten Tagen innerhalb von etwa 10 % deines Eiweißziels zu landen, zählt weit mehr, als jeden Tag eine exakte Aufteilung zu treffen.</li>
+<li><strong>Fett zu stark kürzen.</strong> Unter den obigen Bereich zu gehen, kann dich hungrig und unzufrieden machen, ohne etwas zu beschleunigen.</li>
+<li><strong>Kohlenhydrate standardmäßig streichen.</strong> Low-Carb kann für manche funktionieren, aber Kohlenhydrate zu stark zu kappen, schadet oft dem Training und dem Durchhalten. Kalorien entscheiden weiterhin über den Gewichtsverlust.</li>
+<li><strong>Ballaststoffe vergessen.</strong> Ziele auf etwa 25–35 g pro Tag aus Gemüse, Obst, Hülsenfrüchten und Vollkorn. Sie helfen bei Sättigung und Verdauung.</li>
+<li><strong>Verstecktes Fett übersehen.</strong> Öle, Dressings und Bratfette sind leicht zu übersehen — siehe <a href="healthy-doesnt-mean-low-calorie.html">gesunde Lebensmittel, die überraschend viele Kalorien haben</a>.</li>
+</ul>
+<h2>So passt du deine Makros mit der Zeit an</h2>
+<p>Betrachte deinen ersten Zahlensatz als Entwurf. Erfasse zwei bis drei Wochen konsequent, dann sieh dir dein durchschnittliches Wochengewicht an, nicht den Wert eines einzelnen Morgens — unsere Anleitung <a href="weight-tracking.html">wie oft du dich wiegen solltest</a> erklärt warum. Wenn der Trend trotz konsequenter Erfassung flach bleibt, kürze etwa 100–150 Kalorien, vor allem bei Kohlenhydraten oder Fett, und lass das Eiweiß, wo es ist. Wenn Energie oder Training einbrechen, gib etwas zurück.</p>
+<p>Auswärts essen oder Mahlzeiten erfassen, die du nicht selbst gekocht hast? Eine nahe Schätzung genügt — siehe <a href="eating-out.html">so erfasst du Kalorien und Makros beim Essen auswärts</a>.</p>
+<h2>Häufig gestellte Fragen</h2>
+<h3>Was ist die beste Makro-Aufteilung zum Abnehmen?</h3>
+<p>Die eine beste Aufteilung gibt es nicht. Am wichtigsten sind ein Kaloriendefizit, das du durchhalten kannst, und genug Eiweiß. Ein üblicher Ausgangspunkt sind etwa 25–35 % Eiweiß, 25–35 % Fett und der Rest Kohlenhydrate, aber Eiweiß und Fett wie oben nach Körpergewicht festzulegen, ist verlässlicher.</p>
+<h3>Muss ich meine Makros exakt treffen?</h3>
+<p>Nein. Ziele an den meisten Tagen auf etwa 10 % Abweichung bei Eiweiß- und Kalorienzielen. Wochendurchschnitte zählen mehr als jeder einzelne Tag.</p>
+<h3>Sind Makros oder Kalorien wichtiger zum Abnehmen?</h3>
+<p>Kalorien bestimmen, ob du abnimmst; Makros beeinflussen, wie es abläuft — Muskelerhalt, Hunger und Leistung. Bring zuerst die Kalorien in Ordnung, dann das Eiweiß, dann den Feinschliff.</p>
+<h3>Sollte ich Makros erfassen oder nur Eiweiß?</h3>
+<p>Wenn alles zu erfassen zu viel wirkt, bringt das Erfassen von Kalorien und Eiweiß allein den Großteil des Nutzens. Ergänze Kohlenhydrate und Fett, sobald sich das automatisch anfühlt.</p>
+<h3>Wie viele Kohlenhydrate sollte ich zum Abnehmen essen?</h3>
+<p>Es hängt von deinem Kalorienziel und Aktivitätsniveau ab. Kohlenhydrate sind das, was nach Eiweiß und Fett übrig bleibt, und das liegt bei vielen zwischen etwa 100 und 300 g pro Tag.</p>
+<h2>Die Kurzfassung</h2>
+<ol>
+<li>Lege dein Kalorienziel fest — etwa 300–500 kcal unter dem Erhaltungsbedarf.</li>
+<li>Lege Eiweiß auf etwa 0,7–1,0 g pro lb Körpergewicht fest.</li>
+<li>Lege Fett auf etwa 0,3–0,45 g pro lb fest.</li>
+<li>Fülle die restlichen Kalorien mit Kohlenhydraten (4 kcal pro Gramm).</li>
+<li>Prüfe deinen Wochendurchschnitt nach zwei bis drei Wochen und passe an.</li>
+</ol>
+<div class="disclaimer">Dieser Artikel enthält allgemeine Bildungsinformationen und ist keine medizinische oder Ernährungsberatung. Der Makrobedarf variiert mit Alter, Gesundheitszustand und Training; wenn du eine Erkrankung hast, schwanger bist oder eine Vorgeschichte mit Essstörungen hast, sprich vor einer Änderung deiner Ernährung mit einer qualifizierten medizinischen Fachperson oder einer Ernährungsberatung.</div>
+</div>
+</div>
+</article>
+<div class="cta-banner">
+<div aria-hidden="true" class="cta-glow"></div>
+<div class="cta-inner">
+<div>
+<h2>Kenne deine Makros, bei jeder Mahlzeit.</h2>
+<p>Foto machen — PlateAI verfolgt Kalorien und Makros gegenüber deinen Zielen.</p>
+</div>
+<a class="store-badge" href="https://apps.apple.com/pl/app/ai-calorie-counter-plateai/id6738055240" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.34 1.05-3.11z"></path></svg>
+<span class="lines"><small>Laden im</small><span>App Store</span></span>
+</a>
+</div>
+</div>
+<footer>
+<div class="foot-row">
+<span>PlateAI</span>
+<span>© 2026 Yevhen Basistyi. Alle Rechte vorbehalten.</span>
+</div>
+</footer>
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('plateai-theme', next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
